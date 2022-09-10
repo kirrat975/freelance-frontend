@@ -1,0 +1,84 @@
+.tabreq{
+    border:3px solid black;
+    padding:10px;
+   width: 100%;
+   overflow: hidden;
+   margin-top: 20px;
+ }
+ .tabreq th{
+     text-transform: uppercase;
+     text-align: center;
+     margin-right: 10px;
+     border: 1px solid black;
+     width:25%;
+     padding: 5px;
+     background-color: lightseagreen;
+     letter-spacing: 2px;
+    
+ }
+ .tabreq tr td{
+     margin-right: 20px;
+     border: 1px solid black;
+     padding: 3px;
+     text-align: center;
+     width:25%;
+     font-weight: bold;
+     letter-spacing: 1px;
+     background-color: lightgreen;
+     
+ }
+ .tabreq td:hover{
+    background-color: khaki;
+}
+#accb{
+    background-color: crimson;
+    padding: 5px;
+    font-weight: bold;
+}
+#accb:hover{
+    background-color: salmon;
+}
+#ordb{
+    background-color: royalblue;
+    padding: 5px;
+    font-weight: bold;  
+}
+#ordb:hover{
+    background-color: lightblue;
+}
+@media (min-width: 481px) and (max-width: 850px) {
+
+.navbar{
+    display: inline-block!important;
+    left:25%;
+}
+ .tabcont{
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    padding: 5px;
+ }
+ .tabcont > .table {
+    margin-bottom: 0;
+}
+  
+}
+@media (min-width: 320px) and (max-width: 480px)
+{
+    .navbar{
+        display: inline-block!important;
+        left:10%;
+       
+    }
+     .tabcont{
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        padding: 5px;
+     }
+     .tabcont > .table {
+        margin-bottom: 0;
+    }
+}

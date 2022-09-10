@@ -1,0 +1,130 @@
+{
+    "sourceFile": "src/components/Manreq.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1662301240286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662301282236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,7 @@\n  }\r\n  .tabreq td:hover{\r\n     background-color: khaki;\r\n }\r\n-#acc{\r\n-    \r\n+#accb{\r\n+    background-color: red;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662301294983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,6 @@\n     background-color: khaki;\r\n }\r\n #accb{\r\n     background-color: red;\r\n+    padding: 5px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662301320121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,5 +32,6 @@\n }\r\n #accb{\r\n     background-color: red;\r\n     padding: 5px;\r\n+    font-weight: bold;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662301333844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,8 @@\n  .tabreq td:hover{\r\n     background-color: khaki;\r\n }\r\n #accb{\r\n-    background-color: red;\r\n+    background-color: crimson;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662301362808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,8 @@\n #accb{\r\n     background-color: crimson;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n+}\r\n+#accb:hover{\r\n+    background-color: salmon;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662303457284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,5 +36,10 @@\n     font-weight: bold;\r\n }\r\n #accb:hover{\r\n     background-color: salmon;\r\n+}\r\n+#ordb{\r\n+    background-color: midnightblue;\r\n+    padding: 5px;\r\n+    font-weight: bold;  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662303880844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,8 @@\n #accb:hover{\r\n     background-color: salmon;\r\n }\r\n #ordb{\r\n-    background-color: midnightblue;\r\n+    background-color: royalblue;\r\n     padding: 5px;\r\n     font-weight: bold;  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662303926778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,8 @@\n #ordb{\r\n     background-color: royalblue;\r\n     padding: 5px;\r\n     font-weight: bold;  \r\n+}\r\n+#ordb:hover{\r\n+    background-color: lightblue;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662456044107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,11 @@\n     font-weight: bold;  \r\n }\r\n #ordb:hover{\r\n     background-color: lightblue;\r\n+}\r\n+@media (min-width: 481px) and (max-width: 850px) {\r\n+\r\n+    .tabreq{\r\n+        display: flex;\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662456084252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,7 +48,7 @@\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .tabreq{\r\n-        display: flex;\r\n+      \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662456110025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,8 @@\n     background-color: lightblue;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n-    .tabreq{\r\n-      \r\n+    .tabreq th{\r\n+      display: flex;\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662456174567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,5 +50,8 @@\n \r\n     .tabreq th{\r\n       display: flex;\r\n     }\r\n+    .tabreq td{\r\n+        display: flex;\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662456283249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .tabreq th{\r\n-      display: flex;\r\n+      display: inline-flex;\r\n     }\r\n     .tabreq td{\r\n         display: flex;\r\n     }\r\n"
+                },
+                {
+                    "date": 1662456342960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,7 +51,7 @@\n     .tabreq th{\r\n       display: inline-flex;\r\n     }\r\n     .tabreq td{\r\n-        display: flex;\r\n+        display: inline-flex;\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662456368182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,10 @@\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .tabreq th{\r\n-      display: inline-flex;\r\n+      display: flex;\r\n+      flex-direction: row;\r\n     }\r\n     .tabreq td{\r\n         display: inline-flex;\r\n     }\r\n"
+                },
+                {
+                    "date": 1662456382685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .tabreq th{\r\n       display: flex;\r\n-      flex-direction: row;\r\n+      flex-direction: column;\r\n     }\r\n     .tabreq td{\r\n         display: inline-flex;\r\n     }\r\n"
+                },
+                {
+                    "date": 1662456526956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,12 +47,6 @@\n     background-color: lightblue;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n-    .tabreq th{\r\n-      display: flex;\r\n-      flex-direction: column;\r\n-    }\r\n-    .tabreq td{\r\n-        display: inline-flex;\r\n-    }\r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662456702448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,7 +46,12 @@\n #ordb:hover{\r\n     background-color: lightblue;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n-\r\n+ .tabcont{\r\n+    width: 100%;\r\n+    margin-bottom: 15px;\r\n+    overflow-y: hidden;\r\n+    -ms-overflow-style: -ms-autohiding-scrollbar;\r\n+ }\r\n   \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662456787695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,6 +52,9 @@\n     margin-bottom: 15px;\r\n     overflow-y: hidden;\r\n     -ms-overflow-style: -ms-autohiding-scrollbar;\r\n  }\r\n+ .tabcont > .table {\r\n+    margin-bottom: 0;\r\n+}\r\n   \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662457181374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,13 @@\n #ordb:hover{\r\n     background-color: lightblue;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n+\r\n+.navbar{\r\n+    display: inline-block!important;\r\n+    left:25%;\r\n+}\r\n  .tabcont{\r\n     width: 100%;\r\n     margin-bottom: 15px;\r\n     overflow-y: hidden;\r\n"
+                },
+                {
+                    "date": 1662457214892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,8 +56,9 @@\n     width: 100%;\r\n     margin-bottom: 15px;\r\n     overflow-y: hidden;\r\n     -ms-overflow-style: -ms-autohiding-scrollbar;\r\n+    padding: 5px;\r\n  }\r\n  .tabcont > .table {\r\n     margin-bottom: 0;\r\n }\r\n"
+                },
+                {
+                    "date": 1662457332915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,5 +62,22 @@\n  .tabcont > .table {\r\n     margin-bottom: 0;\r\n }\r\n   \r\n+}\r\n+@media (min-width: 320px) and (max-width: 480px)\r\n+{\r\n+    .navbar{\r\n+        display: inline-block!important;\r\n+        left:25%;\r\n+    }\r\n+     .tabcont{\r\n+        width: 100%;\r\n+        margin-bottom: 15px;\r\n+        overflow-y: hidden;\r\n+        -ms-overflow-style: -ms-autohiding-scrollbar;\r\n+        padding: 5px;\r\n+     }\r\n+     .tabcont > .table {\r\n+        margin-bottom: 0;\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662457352809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n @media (min-width: 320px) and (max-width: 480px)\r\n {\r\n     .navbar{\r\n         display: inline-block!important;\r\n-        left:25%;\r\n+        left:20%;\r\n     }\r\n      .tabcont{\r\n         width: 100%;\r\n         margin-bottom: 15px;\r\n"
+                },
+                {
+                    "date": 1662457360491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n @media (min-width: 320px) and (max-width: 480px)\r\n {\r\n     .navbar{\r\n         display: inline-block!important;\r\n-        left:20%;\r\n+        left:5%;\r\n     }\r\n      .tabcont{\r\n         width: 100%;\r\n         margin-bottom: 15px;\r\n"
+                },
+                {
+                    "date": 1662457374109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,10 @@\n @media (min-width: 320px) and (max-width: 480px)\r\n {\r\n     .navbar{\r\n         display: inline-block!important;\r\n-        left:5%;\r\n+        left:10%;\r\n+        margin-top: 5px;\r\n     }\r\n      .tabcont{\r\n         width: 100%;\r\n         margin-bottom: 15px;\r\n"
+                },
+                {
+                    "date": 1662457386462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n {\r\n     .navbar{\r\n         display: inline-block!important;\r\n         left:10%;\r\n-        margin-top: 5px;\r\n+        top:5%\r\n     }\r\n      .tabcont{\r\n         width: 100%;\r\n         margin-bottom: 15px;\r\n"
+                },
+                {
+                    "date": 1662457417949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,14 +68,14 @@\n {\r\n     .navbar{\r\n         display: inline-block!important;\r\n         left:10%;\r\n-        top:5%\r\n+       \r\n     }\r\n      .tabcont{\r\n         width: 100%;\r\n         margin-bottom: 15px;\r\n-        overflow-y: hidden;\r\n+        overflow-x: hidden;\r\n         -ms-overflow-style: -ms-autohiding-scrollbar;\r\n         padding: 5px;\r\n      }\r\n      .tabcont > .table {\r\n"
+                },
+                {
+                    "date": 1662457430129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n     }\r\n      .tabcont{\r\n         width: 100%;\r\n         margin-bottom: 15px;\r\n-        overflow-x: hidden;\r\n+        overflow-y: hidden;\r\n         -ms-overflow-style: -ms-autohiding-scrollbar;\r\n         padding: 5px;\r\n      }\r\n      .tabcont > .table {\r\n"
+                }
+            ],
+            "date": 1662301240286,
+            "name": "Commit-0",
+            "content": ".tabreq{\r\n    border:3px solid black;\r\n    padding:10px;\r\n   width: 100%;\r\n   overflow: hidden;\r\n   margin-top: 20px;\r\n }\r\n .tabreq th{\r\n     text-transform: uppercase;\r\n     text-align: center;\r\n     margin-right: 10px;\r\n     border: 1px solid black;\r\n     width:25%;\r\n     padding: 5px;\r\n     background-color: lightseagreen;\r\n     letter-spacing: 2px;\r\n    \r\n }\r\n .tabreq tr td{\r\n     margin-right: 20px;\r\n     border: 1px solid black;\r\n     padding: 3px;\r\n     text-align: center;\r\n     width:25%;\r\n     font-weight: bold;\r\n     letter-spacing: 1px;\r\n     background-color: lightgreen;\r\n     \r\n }\r\n .tabreq td:hover{\r\n    background-color: khaki;\r\n}\r\n#acc{\r\n    \r\n}"
+        }
+    ]
+}

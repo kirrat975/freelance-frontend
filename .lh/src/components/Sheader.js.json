@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Sheader.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1662450115270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662450615769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             <nav className='navbar'>\r\n             <Link to=\"/\"></Link>\r\n             <ul>\r\n                 \r\n-                <li><button >Buyer Requests</button></li>\r\n+                 <li><button onClick={()=>navigate('/selld')}>Buyer Requests</button></li>\r\n                 <li><button  onClick={()=>navigate('/selord')}>Orders</button></li>\r\n                 <li><button >Profile</button></li>\r\n                 <li><button onClick={()=>navigate('/set')}>Settings</button></li>\r\n                 <li><button onClick={()=>navigate('/bill')}>Billing</button></li>\r\n"
+                },
+                {
+                    "date": 1662669596885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,11 @@\n             <ul>\r\n                 \r\n                  <li><button onClick={()=>navigate('/selld')}>Buyer Requests</button></li>\r\n                 <li><button  onClick={()=>navigate('/selord')}>Orders</button></li>\r\n-                <li><button >Profile</button></li>\r\n+                <li><button  onClick={()=>navigate('/seprof')}>Profile</button></li>\r\n                 <li><button onClick={()=>navigate('/set')}>Settings</button></li>\r\n-                <li><button onClick={()=>navigate('/bill')}>Billing</button></li>\r\n+                <li><button onClick={()=>navigate('/billsel')}>Billing</button></li>\r\n                 <li><button onClick={handleSLogout}>Logout</button></li>\r\n              \r\n             </ul>\r\n             </nav>\r\n"
+                }
+            ],
+            "date": 1662450115270,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport './Sellerdash.css';\r\nimport { Link,useNavigate} from \"react-router-dom\";\r\nimport { useUserAuth } from \"../context/UserAuthContext\";\r\n\r\nfunction Sheader() {\r\n    const navigate=useNavigate();\r\n    const { logOut} = useUserAuth();\r\n    const handleSLogout=async()=>{\r\n        try {\r\n\r\n            await logOut();\r\n           localStorage.removeItem(\"seller\");\r\n            navigate(\"/\");\r\n          } catch (error) {\r\n            console.log(error.message);\r\n          }\r\n      };\r\n  return (\r\n    <div>\r\n         <header>\r\n            <nav className='navbar'>\r\n            <Link to=\"/\"></Link>\r\n            <ul>\r\n                \r\n                <li><button >Buyer Requests</button></li>\r\n                <li><button  onClick={()=>navigate('/selord')}>Orders</button></li>\r\n                <li><button >Profile</button></li>\r\n                <li><button onClick={()=>navigate('/set')}>Settings</button></li>\r\n                <li><button onClick={()=>navigate('/bill')}>Billing</button></li>\r\n                <li><button onClick={handleSLogout}>Logout</button></li>\r\n             \r\n            </ul>\r\n            </nav>\r\n        </header>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Sheader;"
+        }
+    ]
+}

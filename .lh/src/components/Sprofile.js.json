@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/components/Sprofile.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1662450995616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662452374382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react';\r\n import Card from 'react-bootstrap/Card';\r\n+import seller from '../seller.png';\r\n \r\n function Sprofile() {\r\n     const sellerInfo=JSON.parse(localStorage.getItem('seller'));\r\n   return (\r\n@@ -10,9 +11,9 @@\n             <div className='bprof'>\r\n       <h1 id='buid'>BUYER PROFILE</h1>\r\n       {sellerInfo.map(sellerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={sellerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"260px\" />\r\n+      <Card.Img variant=\"top\" src={seller} width=\"150px\" height=\"260px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n          <h1 id='bname'>User Name : {sellerInfo.name}</h1>\r\n"
+                },
+                {
+                    "date": 1662452498353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,16 +8,16 @@\n     <div>\r\n         <div>\r\n             <h1>My Profile</h1>\r\n             <div className='bprof'>\r\n-      <h1 id='buid'>BUYER PROFILE</h1>\r\n+      <h1 id='suid'>BUYER PROFILE</h1>\r\n       {sellerInfo.map(sellerInfo=>(\r\n-                        <Card className='bcard' style={{ width: '600px'}} key={sellerInfo.id}>\r\n+                        <Card className='scard' style={{ width: '600px'}} key={sellerInfo.id}>\r\n       <Card.Img variant=\"top\" src={seller} width=\"150px\" height=\"260px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n-         <h1 id='bname'>User Name : {sellerInfo.name}</h1>\r\n+         <h1 id='sname'>User Name : {sellerInfo.name}</h1>\r\n             \r\n         </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1662452652469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react';\r\n import Card from 'react-bootstrap/Card';\r\n+import './Suprofile.css';\r\n import seller from '../seller.png';\r\n \r\n function Sprofile() {\r\n     const sellerInfo=JSON.parse(localStorage.getItem('seller'));\r\n"
+                },
+                {
+                    "date": 1662452691414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <div>\r\n         <div>\r\n             <h1>My Profile</h1>\r\n             <div className='bprof'>\r\n-      <h1 id='suid'>BUYER PROFILE</h1>\r\n+      <h1 id='suid'>SELLER PROFILE</h1>\r\n       {sellerInfo.map(sellerInfo=>(\r\n                         <Card className='scard' style={{ width: '600px'}} key={sellerInfo.id}>\r\n       <Card.Img variant=\"top\" src={seller} width=\"150px\" height=\"260px\" />\r\n       <Card.Body>\r\n"
+                },
+                {
+                    "date": 1662452711444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,8 @@\n     const sellerInfo=JSON.parse(localStorage.getItem('seller'));\r\n   return (\r\n     <div>\r\n         <div>\r\n-            <h1>My Profile</h1>\r\n             <div className='bprof'>\r\n       <h1 id='suid'>SELLER PROFILE</h1>\r\n       {sellerInfo.map(sellerInfo=>(\r\n                         <Card className='scard' style={{ width: '600px'}} key={sellerInfo.id}>\r\n"
+                },
+                {
+                    "date": 1662452737640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function Sprofile() {\r\n     const sellerInfo=JSON.parse(localStorage.getItem('seller'));\r\n   return (\r\n     <div>\r\n-        <div>\r\n+        <div className='p-2'>\r\n             <div className='bprof'>\r\n       <h1 id='suid'>SELLER PROFILE</h1>\r\n       {sellerInfo.map(sellerInfo=>(\r\n                         <Card className='scard' style={{ width: '600px'}} key={sellerInfo.id}>\r\n"
+                },
+                {
+                    "date": 1662453000423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import React from 'react';\r\n import Card from 'react-bootstrap/Card';\r\n+import Sheader from './Sheader';\r\n import './Suprofile.css';\r\n import seller from '../seller.png';\r\n \r\n function Sprofile() {\r\n     const sellerInfo=JSON.parse(localStorage.getItem('seller'));\r\n   return (\r\n     <div>\r\n         <div className='p-2'>\r\n+        <Sheader/>\r\n             <div className='bprof'>\r\n       <h1 id='suid'>SELLER PROFILE</h1>\r\n       {sellerInfo.map(sellerInfo=>(\r\n                         <Card className='scard' style={{ width: '600px'}} key={sellerInfo.id}>\r\n"
+                }
+            ],
+            "date": 1662450995616,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport Card from 'react-bootstrap/Card';\r\n\r\nfunction Sprofile() {\r\n    const sellerInfo=JSON.parse(localStorage.getItem('seller'));\r\n  return (\r\n    <div>\r\n        <div>\r\n            <h1>My Profile</h1>\r\n            <div className='bprof'>\r\n      <h1 id='buid'>BUYER PROFILE</h1>\r\n      {sellerInfo.map(sellerInfo=>(\r\n                        <Card className='bcard' style={{ width: '600px'}} key={sellerInfo.id}>\r\n      <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"260px\" />\r\n      <Card.Body>\r\n      <hr/>\r\n        <Card.Title>\r\n         <h1 id='bname'>User Name : {sellerInfo.name}</h1>\r\n            \r\n        </Card.Title>\r\n        <Card.Text>\r\n          <div>\r\n          <table>\r\n          <thead>\r\n          <tr>\r\n            <th>Email Address</th>\r\n            <th>Mobile Number</th>\r\n            <th>Residential Address</th>\r\n            </tr>\r\n          </thead>\r\n            <tbody>\r\n            <tr>\r\n               <td><span>{sellerInfo.email}</span></td>\r\n                <td> <span>{sellerInfo.phone}</span></td>\r\n                <td><span>{sellerInfo.address}</span></td>\r\n                </tr>\r\n            </tbody>\r\n          </table>\r\n\r\n        \r\n            \r\n            \r\n          </div>\r\n        </Card.Text>\r\n      \r\n      </Card.Body>\r\n    </Card>\r\n\r\n\r\n    ))}\r\n   \r\n      </div>\r\n        </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Sprofile;"
+        }
+    ]
+}

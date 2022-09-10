@@ -1,0 +1,358 @@
+{
+    "sourceFile": "src/components/Billing.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 85,
+            "patches": [
+                {
+                    "date": 1660975783510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660976794649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,21 @@\n-import React from 'react'\r\n-\r\n+import React from 'react';\r\n+import { Link} from \"react-router-dom\";\r\n function Billing() {\r\n   return (\r\n-    <div><h1>Billing</h1></div>\r\n+    <div>\r\n+        <header>\r\n+        <div className=\"bill\">\r\n+                        \r\n+                        <ul>\r\n+                            <li><a><Link to='#bhist'>Billing History</Link></a></li>\r\n+                            <li> <a>Biling Info </a> </li>\r\n+                            <li> <a>Balances</a>  </li>\r\n+                            \r\n+                        </ul>\r\n+                    </div>\r\n+        </header>\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default Billing;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660977540087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,13 @@\n                             \r\n                         </ul>\r\n                     </div>\r\n         </header>\r\n+        <hr/>\r\n+        <div className='bcontent'>\r\n+        <h3>Billing History</h3>\r\n+\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1660977661425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <div>\r\n         <header>\r\n         <div className=\"bill\">\r\n                         \r\n-                        <ul>\r\n+                        <ul className='biltabs'>\r\n                             <li><a><Link to='#bhist'>Billing History</Link></a></li>\r\n                             <li> <a>Biling Info </a> </li>\r\n                             <li> <a>Balances</a>  </li>\r\n                             \r\n@@ -17,8 +17,9 @@\n         <hr/>\r\n         <div className='bcontent'>\r\n         <h3>Billing History</h3>\r\n \r\n+\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1660978376340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n                     </div>\r\n         </header>\r\n         <hr/>\r\n         <div className='bcontent'>\r\n-        <h3>Billing History</h3>\r\n+        <h4 >Billing History</h4>\r\n \r\n \r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1660978603189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n                     </div>\r\n         </header>\r\n         <hr/>\r\n         <div className='bcontent'>\r\n-        <h4 >Billing History</h4>\r\n+        <h4 id='bh'>Billing History</h4>\r\n \r\n \r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1660979825346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,29 @@\n         </header>\r\n         <hr/>\r\n         <div className='bcontent'>\r\n         <h4 id='bh'>Billing History</h4>\r\n+        <div className='smenu'>\r\n+           <select>\r\n+            <option value='Data range'>Data range</option>\r\n+           </select>\r\n \r\n+           <select>\r\n+            <option value='Transaction'>Transaction</option>\r\n+           </select> \r\n \r\n+           <select>\r\n+            <option value='Service'>Service</option>\r\n+           </select> \r\n+\r\n+           <select>\r\n+            <option value='Currency'>Currency</option>\r\n+           </select> \r\n+\r\n         </div>\r\n+\r\n+\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1660980173224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n         <hr/>\r\n         <div className='bcontent'>\r\n         <h4 id='bh'>Billing History</h4>\r\n         <div className='smenu'>\r\n+        <div className='smenu-tabs'>\r\n            <select>\r\n             <option value='Data range'>Data range</option>\r\n            </select>\r\n \r\n@@ -32,9 +33,9 @@\n \r\n            <select>\r\n             <option value='Currency'>Currency</option>\r\n            </select> \r\n-\r\n+           </div>\r\n         </div>\r\n \r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1660980256722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,9 @@\n            <select>\r\n             <option value='Currency'>Currency</option>\r\n            </select> \r\n            </div>\r\n+           <input id='sinv'/>\r\n         </div>\r\n \r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1660980520739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n            <select>\r\n             <option value='Currency'>Currency</option>\r\n            </select> \r\n            </div>\r\n-           <input id='sinv'/>\r\n+           <input id='sinv' type='text' placeholder=' &#x1F50D; &nbsp; Search by invoice or order number'/>\r\n         </div>\r\n \r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1660982235308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,13 @@\n             <option value='Currency'>Currency</option>\r\n            </select> \r\n            </div>\r\n            <input id='sinv' type='text' placeholder=' &#x1F50D; &nbsp; Search by invoice or order number'/>\r\n+           <div>\r\n+            <span id='sres'>Showing 0 results</span>\r\n         </div>\r\n+        </div>\r\n+       \r\n \r\n \r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1660982893889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,26 @@\n            <input id='sinv' type='text' placeholder=' &#x1F50D; &nbsp; Search by invoice or order number'/>\r\n            <div>\r\n             <span id='sres'>Showing 0 results</span>\r\n         </div>\r\n+        <div className='btable'>\r\n+            <table className='sbtable'>\r\n+                <thead>\r\n+                    <tr>\r\n+                        <th><label><input type='checkbox' disabled/></label></th>\r\n+                        <th className='tabth'>Date</th>\r\n+                        <th className='tabth'>Transaction</th>\r\n+                        <th className='tabth'>Service</th>\r\n+                        <th className='tabth'>Order</th>\r\n+                        <th className='tabth'>Currency</th>\r\n+                        <th className='tabth'>Total</th>\r\n+                        <th className='tabth'> PDF</th>\r\n+\r\n+                    </tr>\r\n+                </thead>\r\n+            </table>\r\n         </div>\r\n+        </div>\r\n        \r\n \r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1660983102456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n             <span id='sres'>Showing 0 results</span>\r\n         </div>\r\n         <div className='btable'>\r\n             <table className='sbtable'>\r\n-                <thead>\r\n+                <thead className='tabhead'>\r\n                     <tr>\r\n                         <th><label><input type='checkbox' disabled/></label></th>\r\n                         <th className='tabth'>Date</th>\r\n                         <th className='tabth'>Transaction</th>\r\n"
+                },
+                {
+                    "date": 1660983872762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n                         <th><label><input type='checkbox' disabled/></label></th>\r\n-                        <th className='tabth'>Date</th>\r\n+                        <th colSpan={3} className='tabth'>Date</th>\r\n                         <th className='tabth'>Transaction</th>\r\n                         <th className='tabth'>Service</th>\r\n                         <th className='tabth'>Order</th>\r\n                         <th className='tabth'>Currency</th>\r\n"
+                },
+                {
+                    "date": 1660983896396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n                 <thead className='tabhead'>\r\n                     <tr>\r\n                         <th><label><input type='checkbox' disabled/></label></th>\r\n                         <th colSpan={3} className='tabth'>Date</th>\r\n-                        <th className='tabth'>Transaction</th>\r\n+                        <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th className='tabth'>Service</th>\r\n                         <th className='tabth'>Order</th>\r\n                         <th className='tabth'>Currency</th>\r\n                         <th className='tabth'>Total</th>\r\n"
+                },
+                {
+                    "date": 1660983993806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,13 +45,13 @@\n                     <tr>\r\n                         <th><label><input type='checkbox' disabled/></label></th>\r\n                         <th colSpan={3} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n-                        <th className='tabth'>Service</th>\r\n-                        <th className='tabth'>Order</th>\r\n-                        <th className='tabth'>Currency</th>\r\n-                        <th className='tabth'>Total</th>\r\n-                        <th className='tabth'> PDF</th>\r\n+                        <th colSpan={5} className='tabth'>Service</th>\r\n+                        <th colSpan={3} className='tabth'>Order</th>\r\n+                        <th colSpan={2} className='tabth'>Currency</th>\r\n+                        <th colSpan={3} className='tabth'>Total</th>\r\n+                        <th width=\"58px\" className='tabth'> PDF</th>\r\n \r\n                     </tr>\r\n                 </thead>\r\n             </table>\r\n"
+                },
+                {
+                    "date": 1660984075154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n                         <th colSpan={2} className='tabth'>Currency</th>\r\n-                        <th colSpan={3} className='tabth'>Total</th>\r\n+                        <th colSpan={3} style={{textAlign:'right'}} className='tabth'>Total</th>\r\n                         <th width=\"58px\" className='tabth'> PDF</th>\r\n \r\n                     </tr>\r\n                 </thead>\r\n"
+                },
+                {
+                    "date": 1660984122726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,11 +47,11 @@\n                         <th colSpan={3} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n-                        <th colSpan={2} className='tabth'>Currency</th>\r\n+                        <th colSpan={2} style={{textAlign:'right'}} className='tabth'>Currency</th>\r\n                         <th colSpan={3} style={{textAlign:'right'}} className='tabth'>Total</th>\r\n-                        <th width=\"58px\" className='tabth'> PDF</th>\r\n+                        <th width=\"58px\" style={{textAlign:'right'}} className='tabth'> PDF</th>\r\n \r\n                     </tr>\r\n                 </thead>\r\n             </table>\r\n"
+                },
+                {
+                    "date": 1660984207952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         <div className='btable'>\r\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n-                        <th><label><input type='checkbox' disabled/></label></th>\r\n+                        <th><label><input type='checkbox' id='check' disabled/></label></th>\r\n                         <th colSpan={3} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n"
+                },
+                {
+                    "date": 1660984348897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         <div className='btable'>\r\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n-                        <th><label><input type='checkbox' id='check' disabled/></label></th>\r\n+                        <th><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n                         <th colSpan={3} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n"
+                },
+                {
+                    "date": 1660984483773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n                         <th><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n-                        <th colSpan={3} className='tabth'>Date</th>\r\n+                        <th colSpan={2} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n                         <th colSpan={2} style={{textAlign:'right'}} className='tabth'>Currency</th>\r\n"
+                },
+                {
+                    "date": 1660984488993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n                         <th><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n-                        <th colSpan={2} className='tabth'>Date</th>\r\n+                        <th colSpan={4} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n                         <th colSpan={2} style={{textAlign:'right'}} className='tabth'>Currency</th>\r\n"
+                },
+                {
+                    "date": 1660984496230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n                         <th><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n-                        <th colSpan={4} className='tabth'>Date</th>\r\n+                        <th colSpan={3} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n                         <th colSpan={2} style={{textAlign:'right'}} className='tabth'>Currency</th>\r\n"
+                },
+                {
+                    "date": 1660984502976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         <div className='btable'>\r\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n-                        <th><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n+                        <th colSpan={2}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n                         <th colSpan={3} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n"
+                },
+                {
+                    "date": 1660984509543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         <div className='btable'>\r\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n-                        <th colSpan={2}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n+                        <th colSpan={1}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n                         <th colSpan={3} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n"
+                },
+                {
+                    "date": 1660984515478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         <div className='btable'>\r\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n-                        <th colSpan={1}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n+                        <th colSpan={3}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n                         <th colSpan={3} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n"
+                },
+                {
+                    "date": 1660984610991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n         <div className='btable'>\r\n             <table className='sbtable'>\r\n                 <thead className='tabhead'>\r\n                     <tr>\r\n-                        <th colSpan={3}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n+                        <th colSpan={2}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n                         <th colSpan={3} className='tabth'>Date</th>\r\n                         <th colSpan={4} className='tabth'>Transaction</th>\r\n                         <th colSpan={5} className='tabth'>Service</th>\r\n                         <th colSpan={3} className='tabth'>Order</th>\r\n@@ -53,11 +53,16 @@\n                         <th width=\"58px\" style={{textAlign:'right'}} className='tabth'> PDF</th>\r\n \r\n                     </tr>\r\n                 </thead>\r\n+                <tbody></tbody>\r\n             </table>\r\n         </div>\r\n+        <div className='invoice'>\r\n+\r\n         </div>\r\n+\r\n+        </div>\r\n        \r\n \r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1660984885502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react';\r\n import { Link} from \"react-router-dom\";\r\n+import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n     <div>\r\n         <header>\r\n@@ -57,9 +58,9 @@\n                 <tbody></tbody>\r\n             </table>\r\n         </div>\r\n         <div className='invoice'>\r\n-\r\n+        <img src={invoice}  width=\"300px\" height=\"163spx\"/>\r\n         </div>\r\n \r\n         </div>\r\n        \r\n"
+                },
+                {
+                    "date": 1660985024904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,10 @@\n                 <tbody></tbody>\r\n             </table>\r\n         </div>\r\n         <div className='invoice'>\r\n-        <img src={invoice}  width=\"300px\" height=\"163spx\"/>\r\n+        <img src={invoice}  width=\"300px\" height=\"163px\"/>\r\n+        <h3 style={{marginTop:'24px'}}>No invoices yet...</h3>\r\n         </div>\r\n \r\n         </div>\r\n        \r\n"
+                },
+                {
+                    "date": 1660985132279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,8 +60,13 @@\n         </div>\r\n         <div className='invoice'>\r\n         <img src={invoice}  width=\"300px\" height=\"163px\"/>\r\n         <h3 style={{marginTop:'24px'}}>No invoices yet...</h3>\r\n+        <p style={{marginTop:'8px'}}>\r\n+            Ready to place an order?\r\n+            <br/>\r\n+            Make sure <a>your billing info</a> is upto date.\r\n+        </p>\r\n         </div>\r\n \r\n         </div>\r\n        \r\n"
+                },
+                {
+                    "date": 1660985169624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n         <h3 style={{marginTop:'24px'}}>No invoices yet...</h3>\r\n         <p style={{marginTop:'8px'}}>\r\n             Ready to place an order?\r\n             <br/>\r\n-            Make sure <a>your billing info</a> is upto date.\r\n+            Make sure <a style={{color:'blue'}}>your billing info</a> is upto date.\r\n         </p>\r\n         </div>\r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1660985284784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,10 +63,11 @@\n         <h3 style={{marginTop:'24px'}}>No invoices yet...</h3>\r\n         <p style={{marginTop:'8px'}}>\r\n             Ready to place an order?\r\n             <br/>\r\n-            Make sure <a style={{color:'blue'}}>your billing info</a> is upto date.\r\n+            Make sure <a style={{color:'blue'}} >your billing info</a> is upto date.\r\n         </p>\r\n+        <a className='expf'>Explore Fiverr</a>\r\n         </div>\r\n \r\n         </div>\r\n        \r\n"
+                },
+                {
+                    "date": 1660985780545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n         <h3 style={{marginTop:'24px'}}>No invoices yet...</h3>\r\n         <p style={{marginTop:'8px'}}>\r\n             Ready to place an order?\r\n             <br/>\r\n-            Make sure <a style={{color:'blue'}} >your billing info</a> is upto date.\r\n+            Make sure <a href='#'  style={{color:'blue'}} >your billing info</a> is upto date.\r\n         </p>\r\n         <a className='expf'>Explore Fiverr</a>\r\n         </div>\r\n \r\n"
+                },
+                {
+                    "date": 1660985828440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n function Billing() {\r\n   return (\r\n     <div>\r\n         <header>\r\n+        <h1>Billing</h1>\r\n         <div className=\"bill\">\r\n                         \r\n                         <ul className='biltabs'>\r\n                             <li><a><Link to='#bhist'>Billing History</Link></a></li>\r\n"
+                },
+                {
+                    "date": 1660985855007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function Billing() {\r\n   return (\r\n     <div>\r\n         <header>\r\n-        <h1>Billing</h1>\r\n+        <h1 className='hbill'>Billing</h1>\r\n         <div className=\"bill\">\r\n                         \r\n                         <ul className='biltabs'>\r\n                             <li><a><Link to='#bhist'>Billing History</Link></a></li>\r\n"
+                },
+                {
+                    "date": 1660986445960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Link} from \"react-router-dom\";\r\n import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n-    <div>\r\n+    <div className='p-5'>\r\n         <header>\r\n         <h1 className='hbill'>Billing</h1>\r\n         <div className=\"bill\">\r\n                         \r\n"
+                },
+                {
+                    "date": 1660986467452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Link} from \"react-router-dom\";\r\n import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n-    <div className='p-5'>\r\n+    <div className='bcont p-5'>\r\n         <header>\r\n         <h1 className='hbill'>Billing</h1>\r\n         <div className=\"bill\">\r\n                         \r\n"
+                },
+                {
+                    "date": 1660986762257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Link} from \"react-router-dom\";\r\n import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n-    <div className='bcont p-5'>\r\n+    <div className='bcont'>\r\n         <header>\r\n         <h1 className='hbill'>Billing</h1>\r\n         <div className=\"bill\">\r\n                         \r\n"
+                },
+                {
+                    "date": 1660986831513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Link} from \"react-router-dom\";\r\n import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n-    <div className='bcont'>\r\n+    <div className='billcont'>\r\n         <header>\r\n         <h1 className='hbill'>Billing</h1>\r\n         <div className=\"bill\">\r\n                         \r\n"
+                },
+                {
+                    "date": 1660986903065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Link} from \"react-router-dom\";\r\n import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n-    <div className='billcont'>\r\n+    <div className='billcont p-5'>\r\n         <header>\r\n         <h1 className='hbill'>Billing</h1>\r\n         <div className=\"bill\">\r\n                         \r\n"
+                },
+                {
+                    "date": 1660986965465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import { Link} from \"react-router-dom\";\r\n import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n-    <div className='billcont p-5'>\r\n+    <div className='p-5'>\r\n+    <div className='billcont'>\r\n         <header>\r\n         <h1 className='hbill'>Billing</h1>\r\n         <div className=\"bill\">\r\n                         \r\n@@ -74,8 +75,9 @@\n        \r\n \r\n \r\n         </div>\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1660987126749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n                 <tbody></tbody>\r\n             </table>\r\n         </div>\r\n         <div className='invoice'>\r\n-        <img src={invoice}  width=\"300px\" height=\"163px\"/>\r\n+        <img src={invoice}  width=\"300px\" height=\"163px\" style={{border:'none'}}/>\r\n         <h3 style={{marginTop:'24px'}}>No invoices yet...</h3>\r\n         <p style={{marginTop:'8px'}}>\r\n             Ready to place an order?\r\n             <br/>\r\n"
+                },
+                {
+                    "date": 1660987302327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n                         </ul>\r\n                     </div>\r\n         </header>\r\n         <hr/>\r\n-        <div className='bcontent'>\r\n+        <div className='bcontent' id='bhist'>\r\n         <h4 id='bh'>Billing History</h4>\r\n         <div className='smenu'>\r\n         <div className='smenu-tabs'>\r\n            <select>\r\n"
+                },
+                {
+                    "date": 1660987454208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n     <div className='p-5'>\r\n     <div className='billcont'>\r\n         <header>\r\n-        <h1 className='hbill'>Billing</h1>\r\n+        <h1 className='hbill'><i class=\"fa-solid fa-file-invoice\"></i> &nbsp;Billing&nbsp;<i class=\"fa-solid fa-receipt\"></i></h1>\r\n         <div className=\"bill\">\r\n                         \r\n                         <ul className='biltabs'>\r\n                             <li><a><Link to='#bhist'>Billing History</Link></a></li>\r\n"
+                },
+                {
+                    "date": 1660987485517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\r\n     <div className='p-5'>\r\n     <div className='billcont'>\r\n         <header>\r\n-        <h1 className='hbill'><i class=\"fa-solid fa-file-invoice\"></i> &nbsp;Billing&nbsp;<i class=\"fa-solid fa-receipt\"></i></h1>\r\n+        <h1 className='hbill'><i class=\"fa-solid fa-file-invoice\"></i>&nbsp;Billing&nbsp;<i class=\"fa-solid fa-receipt\"></i></h1>\r\n         <div className=\"bill\">\r\n                         \r\n                         <ul className='biltabs'>\r\n                             <li><a><Link to='#bhist'>Billing History</Link></a></li>\r\n"
+                },
+                {
+                    "date": 1662662955927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,83 +1,13 @@\n import React from 'react';\r\n import { Link} from \"react-router-dom\";\r\n+import './Billing.css';\r\n import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n     <div className='p-5'>\r\n     <div className='billcont'>\r\n-        <header>\r\n-        <h1 className='hbill'><i class=\"fa-solid fa-file-invoice\"></i>&nbsp;Billing&nbsp;<i class=\"fa-solid fa-receipt\"></i></h1>\r\n-        <div className=\"bill\">\r\n-                        \r\n-                        <ul className='biltabs'>\r\n-                            <li><a><Link to='#bhist'>Billing History</Link></a></li>\r\n-                            <li> <a>Biling Info </a> </li>\r\n-                            <li> <a>Balances</a>  </li>\r\n-                            \r\n-                        </ul>\r\n-                    </div>\r\n-        </header>\r\n-        <hr/>\r\n-        <div className='bcontent' id='bhist'>\r\n-        <h4 id='bh'>Billing History</h4>\r\n-        <div className='smenu'>\r\n-        <div className='smenu-tabs'>\r\n-           <select>\r\n-            <option value='Data range'>Data range</option>\r\n-           </select>\r\n-\r\n-           <select>\r\n-            <option value='Transaction'>Transaction</option>\r\n-           </select> \r\n-\r\n-           <select>\r\n-            <option value='Service'>Service</option>\r\n-           </select> \r\n-\r\n-           <select>\r\n-            <option value='Currency'>Currency</option>\r\n-           </select> \r\n-           </div>\r\n-           <input id='sinv' type='text' placeholder=' &#x1F50D; &nbsp; Search by invoice or order number'/>\r\n-           <div>\r\n-            <span id='sres'>Showing 0 results</span>\r\n-        </div>\r\n-        <div className='btable'>\r\n-            <table className='sbtable'>\r\n-                <thead className='tabhead'>\r\n-                    <tr>\r\n-                        <th colSpan={2}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n-                        <th colSpan={3} className='tabth'>Date</th>\r\n-                        <th colSpan={4} className='tabth'>Transaction</th>\r\n-                        <th colSpan={5} className='tabth'>Service</th>\r\n-                        <th colSpan={3} className='tabth'>Order</th>\r\n-                        <th colSpan={2} style={{textAlign:'right'}} className='tabth'>Currency</th>\r\n-                        <th colSpan={3} style={{textAlign:'right'}} className='tabth'>Total</th>\r\n-                        <th width=\"58px\" style={{textAlign:'right'}} className='tabth'> PDF</th>\r\n-\r\n-                    </tr>\r\n-                </thead>\r\n-                <tbody></tbody>\r\n-            </table>\r\n-        </div>\r\n-        <div className='invoice'>\r\n-        <img src={invoice}  width=\"300px\" height=\"163px\" style={{border:'none'}}/>\r\n-        <h3 style={{marginTop:'24px'}}>No invoices yet...</h3>\r\n-        <p style={{marginTop:'8px'}}>\r\n-            Ready to place an order?\r\n-            <br/>\r\n-            Make sure <a href='#'  style={{color:'blue'}} >your billing info</a> is upto date.\r\n-        </p>\r\n-        <a className='expf'>Explore Fiverr</a>\r\n-        </div>\r\n-\r\n-        </div>\r\n-       \r\n-\r\n-\r\n-        </div>\r\n-        </div>\r\n+      \r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662662961368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n function Billing() {\r\n   return (\r\n     <div className='p-5'>\r\n     <div className='billcont'>\r\n-      \r\n+      <div></div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662662980195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,80 @@\n function Billing() {\r\n   return (\r\n     <div className='p-5'>\r\n     <div className='billcont'>\r\n-      <div></div>\r\n+        <header>\r\n+        <h1 className='hbill'><i class=\"fa-solid fa-file-invoice\"></i>&nbsp;Billing&nbsp;<i class=\"fa-solid fa-receipt\"></i></h1>\r\n+        <div className=\"bill\">\r\n+                        \r\n+                        <ul className='biltabs'>\r\n+                            <li><a><Link to='#bhist'>Billing History</Link></a></li>\r\n+                            <li> <a>Biling Info </a> </li>\r\n+                            <li> <a>Balances</a>  </li>\r\n+                            \r\n+                        </ul>\r\n+                    </div>\r\n+        </header>\r\n+        <hr/>\r\n+        <div className='bcontent' id='bhist'>\r\n+        <h4 id='bh'>Billing History</h4>\r\n+        <div className='smenu'>\r\n+        <div className='smenu-tabs'>\r\n+           <select>\r\n+            <option value='Data range'>Data range</option>\r\n+           </select>\r\n+\r\n+           <select>\r\n+            <option value='Transaction'>Transaction</option>\r\n+           </select> \r\n+\r\n+           <select>\r\n+            <option value='Service'>Service</option>\r\n+           </select> \r\n+\r\n+           <select>\r\n+            <option value='Currency'>Currency</option>\r\n+           </select> \r\n+           </div>\r\n+           <input id='sinv' type='text' placeholder=' &#x1F50D; &nbsp; Search by invoice or order number'/>\r\n+           <div>\r\n+            <span id='sres'>Showing 0 results</span>\r\n+        </div>\r\n+        <div className='btable'>\r\n+            <table className='sbtable'>\r\n+                <thead className='tabhead'>\r\n+                    <tr>\r\n+                        <th colSpan={2}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n+                        <th colSpan={3} className='tabth'>Date</th>\r\n+                        <th colSpan={4} className='tabth'>Transaction</th>\r\n+                        <th colSpan={5} className='tabth'>Service</th>\r\n+                        <th colSpan={3} className='tabth'>Order</th>\r\n+                        <th colSpan={2} style={{textAlign:'right'}} className='tabth'>Currency</th>\r\n+                        <th colSpan={3} style={{textAlign:'right'}} className='tabth'>Total</th>\r\n+                        <th width=\"58px\" style={{textAlign:'right'}} className='tabth'> PDF</th>\r\n+\r\n+                    </tr>\r\n+                </thead>\r\n+                <tbody></tbody>\r\n+            </table>\r\n+        </div>\r\n+        <div className='invoice'>\r\n+        <img src={invoice}  width=\"300px\" height=\"163px\" style={{border:'none'}}/>\r\n+        <h3 style={{marginTop:'24px'}}>No invoices yet...</h3>\r\n+        <p style={{marginTop:'8px'}}>\r\n+            Ready to place an order?\r\n+            <br/>\r\n+            Make sure <a href='#'  style={{color:'blue'}} >your billing info</a> is upto date.\r\n+        </p>\r\n+        <a className='expf'>Explore Fiverr</a>\r\n+        </div>\r\n+\r\n+        </div>\r\n+       \r\n+\r\n+\r\n+        </div>\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662662993943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,20 +5,9 @@\n function Billing() {\r\n   return (\r\n     <div className='p-5'>\r\n     <div className='billcont'>\r\n-        <header>\r\n-        <h1 className='hbill'><i class=\"fa-solid fa-file-invoice\"></i>&nbsp;Billing&nbsp;<i class=\"fa-solid fa-receipt\"></i></h1>\r\n-        <div className=\"bill\">\r\n-                        \r\n-                        <ul className='biltabs'>\r\n-                            <li><a><Link to='#bhist'>Billing History</Link></a></li>\r\n-                            <li> <a>Biling Info </a> </li>\r\n-                            <li> <a>Balances</a>  </li>\r\n-                            \r\n-                        </ul>\r\n-                    </div>\r\n-        </header>\r\n+      \r\n         <hr/>\r\n         <div className='bcontent' id='bhist'>\r\n         <h4 id='bh'>Billing History</h4>\r\n         <div className='smenu'>\r\n"
+                },
+                {
+                    "date": 1662663015115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,63 +6,11 @@\n   return (\r\n     <div className='p-5'>\r\n     <div className='billcont'>\r\n       \r\n-        <hr/>\r\n+        \r\n         <div className='bcontent' id='bhist'>\r\n         <h4 id='bh'>Billing History</h4>\r\n-        <div className='smenu'>\r\n-        <div className='smenu-tabs'>\r\n-           <select>\r\n-            <option value='Data range'>Data range</option>\r\n-           </select>\r\n-\r\n-           <select>\r\n-            <option value='Transaction'>Transaction</option>\r\n-           </select> \r\n-\r\n-           <select>\r\n-            <option value='Service'>Service</option>\r\n-           </select> \r\n-\r\n-           <select>\r\n-            <option value='Currency'>Currency</option>\r\n-           </select> \r\n-           </div>\r\n-           <input id='sinv' type='text' placeholder=' &#x1F50D; &nbsp; Search by invoice or order number'/>\r\n-           <div>\r\n-            <span id='sres'>Showing 0 results</span>\r\n-        </div>\r\n-        <div className='btable'>\r\n-            <table className='sbtable'>\r\n-                <thead className='tabhead'>\r\n-                    <tr>\r\n-                        <th colSpan={2}><label><span><input type='checkbox' id='check' disabled/></span></label></th>\r\n-                        <th colSpan={3} className='tabth'>Date</th>\r\n-                        <th colSpan={4} className='tabth'>Transaction</th>\r\n-                        <th colSpan={5} className='tabth'>Service</th>\r\n-                        <th colSpan={3} className='tabth'>Order</th>\r\n-                        <th colSpan={2} style={{textAlign:'right'}} className='tabth'>Currency</th>\r\n-                        <th colSpan={3} style={{textAlign:'right'}} className='tabth'>Total</th>\r\n-                        <th width=\"58px\" style={{textAlign:'right'}} className='tabth'> PDF</th>\r\n-\r\n-                    </tr>\r\n-                </thead>\r\n-                <tbody></tbody>\r\n-            </table>\r\n-        </div>\r\n-        <div className='invoice'>\r\n-        <img src={invoice}  width=\"300px\" height=\"163px\" style={{border:'none'}}/>\r\n-        <h3 style={{marginTop:'24px'}}>No invoices yet...</h3>\r\n-        <p style={{marginTop:'8px'}}>\r\n-            Ready to place an order?\r\n-            <br/>\r\n-            Make sure <a href='#'  style={{color:'blue'}} >your billing info</a> is upto date.\r\n-        </p>\r\n-        <a className='expf'>Explore Fiverr</a>\r\n-        </div>\r\n-\r\n-        </div>\r\n        \r\n \r\n \r\n         </div>\r\n"
+                },
+                {
+                    "date": 1662663023370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,14 @@\n     <div className='p-5'>\r\n     <div className='billcont'>\r\n       \r\n         \r\n-        <div className='bcontent' id='bhist'>\r\n-        <h4 id='bh'>Billing History</h4>\r\n        \r\n+       \r\n \r\n \r\n+        \r\n         </div>\r\n-        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662663031044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,12 @@\n import './Billing.css';\r\n import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n-    <div className='p-5'>\r\n+    <div className='p-4'>\r\n     <div className='billcont'>\r\n       \r\n-        \r\n-       \r\n-       \r\n \r\n-\r\n         \r\n         </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1662663052499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,13 @@\n import React from 'react';\r\n-import { Link} from \"react-router-dom\";\r\n+\r\n import './Billing.css';\r\n import invoice from '../invoice.png';\r\n function Billing() {\r\n   return (\r\n     <div className='p-4'>\r\n     <div className='billcont'>\r\n       \r\n-\r\n-        \r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662663084216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react';\r\n \r\n import './Billing.css';\r\n-import invoice from '../invoice.png';\r\n+import axios from \"axios\";\r\n+\r\n function Billing() {\r\n   return (\r\n     <div className='p-4'>\r\n     <div className='billcont'>\r\n"
+                },
+                {
+                    "date": 1662663126546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import './Billing.css';\r\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n+    \r\n   return (\r\n     <div className='p-4'>\r\n     <div className='billcont'>\r\n       \r\n"
+                },
+                {
+                    "date": 1662663148936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,12 @@\n import './Billing.css';\r\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n-    \r\n+    useEffect(() => {\r\n+        getOrder();\r\n+      \r\n+      }, []);\r\n   return (\r\n     <div className='p-4'>\r\n     <div className='billcont'>\r\n       \r\n"
+                },
+                {
+                    "date": 1662663161777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react';\r\n+import {React ,useState,useEffect} from 'react';\r\n \r\n import './Billing.css';\r\n import axios from \"axios\";\r\n \r\n"
+                },
+                {
+                    "date": 1662663188231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,28 @@\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n+      const getOrder = async () => {\r\n+       \r\n+     \r\n+        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n+         \r\n+\r\n+          \r\n+        console.log(response.data);\r\n+      \r\n+        if(buyerId[0]===response.data[0].buyerId)\r\n+        {\r\n+            setSUserData(response.data);\r\n+        }\r\n+        else{\r\n+            alert(\"Buyer doesn't match\")\r\n+        }\r\n+\r\n+           \r\n+        });\r\n+    }\r\n   return (\r\n     <div className='p-4'>\r\n     <div className='billcont'>\r\n       \r\n"
+                },
+                {
+                    "date": 1662663197604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,17 +14,9 @@\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n \r\n           \r\n-        console.log(response.data);\r\n-      \r\n-        if(buyerId[0]===response.data[0].buyerId)\r\n-        {\r\n-            setSUserData(response.data);\r\n-        }\r\n-        else{\r\n-            alert(\"Buyer doesn't match\")\r\n-        }\r\n+       \r\n \r\n            \r\n         });\r\n     }\r\n"
+                },
+                {
+                    "date": 1662663203833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,8 @@\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n \r\n-          \r\n-       \r\n-\r\n            \r\n         });\r\n     }\r\n   return (\r\n"
+                },
+                {
+                    "date": 1662663447212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import './Billing.css';\r\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n+    c\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663456403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import './Billing.css';\r\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n-    c\r\n+    const order=\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663806512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import './Billing.css';\r\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n-    const order=\r\n+    const order=JSON.parse(localStorage.getItem(\"order\"));\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663821705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import './Billing.css';\r\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n-    const order=JSON.parse(localStorage.getItem(\"order\"));\r\n+    const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663839137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n+    \r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663845956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    \r\n+    const \r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663851843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    const \r\n+    const orderid=\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663862735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    const orderid=\r\n+    const orderid=order.m\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663869555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    const orderid=order.m\r\n+    const orderid=order.map(x=>)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663879228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    const orderid=order.map(x=>)\r\n+    const orderid=order.map(x=>x.orders)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663885516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n     const orderid=order.map(x=>x.orders)\r\n+    const\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663891135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n     const orderid=order.map(x=>x.orders)\r\n-    const\r\n+    console\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663924344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    const orderid=order.map(x=>x.orders)\r\n-    console\r\n+    const orderid=order.map(x=>x.order)\r\n+    console.log(orderid)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663930488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    const orderid=order.map(x=>x.order)\r\n+    const orderid=order.map(x=>x.title)\r\n     console.log(orderid)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n"
+                },
+                {
+                    "date": 1662663942639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    const orderid=order.map(x=>x.title)\r\n+    \r\n     console.log(orderid)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n"
+                },
+                {
+                    "date": 1662663953364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n     \r\n-    console.log(orderid)\r\n+    console.log(order)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662663963805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n     \r\n-    console.log(order)\r\n+    console.log(order.title)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662664016759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n     \r\n-    console.log(order.title)\r\n+    console.log(order.)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662664029581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    \r\n-    console.log(order.)\r\n+    const orderid=order.map(x=>x._)\r\n+    console.log(orderid)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662664086048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n import './Billing.css';\r\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n-    const order=JSON.parse(localStorage.getItem(\"updata\"));\r\n-    const orderid=order.map(x=>x._)\r\n+    const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n+    const orderid=order.map(x=>x._id)\r\n     console.log(orderid)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n"
+                },
+                {
+                    "date": 1662664091542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n import axios from \"axios\";\r\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n-    const orderid=order.map(x=>x._id)\r\n-    console.log(orderid)\r\n+    //const orderid=order.map(x=>x._id)\r\n+    console.log(order)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662664129843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \r\n function Billing() {\r\n     const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n     //const orderid=order.map(x=>x._id)\r\n-    console.log(order)\r\n+    console.log(order._id)\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662664145216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       }, []);\r\n       const getOrder = async () => {\r\n        \r\n      \r\n-        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n+        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.).then((response)=>{\r\n          \r\n \r\n            \r\n         });\r\n"
+                },
+                {
+                    "date": 1662664214634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,17 +13,18 @@\n       }, []);\r\n       const getOrder = async () => {\r\n        \r\n      \r\n-        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.).then((response)=>{\r\n+        await axios.get(\"http://localhost:9999/retrieveOrder/\"+order._id).then((response)=>{\r\n          \r\n \r\n            \r\n         });\r\n     }\r\n   return (\r\n     <div className='p-4'>\r\n     <div className='billcont'>\r\n+    \r\n       \r\n         </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1662664220912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     }\r\n   return (\r\n     <div className='p-4'>\r\n     <div className='billcont'>\r\n-    <h1\r\n+    <h1></h1>\r\n       \r\n         </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1662664278834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n        \r\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrder/\"+order._id).then((response)=>{\r\n          console.log(response.data);\r\n-         local\r\n+         localStorage\r\n \r\n            \r\n         });\r\n     }\r\n"
+                }
+            ],
+            "date": 1660975783510,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction Billing() {\r\n  return (\r\n    <div><h1>Billing</h1></div>\r\n  )\r\n}\r\n\r\nexport default Billing;"
+        }
+    ]
+}

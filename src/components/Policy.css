@@ -1,0 +1,23 @@
+#pcont{
+    text-align: center;
+    background-color: burlywood;
+    letter-spacing: 3px;
+    border:5px solid black;
+    padding: 10px;
+   
+}
+#pcont h1{
+    -webkit-text-stroke-color: brown;
+    -webkit-text-stroke-width:2px;
+    color:white;
+    font-family: cursive;
+    font-weight: bold;
+}
+#pcont h3{
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: cursive;
+}
+#pcont p{
+    font-weight: 400;
+}

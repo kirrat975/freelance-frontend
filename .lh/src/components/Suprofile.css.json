@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/components/Suprofile.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1662452467360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662452506055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     position: relative;\r\n     left:25%;\r\n     top:5%;\r\n }\r\n-.bcard{\r\n+.scard{\r\n     border: 5px solid black;\r\n     padding: 10px;\r\n     margin: 18px;\r\n     text-align:center;\r\n"
+                },
+                {
+                    "date": 1662452514263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     transition:transform ease 0.5s;\r\n     background-image:linear-gradient(109.6deg, rgb(0, 204, 130) 11.2%, rgb(58, 181, 46) 91.7%);\r\n \r\n }\r\n-#buid{\r\n+#suid{\r\n     text-align: center;\r\n     position: relative;\r\n     right: 25%;\r\n     -webkit-text-stroke-color: blue;\r\n@@ -25,9 +25,9 @@\n     -webkit-text-stroke-width:1px;\r\n     text-transform: uppercase;\r\n \r\n }\r\n-#bname{\r\n+#sname{\r\n     font-size: 36px;\r\n     text-transform: uppercase;\r\n     letter-spacing: 3px;\r\n     font-weight: bold;\r\n"
+                },
+                {
+                    "date": 1662452529834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,24 +38,24 @@\n     border: 3px solid black;\r\n     margin-top: 5px;\r\n     padding: 5px;\r\n }\r\n-.bcard th{\r\n+.scard th{\r\n     width:30%;\r\n     border: 1px solid black;\r\n     color:midnightblues;\r\n     letter-spacing: 2px;\r\n     padding: 5px;\r\n     text-transform: capitalize;\r\n     font-size: 18px;\r\n }\r\n-.bcard tr{\r\n+.scard tr{\r\n     width:30%;\r\n     border: 1px solid black;\r\n     padding: 5px;\r\n     \r\n }\r\n-.bcard td{\r\n+.scard td{\r\n     text-transform: lowercase;\r\n     font-family: cursive;\r\n     font-weight: 400;\r\n     width:30%;\r\n"
+                },
+                {
+                    "date": 1662452773847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     padding: 10px;\r\n     margin: 18px;\r\n     text-align:center;\r\n     border-radius: 4px;\r\n-    box-shadow: 5px 5px 5px 5px seagreen;\r\n+    box-shadow: 5px 5px 5px 5px lawngreen;\r\n    \r\n     transition:transform ease 0.5s;\r\n     background-image:linear-gradient(109.6deg, rgb(0, 204, 130) 11.2%, rgb(58, 181, 46) 91.7%);\r\n \r\n"
+                },
+                {
+                    "date": 1662452861753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     border-radius: 4px;\r\n     box-shadow: 5px 5px 5px 5px lawngreen;\r\n    \r\n     transition:transform ease 0.5s;\r\n-    background-image:linear-gradient(109.6deg, rgb(0, 204, 130) 11.2%, rgb(58, 181, 46) 91.7%);\r\n+    background-image: linear-gradient(109.6deg, rgba(98, 210, 141, 0.88) 11.2%, rgba(234, 245, 45, 0.79) 88%);\r\n \r\n }\r\n #suid{\r\n     text-align: center;\r\n"
+                },
+                {
+                    "date": 1662452896666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     padding: 10px;\r\n     margin: 18px;\r\n     text-align:center;\r\n     border-radius: 4px;\r\n-    box-shadow: 5px 5px 5px 5px lawngreen;\r\n+    box-shadow: 5px 5px 5px 5px green;\r\n    \r\n     transition:transform ease 0.5s;\r\n     background-image: linear-gradient(109.6deg, rgba(98, 210, 141, 0.88) 11.2%, rgba(234, 245, 45, 0.79) 88%);\r\n \r\n"
+                },
+                {
+                    "date": 1662452914313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n #suid{\r\n     text-align: center;\r\n     position: relative;\r\n     right: 25%;\r\n-    -webkit-text-stroke-color: blue;\r\n+    -webkit-text-stroke-color: royalblue;\r\n     letter-spacing: 20px;\r\n     font-size: 50px;\r\n     -webkit-text-stroke-width:1px;\r\n     text-transform: uppercase;\r\n"
+                }
+            ],
+            "date": 1662452467360,
+            "name": "Commit-0",
+            "content": ".bprof{\r\n    position: relative;\r\n    left:25%;\r\n    top:5%;\r\n}\r\n.bcard{\r\n    border: 5px solid black;\r\n    padding: 10px;\r\n    margin: 18px;\r\n    text-align:center;\r\n    border-radius: 4px;\r\n    box-shadow: 5px 5px 5px 5px seagreen;\r\n   \r\n    transition:transform ease 0.5s;\r\n    background-image:linear-gradient(109.6deg, rgb(0, 204, 130) 11.2%, rgb(58, 181, 46) 91.7%);\r\n\r\n}\r\n#buid{\r\n    text-align: center;\r\n    position: relative;\r\n    right: 25%;\r\n    -webkit-text-stroke-color: blue;\r\n    letter-spacing: 20px;\r\n    font-size: 50px;\r\n    -webkit-text-stroke-width:1px;\r\n    text-transform: uppercase;\r\n\r\n}\r\n#bname{\r\n    font-size: 36px;\r\n    text-transform: uppercase;\r\n    letter-spacing: 3px;\r\n    font-weight: bold;\r\n    -webkit-text-stroke-color: white;\r\n    -webkit-text-stroke-width:1px;\r\n}\r\ntable{\r\n    border: 3px solid black;\r\n    margin-top: 5px;\r\n    padding: 5px;\r\n}\r\n.bcard th{\r\n    width:30%;\r\n    border: 1px solid black;\r\n    color:midnightblues;\r\n    letter-spacing: 2px;\r\n    padding: 5px;\r\n    text-transform: capitalize;\r\n    font-size: 18px;\r\n}\r\n.bcard tr{\r\n    width:30%;\r\n    border: 1px solid black;\r\n    padding: 5px;\r\n    \r\n}\r\n.bcard td{\r\n    text-transform: lowercase;\r\n    font-family: cursive;\r\n    font-weight: 400;\r\n    width:30%;\r\n    letter-spacing: 3px;\r\n    padding: 5px;\r\n    color:black;\r\n    border: 1px solid black;\r\n    font-size: 16px;\r\n\r\n    \r\n   \r\n    \r\n}"
+        }
+    ]
+}

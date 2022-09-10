@@ -1,0 +1,106 @@
+.billcont{
+    border: 20px solid black;
+    box-sizing: border-box;
+    border-radius: 60px;
+    border-left-color:lightgreen;
+    border-right-color:lightgreen;
+    background-color: mintcream;
+    margin-top: 30px;
+
+}
+.billcard{
+  border: 5px solid black;
+  padding: 20px;
+  margin: 18px;
+  text-align:center;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px 5px seagreen;
+ 
+  transition:transform ease 0.5s;
+  background-image:linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  position: relative;
+  left:25%;
+}
+#billname{
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width:1px;
+}
+.billtab{
+  border:5px solid black;
+  margin-left: 80px;
+  width:400px;
+}
+.billtabi{
+  border:5px solid black;
+  margin-left: 80px;
+  width:400px;
+  margin-top: 5px;
+}
+.billcard tr td{
+  border: 3px solid black;
+  padding:10px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+ 
+
+    
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .billcont{
+    border: 5px solid black;
+    border-radius: 0px;
+    width:350px;
+    position: relative;
+    left:18%;
+    margin-top: 10px;
+
+  }
+  .billcard{
+    width:300px !important;
+   left:1%;
+  }
+  .billtab{
+    margin-left: 0px;
+    position: relative;
+  }
+  .billcard tr td{
+    padding: 5px;
+  }
+ 
+  
+   
+    
+  }
+  
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .billcont{
+      border: 5px solid black;
+      border-radius: 0px;
+      width:350px;
+      position: relative;
+      left:5%;
+      margin-top: 10px;
+  
+    }
+    .billcard{
+      width:300px !important;
+     left:1%;
+    }
+    .billtab{
+      margin-left: 0px;
+      position: relative;
+    }
+    .billcard tr td{
+      padding: 5px;
+    }
+   
+    
+  }

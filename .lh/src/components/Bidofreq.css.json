@@ -1,0 +1,110 @@
+{
+    "sourceFile": "src/components/Bidofreq.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1662055087469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662055256606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n .modform{\r\n     border:2px solid black;\r\n     padding: 10px;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n     \r\n     }\r\n     \r\n     .modinp{\r\n"
+                },
+                {
+                    "date": 1662055273609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \r\n     }\r\n     \r\n     .modinp{\r\n-    width:300px;\r\n+    width:400px;\r\n     text-align: center;\r\n     padding: 3px;\r\n     position: relative;\r\n     left:20%;\r\n"
+                },
+                {
+                    "date": 1662055283497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \r\n     }\r\n     \r\n     .modinp{\r\n-    width:400px;\r\n+    width:600px;\r\n     text-align: center;\r\n     padding: 3px;\r\n     position: relative;\r\n     left:20%;\r\n"
+                },
+                {
+                    "date": 1662055291606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \r\n     }\r\n     \r\n     .modinp{\r\n-    width:600px;\r\n+    width:700px;\r\n     text-align: center;\r\n     padding: 3px;\r\n     position: relative;\r\n     left:20%;\r\n"
+                },
+                {
+                    "date": 1662055298141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     width:700px;\r\n     text-align: center;\r\n     padding: 3px;\r\n     position: relative;\r\n-    left:20%;\r\n+    left:30%;\r\n     margin-top: 20px;\r\n     }\r\n     #modtexta{\r\n         width:300px;\r\n"
+                },
+                {
+                    "date": 1662055304315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     width:700px;\r\n     text-align: center;\r\n     padding: 3px;\r\n     position: relative;\r\n-    left:30%;\r\n+    left:24%;\r\n     margin-top: 20px;\r\n     }\r\n     #modtexta{\r\n         width:300px;\r\n"
+                },
+                {
+                    "date": 1662055314776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     left:24%;\r\n     margin-top: 20px;\r\n     }\r\n     #modtexta{\r\n-        width:300px;\r\n+        width:400px;\r\n         height: 100px;\r\n         position: relative;\r\n         left:20%;\r\n         text-align: center;\r\n"
+                },
+                {
+                    "date": 1662055320199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     left:24%;\r\n     margin-top: 20px;\r\n     }\r\n     #modtexta{\r\n-        width:400px;\r\n+        width:500px;\r\n         height: 100px;\r\n         position: relative;\r\n         left:20%;\r\n         text-align: center;\r\n"
+                },
+                {
+                    "date": 1662055329468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,12 +14,12 @@\n     left:24%;\r\n     margin-top: 20px;\r\n     }\r\n     #modtexta{\r\n-        width:500px;\r\n+        width:600px;\r\n         height: 100px;\r\n         position: relative;\r\n-        left:20%;\r\n+        left:24%;\r\n         text-align: center;\r\n     }\r\n     #modsel{\r\n         width:200px;\r\n"
+                },
+                {
+                    "date": 1662055341296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     left:24%;\r\n     margin-top: 20px;\r\n     }\r\n     #modtexta{\r\n-        width:600px;\r\n+        width:700px;\r\n         height: 100px;\r\n         position: relative;\r\n         left:24%;\r\n         text-align: center;\r\n"
+                },
+                {
+                    "date": 1662055350658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         left:24%;\r\n         text-align: center;\r\n     }\r\n     #modsel{\r\n-        width:200px;\r\n+        width:300px;\r\n         padding: 2px;\r\n         text-align: center;\r\n         position: relative;\r\n         left:30%;\r\n"
+                },
+                {
+                    "date": 1662055356643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n         width:300px;\r\n         padding: 2px;\r\n         text-align: center;\r\n         position: relative;\r\n-        left:30%;\r\n+        left:50%;\r\n     }\r\n     #modsub{\r\n         width:200px;\r\n         padding: 2px;\r\n"
+                },
+                {
+                    "date": 1662055372068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n         width:300px;\r\n         padding: 2px;\r\n         text-align: center;\r\n         position: relative;\r\n-        left:50%;\r\n+        left:40%;\r\n     }\r\n     #modsub{\r\n         width:200px;\r\n         padding: 2px;\r\n@@ -39,7 +39,7 @@\n     #modcan{\r\n         padding: 5px;\r\n         position: relative;\r\n         right: 35%;\r\n-        width:100px;\r\n+        width:200px;\r\n         background-color: lightblue;\r\n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662055380438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,7 +39,7 @@\n     #modcan{\r\n         padding: 5px;\r\n         position: relative;\r\n         right: 35%;\r\n-        width:200px;\r\n+        width:300px;\r\n         background-color: lightblue;\r\n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662055394965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,18 +28,12 @@\n         position: relative;\r\n         left:40%;\r\n     }\r\n     #modsub{\r\n-        width:200px;\r\n+        width:300px;\r\n         padding: 2px;\r\n         text-align: center;\r\n         position: relative;\r\n         left:30%;\r\n         background-color:#1dbf73;\r\n     }\r\n-    #modcan{\r\n-        padding: 5px;\r\n-        position: relative;\r\n-        right: 35%;\r\n-        width:300px;\r\n-        background-color: lightblue;\r\n\\ No newline at end of file\n-    }\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662055404939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n         position: relative;\r\n         left:40%;\r\n     }\r\n     #modsub{\r\n-        width:300px;\r\n-        padding: 2px;\r\n+        width:500px;\r\n+        padding: 5px;\r\n         text-align: center;\r\n         position: relative;\r\n         left:30%;\r\n         background-color:#1dbf73;\r\n"
+                },
+                {
+                    "date": 1662055414213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n         width:500px;\r\n         padding: 5px;\r\n         text-align: center;\r\n         position: relative;\r\n-        left:30%;\r\n+        left:35%;\r\n         background-color:#1dbf73;\r\n     }\r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662055426869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n         width:500px;\r\n         padding: 5px;\r\n         text-align: center;\r\n         position: relative;\r\n-        left:35%;\r\n+        left:33%;\r\n         background-color:#1dbf73;\r\n     }\r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662055432632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,8 @@\n         width:500px;\r\n         padding: 5px;\r\n         text-align: center;\r\n         position: relative;\r\n-        left:33%;\r\n+        left:32%;\r\n         background-color:#1dbf73;\r\n     }\r\n     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662055442372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n .modform{\r\n     border:2px solid black;\r\n-    padding: 10px;\r\n+    padding: 20px;\r\n     align-items: center;\r\n     justify-content: center;\r\n     \r\n     }\r\n"
+                },
+                {
+                    "date": 1662055454632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     border:2px solid black;\r\n     padding: 20px;\r\n     align-items: center;\r\n     justify-content: center;\r\n+    background-color: lightgreen;\r\n     \r\n     }\r\n     \r\n     .modinp{\r\n"
+                },
+                {
+                    "date": 1662055468956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     border:2px solid black;\r\n     padding: 20px;\r\n     align-items: center;\r\n     justify-content: center;\r\n+    font-weight: bold;\r\n     background-color: lightgreen;\r\n     \r\n     }\r\n     \r\n"
+                },
+                {
+                    "date": 1662055492262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     border:2px solid black;\r\n     padding: 20px;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    font-weight: bold;\r\n+   \r\n     background-color: lightgreen;\r\n     \r\n     }\r\n     \r\n@@ -14,27 +14,31 @@\n     padding: 3px;\r\n     position: relative;\r\n     left:24%;\r\n     margin-top: 20px;\r\n+    font-weight: bold;\r\n     }\r\n     #modtexta{\r\n         width:700px;\r\n         height: 100px;\r\n         position: relative;\r\n         left:24%;\r\n+        font-weight: bold;\r\n         text-align: center;\r\n     }\r\n     #modsel{\r\n         width:300px;\r\n         padding: 2px;\r\n         text-align: center;\r\n         position: relative;\r\n+        font-weight: bold;\r\n         left:40%;\r\n     }\r\n     #modsub{\r\n         width:500px;\r\n         padding: 5px;\r\n         text-align: center;\r\n+        font-weight: bold;\r\n         position: relative;\r\n         left:32%;\r\n         background-color:#1dbf73;\r\n     }\r\n"
+                }
+            ],
+            "date": 1662055087469,
+            "name": "Commit-0",
+            "content": ".modform{\r\n    border:2px solid black;\r\n    padding: 10px;\r\n    \r\n    }\r\n    \r\n    .modinp{\r\n    width:300px;\r\n    text-align: center;\r\n    padding: 3px;\r\n    position: relative;\r\n    left:20%;\r\n    margin-top: 20px;\r\n    }\r\n    #modtexta{\r\n        width:300px;\r\n        height: 100px;\r\n        position: relative;\r\n        left:20%;\r\n        text-align: center;\r\n    }\r\n    #modsel{\r\n        width:200px;\r\n        padding: 2px;\r\n        text-align: center;\r\n        position: relative;\r\n        left:30%;\r\n    }\r\n    #modsub{\r\n        width:200px;\r\n        padding: 2px;\r\n        text-align: center;\r\n        position: relative;\r\n        left:30%;\r\n        background-color:#1dbf73;\r\n    }\r\n    #modcan{\r\n        padding: 5px;\r\n        position: relative;\r\n        right: 35%;\r\n        width:100px;\r\n        background-color: lightblue;\r\n    }"
+        }
+    ]
+}

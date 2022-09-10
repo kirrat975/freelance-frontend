@@ -1,0 +1,210 @@
+{
+    "sourceFile": "src/components/Home.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 48,
+            "patches": [
+                {
+                    "date": 1660316342326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660316406790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n   <button onClick={()=>navigate('/sjoin')}>Join as Seller</button>\r\n   <button onClick={()=>navigate('/signin')}>Sign In</button>\r\n   <button onClick={()=>navigate('/policy')}>Private Policy</button>\r\n-  <button onClick={()=>navigate('/ftos')}>Private Policy</button>\r\n+  <button onClick={()=>navigate('/ftos')}>Terms Of Services</button>\r\n \r\n \r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1660975844047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,40 @@\n import React from 'react';\r\n import 'bootstrap/dist/css/bootstrap.min.css';\r\n import { Link,useNavigate} from \"react-router-dom\";\r\n+import logo from '../logo.png';\r\n function Home() {\r\n   const navigate=useNavigate();\r\n   return (\r\n-    <div className='d-md-block'>\r\n-    <h1>Freelance Marketplace</h1>\r\n-    <Link to=\"/\"></Link>\r\n+    <div className='row-md-6 align-items-center'>\r\n+    <div className='hohead'>\r\n+    <header>\r\n+      <nav className=\"navbar navbar-light bg-light\">\r\n+      <span id='flogo'>\r\n+      \r\n+  <a className=\"navbar-brand\" href=\"#\">\r\n+    <img src={logo}  className=\"d-inline-block align-center\" id='logo' />\r\n \r\n-   <button onClick={()=>navigate('/bjoin')}>Join as Buyer</button>\r\n+  </a>\r\n+  </span>\r\n+  \r\n+  <Link to=\"/\"></Link>\r\n+  <ul>\r\n \r\n-  <button onClick={()=>navigate('/sjoin')}>Join as Seller</button>\r\n-  <button onClick={()=>navigate('/signin')}>Sign In</button>\r\n-  <button onClick={()=>navigate('/policy')}>Private Policy</button>\r\n-  <button onClick={()=>navigate('/ftos')}>Terms Of Services</button>\r\n+ <li><button   onClick={()=>navigate('/bjoin')}>Join as Buyer</button></li>\r\n+<li><button    onClick={()=>navigate('/sjoin')}>Join as Seller</button></li>\r\n+<li><button    onClick={()=>navigate('/signin')}>Sign In</button></li>\r\n+<li><button    onClick={()=>navigate('/policy')}>Private Policy</button></li>\r\n+<li><button    onClick={()=>navigate('/ftos')}>Terms Of Services</button></li>\r\n+<li><button    onClick={()=>navigate('/set')}>Settings</button></li>\r\n+<li><button    onClick={()=>navigate('/bill')}>Billing</button></li>\r\n+</ul>\r\n+ \r\n+</nav>\r\n+</header>\r\n+    </div>\r\n+   \r\n+  \r\n \r\n \r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1660994275528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-    <img src={logo}  className=\"d-inline-block align-center\" id='logo' />\r\n+    <img src={logo}  className=\"d-inline align-center\" id='logo' />\r\n \r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660994285792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-    <img src={logo}  className=\"d-inline align-center\" id='logo' />\r\n+    <img src={logo}  className=\" align-center\" id='logo' />\r\n \r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660994315806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-    <img src={logo}  className=\" align-center\" id='logo' />\r\n+    <img src={logo} className=\"img img fluid\" id='logo' />\r\n \r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660994791073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-    <img src={logo} className=\"img img fluid\" id='logo' />\r\n+  <i class=\"fa-solid fa-circle-f\"></i>\r\n+  <i class=\"fa-solid fa-circle-m\"></i>\r\n \r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660994885955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-  <i class=\"fa-solid fa-circle-f\"></i>\r\n-  <i class=\"fa-solid fa-circle-m\"></i>\r\n+  <p><i class=\"fa-solid fa-circle-f\"></i>\r\n+  <i class=\"fa-solid fa-circle-m\"></i></p>\r\n \r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660994915034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,9 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-  <p><i class=\"fa-solid fa-circle-f\"></i>\r\n-  <i class=\"fa-solid fa-circle-m\"></i></p>\r\n+  <i class=\"fa-solid fa-square-f\"></i>\r\n \r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660994984328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-  <i class=\"fa-solid fa-square-f\"></i>\r\n+  <i class=\"fa-duotone fa-square-f\"></i>\r\n \r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660995000834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n   <i class=\"fa-duotone fa-square-f\"></i>\r\n+  <i class=\"fa-duotone fa-square-m\"></i>\r\n \r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660995021698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,13 @@\n     <header>\r\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n-  <a className=\"navbar-brand\" href=\"#\">\r\n+  \r\n   <i class=\"fa-duotone fa-square-f\"></i>\r\n   <i class=\"fa-duotone fa-square-m\"></i>\r\n \r\n-  </a>\r\n+  \r\n   </span>\r\n   \r\n   <Link to=\"/\"></Link>\r\n   <ul>\r\n"
+                },
+                {
+                    "date": 1660995038573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,13 @@\n     <header>\r\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n-  \r\n+  <a className=\"navbar-brand\" href=\"#\">\r\n   <i class=\"fa-duotone fa-square-f\"></i>\r\n   <i class=\"fa-duotone fa-square-m\"></i>\r\n \r\n-  \r\n+  </a>\r\n   </span>\r\n   \r\n   <Link to=\"/\"></Link>\r\n   <ul>\r\n"
+                },
+                {
+                    "date": 1660995075822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,10 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-  <i class=\"fa-duotone fa-square-f\"></i>\r\n-  <i class=\"fa-duotone fa-square-m\"></i>\r\n-\r\n+  \r\n+    <h1>Freelance Marketplace</h1>\r\n   </a>\r\n   </span>\r\n   \r\n   <Link to=\"/\"></Link>\r\n"
+                },
+                {
+                    "date": 1660995351182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n   \r\n-    <h1>Freelance Marketplace</h1>\r\n+    <h1><i class=\"fa-duotone fa-square-f\"></i>Freelance Marketplace</h1>\r\n   </a>\r\n   </span>\r\n   \r\n   <Link to=\"/\"></Link>\r\n"
+                },
+                {
+                    "date": 1660995358442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n   \r\n-    <h1><i class=\"fa-duotone fa-square-f\"></i>Freelance Marketplace</h1>\r\n+    <h1>Freelance Marketplace</h1>\r\n   </a>\r\n   </span>\r\n   \r\n   <Link to=\"/\"></Link>\r\n"
+                },
+                {
+                    "date": 1660995378576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n   \r\n-    <h1>Freelance Marketplace</h1>\r\n+    <h1><i class=\"fa-duotone fa-f\"></i>Freelance Marketplace</h1>\r\n   </a>\r\n   </span>\r\n   \r\n   <Link to=\"/\"></Link>\r\n"
+                },
+                {
+                    "date": 1660995416326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n   \r\n-    <h1><i class=\"fa-duotone fa-f\"></i>Freelance Marketplace</h1>\r\n+    <h1>Freelance Marketplace</h1>\r\n   </a>\r\n   </span>\r\n   \r\n   <Link to=\"/\"></Link>\r\n"
+                },
+                {
+                    "date": 1660995493624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-  \r\n+    <img src={logo}/>\r\n     <h1>Freelance Marketplace</h1>\r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660995548655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       <nav className=\"navbar navbar-light bg-light\">\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n-    <img src={logo}/>\r\n+    <img src={logo} className='filogo'/>\r\n     <h1>Freelance Marketplace</h1>\r\n   </a>\r\n   </span>\r\n   \r\n"
+                },
+                {
+                    "date": 1660995858060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,8 @@\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n     <img src={logo} className='filogo'/>\r\n-    <h1>Freelance Marketplace</h1>\r\n   </a>\r\n   </span>\r\n   \r\n   <Link to=\"/\"></Link>\r\n"
+                },
+                {
+                    "date": 1660995998538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,14 +8,16 @@\n     <div className='row-md-6 align-items-center'>\r\n     <div className='hohead'>\r\n     <header>\r\n       <nav className=\"navbar navbar-light bg-light\">\r\n+      <div>\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n     <img src={logo} className='filogo'/>\r\n   </a>\r\n   </span>\r\n+  </div>\r\n   \r\n   <Link to=\"/\"></Link>\r\n   <ul>\r\n \r\n"
+                },
+                {
+                    "date": 1660996016841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n   <a className=\"navbar-brand\" href=\"#\">\r\n     <img src={logo} className='filogo'/>\r\n   </a>\r\n   </span>\r\n+  <h1>Freelance Marketplace</h1>\r\n   </div>\r\n   \r\n   <Link to=\"/\"></Link>\r\n   <ul>\r\n"
+                },
+                {
+                    "date": 1660996041716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     <div className='row-md-6 align-items-center'>\r\n     <div className='hohead'>\r\n     <header>\r\n       <nav className=\"navbar navbar-light bg-light\">\r\n-      <div>\r\n+      <div className='hlogo'>\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n     <img src={logo} className='filogo'/>\r\n"
+                },
+                {
+                    "date": 1660996752721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,11 @@\n </nav>\r\n </header>\r\n     </div>\r\n    \r\n-  \r\n+  <div>\r\n+    \r\n+  </div>\r\n \r\n \r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1661015192892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,15 @@\n import React from 'react';\r\n import 'bootstrap/dist/css/bootstrap.min.css';\r\n import { Link,useNavigate} from \"react-router-dom\";\r\n+\r\n import logo from '../logo.png';\r\n+import andrea from '../andrea.png';\r\n+import moon from '../moon.png';\r\n+import ritika from '../ritika.png';\r\n+import zach from '../zach.png';\r\n+import gabrele from '../gabrele.png';\r\n+import Carousel from 'react-bootstrap/Carousel'; \r\n function Home() {\r\n   const navigate=useNavigate();\r\n   return (\r\n     <div className='row-md-6 align-items-center'>\r\n@@ -35,9 +42,75 @@\n </header>\r\n     </div>\r\n    \r\n   <div>\r\n-    \r\n+  <Carousel>\r\n+      <Carousel.Item>\r\n+        <img\r\n+          className=\"d-block w-100\"\r\n+          src={andrea}\r\n+          alt=\"First slide\"\r\n+        />\r\n+        <Carousel.Caption>\r\n+          <h3>Andrea</h3>\r\n+          <p>Fashion Designer.</p>\r\n+        </Carousel.Caption>\r\n+      </Carousel.Item>\r\n+      <Carousel.Item>\r\n+        <img\r\n+          className=\"d-block w-100\"\r\n+          src={moon}\r\n+          alt=\"Second slide\"\r\n+        />\r\n+\r\n+        <Carousel.Caption>\r\n+          <h3>Moon</h3>\r\n+          <p>Marketing Expert</p>\r\n+        </Carousel.Caption>\r\n+      </Carousel.Item>\r\n+      <Carousel.Item>\r\n+        <img\r\n+          className=\"d-block w-100\"\r\n+          src={ritika}\r\n+          alt=\"Third slide\"\r\n+        />\r\n+\r\n+        <Carousel.Caption>\r\n+          <h3>Ritika</h3>\r\n+          <p>\r\n+           Shoemaker and Designer\r\n+          </p>\r\n+        </Carousel.Caption>\r\n+      </Carousel.Item>\r\n+      <Carousel.Item>\r\n+        <img\r\n+          className=\"d-block w-100\"\r\n+          src={zach}\r\n+          alt=\"Fourth slide\"\r\n+        />\r\n+\r\n+        <Carousel.Caption>\r\n+          <h3>Zach</h3>\r\n+          <p>\r\n+          Bar owner\r\n+          </p>\r\n+        </Carousel.Caption>\r\n+      </Carousel.Item>\r\n+      <Carousel.Item>\r\n+        <img\r\n+          className=\"d-block w-100\"\r\n+          src={gabrele}\r\n+          alt=\"Fifth slide\"\r\n+        />\r\n+\r\n+        <Carousel.Caption>\r\n+          <h3>Gabrielle</h3>\r\n+          <p>\r\n+         Video Editor\r\n+          </p>\r\n+        </Carousel.Caption>\r\n+      </Carousel.Item>\r\n+    </Carousel>\r\n   </div>\r\n \r\n \r\n     </div>\r\n"
+                },
+                {
+                    "date": 1661015239864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n"
+                },
+                {
+                    "date": 1661015261567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={moon}\r\n           alt=\"Second slide\"\r\n         />\r\n \r\n@@ -68,9 +68,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={ritika}\r\n           alt=\"Third slide\"\r\n         />\r\n \r\n@@ -82,9 +82,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={zach}\r\n           alt=\"Fourth slide\"\r\n         />\r\n \r\n@@ -96,9 +96,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={gabrele}\r\n           alt=\"Fifth slide\"\r\n         />\r\n \r\n"
+                },
+                {
+                    "date": 1661015284019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n@@ -56,9 +56,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={moon}\r\n           alt=\"Second slide\"\r\n         />\r\n \r\n@@ -68,9 +68,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={ritika}\r\n           alt=\"Third slide\"\r\n         />\r\n \r\n@@ -82,9 +82,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={zach}\r\n           alt=\"Fourth slide\"\r\n         />\r\n \r\n@@ -96,9 +96,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={gabrele}\r\n           alt=\"Fifth slide\"\r\n         />\r\n \r\n"
+                },
+                {
+                    "date": 1661015501317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-inline w-100\"\r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n"
+                },
+                {
+                    "date": 1661015568219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-inline w-100\"\r\n+          className=\"d-block\"\r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n@@ -56,9 +56,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block\"\r\n           src={moon}\r\n           alt=\"Second slide\"\r\n         />\r\n \r\n@@ -68,9 +68,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block\"\r\n           src={ritika}\r\n           alt=\"Third slide\"\r\n         />\r\n \r\n@@ -82,9 +82,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block\"\r\n           src={zach}\r\n           alt=\"Fourth slide\"\r\n         />\r\n \r\n@@ -96,9 +96,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block\"\r\n           src={gabrele}\r\n           alt=\"Fifth slide\"\r\n         />\r\n \r\n"
+                },
+                {
+                    "date": 1661015852113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block\"\r\n+          className=\"d-block w-10\"\r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n@@ -56,9 +56,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block\"\r\n+          className=\"d-block w-10\"\r\n           src={moon}\r\n           alt=\"Second slide\"\r\n         />\r\n \r\n@@ -68,9 +68,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block\"\r\n+          className=\"d-block w-10\"\r\n           src={ritika}\r\n           alt=\"Third slide\"\r\n         />\r\n \r\n@@ -82,9 +82,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block\"\r\n+          className=\"d-block w-10\"\r\n           src={zach}\r\n           alt=\"Fourth slide\"\r\n         />\r\n \r\n@@ -96,9 +96,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block\"\r\n+          className=\"d-block w-10\"\r\n           src={gabrele}\r\n           alt=\"Fifth slide\"\r\n         />\r\n \r\n"
+                },
+                {
+                    "date": 1661015863728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-10\"\r\n+          className=\"d-block w-60\"\r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n"
+                },
+                {
+                    "date": 1661015882290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-60\"\r\n+          className=\"d-block w-100\"\r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n@@ -56,9 +56,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-10\"\r\n+          className=\"d-block w-100\"\r\n           src={moon}\r\n           alt=\"Second slide\"\r\n         />\r\n \r\n@@ -68,9 +68,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-10\"\r\n+          className=\"d-block w-100\"\r\n           src={ritika}\r\n           alt=\"Third slide\"\r\n         />\r\n \r\n@@ -82,9 +82,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-10\"\r\n+          className=\"d-block w-100\"\r\n           src={zach}\r\n           alt=\"Fourth slide\"\r\n         />\r\n \r\n@@ -96,9 +96,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-10\"\r\n+          className=\"d-block w-100\"\r\n           src={gabrele}\r\n           alt=\"Fifth slide\"\r\n         />\r\n \r\n"
+                },
+                {
+                    "date": 1661016062983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n </header>\r\n     </div>\r\n    \r\n   <div>\r\n-  <Carousel>\r\n+  <Carousel className='p-5'>\r\n       <Carousel.Item>\r\n         <img\r\n           className=\"d-block w-100\"\r\n           src={andrea}\r\n"
+                },
+                {
+                    "date": 1661016107846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,10 +41,10 @@\n </nav>\r\n </header>\r\n     </div>\r\n    \r\n-  <div>\r\n-  <Carousel className='p-5'>\r\n+  <div className='car-cont'>\r\n+  <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n           className=\"d-block w-100\"\r\n           src={andrea}\r\n"
+                },
+                {
+                    "date": 1661017154897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n           <h3>Andrea</h3>\r\n-          <p>Fashion Designer.</p>\r\n+          <h5>Fashion Designer.</h5>\r\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n@@ -63,9 +63,9 @@\n         />\r\n \r\n         <Carousel.Caption>\r\n           <h3>Moon</h3>\r\n-          <p>Marketing Expert</p>\r\n+          <h5>Marketing Expert</h5>\r\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n@@ -75,11 +75,11 @@\n         />\r\n \r\n         <Carousel.Caption>\r\n           <h3>Ritika</h3>\r\n-          <p>\r\n+          <h5>\r\n            Shoemaker and Designer\r\n-          </p>\r\n+          </h5>\r\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n@@ -89,11 +89,11 @@\n         />\r\n \r\n         <Carousel.Caption>\r\n           <h3>Zach</h3>\r\n-          <p>\r\n+          <h5>\r\n           Bar owner\r\n-          </p>\r\n+          </h5>\r\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n@@ -103,11 +103,11 @@\n         />\r\n \r\n         <Carousel.Caption>\r\n           <h3>Gabrielle</h3>\r\n-          <p>\r\n+          <h5>\r\n          Video Editor\r\n-          </p>\r\n+          </h5>\r\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n     </Carousel>\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1661017341661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div className='car-cont'>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n@@ -56,9 +56,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={moon}\r\n           alt=\"Second slide\"\r\n         />\r\n \r\n@@ -68,9 +68,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={ritika}\r\n           alt=\"Third slide\"\r\n         />\r\n \r\n@@ -82,9 +82,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={zach}\r\n           alt=\"Fourth slide\"\r\n         />\r\n \r\n@@ -96,9 +96,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          className=\"d-block w-50\"\r\n           src={gabrele}\r\n           alt=\"Fifth slide\"\r\n         />\r\n \r\n"
+                },
+                {
+                    "date": 1661017370930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div className='car-cont'>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n@@ -56,9 +56,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={moon}\r\n           alt=\"Second slide\"\r\n         />\r\n \r\n@@ -68,9 +68,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={ritika}\r\n           alt=\"Third slide\"\r\n         />\r\n \r\n@@ -82,9 +82,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={zach}\r\n           alt=\"Fourth slide\"\r\n         />\r\n \r\n@@ -96,9 +96,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-50\"\r\n+          className=\"d-block w-100\"\r\n           src={gabrele}\r\n           alt=\"Fifth slide\"\r\n         />\r\n \r\n"
+                },
+                {
+                    "date": 1661019043502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   <div className='car-cont'>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          \r\n           src={andrea}\r\n           alt=\"First slide\"\r\n         />\r\n         <Carousel.Caption>\r\n@@ -56,9 +56,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+        \r\n           src={moon}\r\n           alt=\"Second slide\"\r\n         />\r\n \r\n@@ -68,9 +68,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          \r\n           src={ritika}\r\n           alt=\"Third slide\"\r\n         />\r\n \r\n@@ -82,9 +82,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+          \r\n           src={zach}\r\n           alt=\"Fourth slide\"\r\n         />\r\n \r\n@@ -96,9 +96,9 @@\n         </Carousel.Caption>\r\n       </Carousel.Item>\r\n       <Carousel.Item>\r\n         <img\r\n-          className=\"d-block w-100\"\r\n+         \r\n           src={gabrele}\r\n           alt=\"Fifth slide\"\r\n         />\r\n \r\n"
+                },
+                {
+                    "date": 1661020195652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n  \r\n </nav>\r\n </header>\r\n     </div>\r\n-   \r\n+   <div className='p-4'>\r\n   <div className='car-cont'>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n@@ -111,9 +111,9 @@\n       </Carousel.Item>\r\n     </Carousel>\r\n   </div>\r\n \r\n-\r\n+</div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1661020228345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <div className='row-md-6 align-items-center'>\r\n     <div className='hohead'>\r\n     <header>\r\n-      <nav className=\"navbar navbar-light bg-light\">\r\n+      <nav className=\"navbar navbar-light bg-dark\">\r\n       <div className='hlogo'>\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n"
+                },
+                {
+                    "date": 1661020260542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <div className='row-md-6 align-items-center'>\r\n     <div className='hohead'>\r\n     <header>\r\n-      <nav className=\"navbar navbar-light bg-dark\">\r\n+      <nav className=\"navbar navbar-light bg-dark p-2\">\r\n       <div className='hlogo'>\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n"
+                },
+                {
+                    "date": 1661020273005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <div className='row-md-6 align-items-center'>\r\n     <div className='hohead'>\r\n     <header>\r\n-      <nav className=\"navbar navbar-light bg-dark p-2\">\r\n+      <nav className=\"navbar navbar-light bg-dark p-4\">\r\n       <div className='hlogo'>\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n"
+                },
+                {
+                    "date": 1661020284787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   return (\r\n     <div className='row-md-6 align-items-center'>\r\n     <div className='hohead'>\r\n     <header>\r\n-      <nav className=\"navbar navbar-light bg-dark p-4\">\r\n+      <nav className=\"navbar navbar-light bg-dark p-1\">\r\n       <div className='hlogo'>\r\n       <span id='flogo'>\r\n       \r\n   <a className=\"navbar-brand\" href=\"#\">\r\n"
+                },
+                {
+                    "date": 1661020309716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n import Carousel from 'react-bootstrap/Carousel'; \r\n function Home() {\r\n   const navigate=useNavigate();\r\n   return (\r\n-    <div className='row-md-6 align-items-center'>\r\n+    <div className='row-md-6 align-items-center p-2'>\r\n     <div className='hohead'>\r\n     <header>\r\n       <nav className=\"navbar navbar-light bg-dark p-1\">\r\n       <div className='hlogo'>\r\n"
+                },
+                {
+                    "date": 1661236420796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react';\r\n+import './Home.css';\r\n import 'bootstrap/dist/css/bootstrap.min.css';\r\n import { Link,useNavigate} from \"react-router-dom\";\r\n \r\n import logo from '../logo.png';\r\n@@ -11,9 +12,9 @@\n import Carousel from 'react-bootstrap/Carousel'; \r\n function Home() {\r\n   const navigate=useNavigate();\r\n   return (\r\n-    <div className='row-md-6 align-items-center p-2'>\r\n+    <div className='row-lg-6 align-items-center p-4'>\r\n     <div className='hohead'>\r\n     <header>\r\n       <nav className=\"navbar navbar-light bg-dark p-1\">\r\n       <div className='hlogo'>\r\n@@ -35,14 +36,16 @@\n <li><button    onClick={()=>navigate('/policy')}>Private Policy</button></li>\r\n <li><button    onClick={()=>navigate('/ftos')}>Terms Of Services</button></li>\r\n <li><button    onClick={()=>navigate('/set')}>Settings</button></li>\r\n <li><button    onClick={()=>navigate('/bill')}>Billing</button></li>\r\n+<li><button    onClick={()=>navigate('/buyhp')}>Buyer HomePage</button></li>\r\n </ul>\r\n  \r\n </nav>\r\n </header>\r\n     </div>\r\n    <div className='p-4'>\r\n+   <h1 className='topf'>Top Freelancers</h1>\r\n   <div className='car-cont'>\r\n   <Carousel>\r\n       <Carousel.Item>\r\n         <img\r\n"
+                },
+                {
+                    "date": 1661324796429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,10 +34,8 @@\n <li><button    onClick={()=>navigate('/sjoin')}>Join as Seller</button></li>\r\n <li><button    onClick={()=>navigate('/signin')}>Sign In</button></li>\r\n <li><button    onClick={()=>navigate('/policy')}>Private Policy</button></li>\r\n <li><button    onClick={()=>navigate('/ftos')}>Terms Of Services</button></li>\r\n-<li><button    onClick={()=>navigate('/set')}>Settings</button></li>\r\n-<li><button    onClick={()=>navigate('/bill')}>Billing</button></li>\r\n <li><button    onClick={()=>navigate('/buyhp')}>Buyer HomePage</button></li>\r\n </ul>\r\n  \r\n </nav>\r\n"
+                },
+                {
+                    "date": 1662460033501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,10 @@\n <li><button    onClick={()=>navigate('/sjoin')}>Join as Seller</button></li>\r\n <li><button    onClick={()=>navigate('/signin')}>Sign In</button></li>\r\n <li><button    onClick={()=>navigate('/policy')}>Private Policy</button></li>\r\n <li><button    onClick={()=>navigate('/ftos')}>Terms Of Services</button></li>\r\n-<li><button    onClick={()=>navigate('/buyhp')}>Buyer HomePage</button></li>\r\n+\r\n+\r\n </ul>\r\n  \r\n </nav>\r\n </header>\r\n"
+                }
+            ],
+            "date": 1660316342326,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport 'bootstrap/dist/css/bootstrap.min.css';\r\nimport { Link,useNavigate} from \"react-router-dom\";\r\nfunction Home() {\r\n  const navigate=useNavigate();\r\n  return (\r\n    <div className='d-md-block'>\r\n    <h1>Freelance Marketplace</h1>\r\n    <Link to=\"/\"></Link>\r\n\r\n   <button onClick={()=>navigate('/bjoin')}>Join as Buyer</button>\r\n\r\n  <button onClick={()=>navigate('/sjoin')}>Join as Seller</button>\r\n  <button onClick={()=>navigate('/signin')}>Sign In</button>\r\n  <button onClick={()=>navigate('/policy')}>Private Policy</button>\r\n  <button onClick={()=>navigate('/ftos')}>Private Policy</button>\r\n\r\n\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Home;"
+        }
+    ]
+}

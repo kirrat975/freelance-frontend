@@ -1,0 +1,109 @@
+#ftcont{
+    text-align: justify;
+    background-color: lightgreen;
+    letter-spacing: 3px;
+    border:5px solid black;
+    padding: 20px;
+    justify-content: space-evenly;
+    line-height: 30px;
+}
+
+.sftcont{
+    border: 20px solid black;
+    padding:30px;
+    border-top-color:lawngreen;
+    border-bottom-color:lawngreen;
+    border-left-color:white;
+    border-right-color:white;
+    border-radius: 100px;
+}
+.sftcont h1{
+    -webkit-text-stroke-color:seagreen;
+    -webkit-text-stroke-width:2px;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+
+}
+.htos{
+    text-decoration: underline;
+    background-color: lime;
+    display: inline;
+    
+   
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    #ftcont{
+        position: relative !important;
+        left: 5% ;
+        margin-top: 5px;
+    }
+    .sftcont{
+     
+      border:5px solid black!important;
+      padding: 20px !important;
+      border-radius:0px !important;
+      width:200px;
+      
+     
+    }
+
+    .sftcont h1{
+      font-size: 20px;
+    }
+    .htos {
+        font-size: 20px;
+        
+    }
+    ul{
+       display: inline!important;
+    }
+    p,li{
+        font-size: 12px;
+        line-height: 25px;
+        padding: 3px;
+        letter-spacing: 2px;
+    }
+
+     
+      
+    }
+    
+    
+    
+    @media (min-width: 320px) and (max-width: 480px) {
+      
+        #ftcont{
+            position: relative !important;
+            left: 10% ;
+            margin-top: 10px;
+        }
+        .sftcont{
+         
+          border:5px solid black!important;
+          padding: 20px !important;
+          border-radius:0px !important;
+          width:200px;
+          
+         
+        }
+    
+        .sftcont h1{
+          font-size: 20px;
+        }
+        .htos {
+            font-size: 20px;
+            
+        }
+        ul{
+           display: inline!important;
+        }
+        p,li{
+            font-size: 12px;
+            line-height: 25px;
+            padding: 3px;
+           
+        }
+      
+    }

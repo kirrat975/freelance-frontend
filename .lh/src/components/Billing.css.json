@@ -1,0 +1,114 @@
+{
+    "sourceFile": "src/components/Billing.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 24,
+            "patches": [
+                {
+                    "date": 1662457994796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662667020570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,139 +5,13 @@\n     border-left-color:lightgreen;\r\n     border-right-color:lightgreen;\r\n \r\n }\r\n-.hbill{\r\n-    text-align: center;\r\n-    letter-spacing: 3px;\r\n-    text-transform: uppercase;\r\n-    margin-top: 8px;\r\n-    -webkit-text-stroke-color:greenyellow;\r\n-    -webkit-text-stroke-width:2px;\r\n+ white;\r\n \r\n-}\r\n-\r\n-.bcontent{\r\n-    padding: 32px;\r\n-    box-sizing: border-box;\r\n     \r\n-    \r\n }\r\n-.biltabs{\r\n-    overflow: auto;\r\n-    white-space: nowrap;\r\n-    padding: 10px;\r\n-    border-bottom: 1px solid #e4e5e7;\r\n-    margin-top: 50px;\r\n-    \r\n-}\r\n-.biltabs li{\r\n-    display: inline-block;\r\n-    margin-right: 12px;\r\n-    padding: 8px 12px;\r\n-    cursor: pointer;\r\n-    font-weight: bold;\r\n-    color:gray;\r\n-    letter-spacing: 3px;\r\n-}\r\n-.biltabs li a{\r\n-    color:#1dbf73;\r\n-    text-decoration: underline;\r\n-}\r\n- #bh{\r\n-    margin-bottom: 40px;\r\n-    margin-top:30px;\r\n-    letter-spacing: 3px;\r\n-}\r\n-.smenu-tabs select {\r\n-margin-right: 20px;\r\n-font-weight: bold;\r\n-}\r\n-.smenu  #sinv{\r\n-    box-sizing: border-box;\r\n-    width: 350px;\r\n-    padding: 8px 12px;\r\n-    border: 1px solid #c5c6c9;\r\n-    border-radius: 4px;\r\n-    color: #404145;\r\n-   margin-top: 40px;\r\n-}\r\n-.smenu #sres{\r\n-    margin-right: 8px;\r\n-    color:black;\r\n-    display: flex;\r\n-    margin-top: 24px;\r\n-    justify-content: space-between;\r\n-}\r\n-.btable{\r\n-    margin-top: 24px;\r\n-    border: 1px solid #dadbdd;\r\n-    border-radius: 6px;\r\n-    overflow: hidden;\r\n-}\r\n-.btable .sbtable{\r\n-    width: 100%;\r\n-    table-layout: fixed;\r\n-    border-collapse: collapse;\r\n-    color: #404145;\r\n-    font-size: 14px;\r\n-}\r\n-.tabhead{\r\n-    background-color: #fafafa;\r\n-}\r\n-.tabhead tr{\r\n-    display: table-row;\r\n-}\r\n-.tabth{\r\n-    height: 44px;\r\n-    font-size: 14px;\r\n-    overflow: hidden;\r\n-    text-align: left;\r\n-    vertical-align: middle;\r\n-    padding-left: 12px;\r\n-    padding-right: 12px;\r\n-    font-weight: 700;\r\n \r\n-}\r\n-.tabhead #check{\r\n-    vertical-align: middle;\r\n-    color: #b5b6ba;\r\n-    display: inline-flex;\r\n-    align-items: center;\r\n-    -webkit-box-orient: horizontal;\r\n-    -webkit-box-direction: normal;\r\n-    flex-direction: row;\r\n-    -webkit-box-align: center;\r\n-    border: 1px solid black;\r\n-}\r\n-.invoice{\r\n-    padding: 80px 40px;\r\n-    text-align: center;\r\n-    justify-content: center;\r\n-    align-items: center;\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-\r\n-}\r\n-.invoice .expf{\r\n-    display: inline-block;\r\n-    box-sizing: border-box;\r\n-    position: relative;\r\n-    padding: 12px 24px;\r\n-    border: 1px solid transparent;\r\n-    border-radius: 4px;\r\n-    font-weight: 600;\r\n-    font-size: 16px;\r\n-    line-height: 100%;\r\n-    text-align: center;\r\n-    cursor: pointer;\r\n-    margin-top: 24px;\r\n-    background-color: #1dbf73;\r\n-    color: white;\r\n-\r\n-    \r\n-}\r\n-\r\n @media (min-width: 481px) and (max-width: 767px) {\r\n   .billcont{\r\n     border: 5px solid black;\r\n     border-radius: 0px;\r\n"
+                },
+                {
+                    "date": 1662667034449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n     border-left-color:lightgreen;\r\n     border-right-color:lightgreen;\r\n \r\n }\r\n- white;\r\n+ \r\n \r\n     \r\n-}\r\n \r\n+\r\n @media (min-width: 481px) and (max-width: 767px) {\r\n   .billcont{\r\n     border: 5px solid black;\r\n     border-radius: 0px;\r\n"
+                },
+                {
+                    "date": 1662667039844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,36 +20,10 @@\n     left:3%;\r\n     margin-top: 10px;\r\n \r\n   }\r\n-  .biltabs li{\r\n-    display:flex;\r\n-    font-size: 14px;\r\n-   margin-left: 50px;\r\n-    \r\n-\r\n+ 0px;\r\n   }\r\n-  .smenu-tabs select{\r\n-    display: flex;\r\n-    margin-bottom: 10px;\r\n-    margin-left: 20px;\r\n-    width:150px;\r\n-  }\r\n-  .smenu #sinv{\r\n-    width:250px;\r\n-    margin-top: 20px;\r\n-    font-size: 12px;\r\n-    position: relative;\r\n-    right: 5%;\r\n-  }\r\n-  .sbtable{\r\n-   display: none;\r\n-   \r\n-  }\r\n-  .invoice img{\r\n-    width:200px;\r\n-    height: 100px;\r\n-  }\r\n   \r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1662667045798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,9 @@\n     left:3%;\r\n     margin-top: 10px;\r\n \r\n   }\r\n- 0px;\r\n-  }\r\n+ \r\n   \r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1662667051079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,41 +38,7 @@\n         right:2%;\r\n         margin-top: 10px;\r\n     \r\n       }\r\n-      .biltabs li{\r\n-        display:flex;\r\n-        font-size: 14px;\r\n-       margin-left: 20px;\r\n-        \r\n+   \r\n     \r\n-      }\r\n-      .smenu-tabs{\r\n-        position: relative;\r\n-        right: 8%;\r\n-      }\r\n-      .smenu-tabs select{\r\n-        display: flex;\r\n-        margin-bottom: 10px;\r\n-        width:150px;\r\n-      }\r\n-      .smenu #sinv{\r\n-        width:180px;\r\n-        margin-top: 20px;\r\n-        font-size: 8px;\r\n-        position: relative;\r\n-        right: 20%;\r\n-        font-weight: bold;\r\n-      }\r\n-      .sbtable{\r\n-       display: none;\r\n-       \r\n-      }\r\n-      .invoice{\r\n-        padding: 0;\r\n-      }\r\n-      .invoice img{\r\n-        width:150px;\r\n-        height: 100px;\r\n-      }\r\n-    \r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662667061177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n     border-left-color:lightgreen;\r\n     border-right-color:lightgreen;\r\n \r\n }\r\n+.billcard{\r\n+  \r\n+}\r\n  \r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1662667115884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,17 @@\n     border-right-color:lightgreen;\r\n \r\n }\r\n .billcard{\r\n-  \r\n+  border: 5px solid black;\r\n+  padding: 10px;\r\n+  margin: 18px;\r\n+  text-align:center;\r\n+  border-radius: 4px;\r\n+  box-shadow: 5px 5px 5px 5px seagreen;\r\n+ \r\n+  transition:transform ease 0.5s;\r\n+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);\r\n }\r\n  \r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1662667123367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n  \r\n   transition:transform ease 0.5s;\r\n   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);\r\n }\r\n+\r\n  \r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1662667138946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,16 @@\n  \r\n   transition:transform ease 0.5s;\r\n   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);\r\n }\r\n-\r\n+#billname{\r\n+  font-size: 36px;\r\n+  text-transform: uppercase;\r\n+  letter-spacing: 3px;\r\n+  font-weight: bold;\r\n+  -webkit-text-stroke-color: white;\r\n+  -webkit-text-stroke-width:1px;\r\n+}\r\n  \r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1662667173934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n   font-weight: bold;\r\n   -webkit-text-stroke-color: white;\r\n   -webkit-text-stroke-width:1px;\r\n }\r\n+\r\n  \r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1662667180447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,11 @@\n   font-weight: bold;\r\n   -webkit-text-stroke-color: white;\r\n   -webkit-text-stroke-width:1px;\r\n }\r\n-\r\n+table{\r\n+  bo\r\n+}\r\n  \r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1662667190537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   -webkit-text-stroke-color: white;\r\n   -webkit-text-stroke-width:1px;\r\n }\r\n table{\r\n-  bo\r\n+  border\r\n }\r\n  \r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1662667200580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n   -webkit-text-stroke-color: white;\r\n   -webkit-text-stroke-width:1px;\r\n }\r\n table{\r\n-  border\r\n+  border:5px solid black;\r\n }\r\n  \r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1662667209335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n }\r\n table{\r\n   border:5px solid black;\r\n }\r\n+\r\n  \r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1662667227377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n }\r\n table{\r\n   border:5px solid black;\r\n }\r\n-\r\n+cartab\r\n  \r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1662667234187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n }\r\n table{\r\n   border:5px solid black;\r\n }\r\n-cartab\r\n+.cartab\r\n  \r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1662667241734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,11 @@\n }\r\n table{\r\n   border:5px solid black;\r\n }\r\n-.cartab\r\n+.cartab tr td{\r\n+  \r\n+}\r\n  \r\n \r\n     \r\n \r\n"
+                },
+                {
+                    "date": 1662667253162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n table{\r\n   border:5px solid black;\r\n }\r\n .cartab tr td{\r\n-  \r\n+  border: 3px solid black;\r\n }\r\n  \r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1662667290683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n }\r\n table{\r\n   border:5px solid black;\r\n }\r\n-.cartab tr td{\r\n+.cartab tr {\r\n   border: 3px solid black;\r\n }\r\n  \r\n \r\n"
+                },
+                {
+                    "date": 1662667321899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n }\r\n table{\r\n   border:5px solid black;\r\n }\r\n-.cartab tr {\r\n+.c tr {\r\n   border: 3px solid black;\r\n }\r\n  \r\n \r\n"
+                },
+                {
+                    "date": 1662667339598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n }\r\n table{\r\n   border:5px solid black;\r\n }\r\n-.c tr {\r\n+.billcard tr td{\r\n   border: 3px solid black;\r\n }\r\n  \r\n \r\n"
+                },
+                {
+                    "date": 1662667351750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n   border:5px solid black;\r\n }\r\n .billcard tr td{\r\n   border: 3px solid black;\r\n+  padding:10px;\r\n }\r\n  \r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1662667360599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n }\r\n .billcard tr td{\r\n   border: 3px solid black;\r\n   padding:10px;\r\n-  \r\n+  f\r\n }\r\n  \r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1662667408194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   -webkit-text-stroke-width:1px;\r\n }\r\n table{\r\n   border:5px solid black;\r\n-  margin-left: ;\r\n+  margin-left: 10p;\r\n }\r\n .billcard tr td{\r\n   border: 3px solid black;\r\n   padding:10px;\r\n"
+                }
+            ],
+            "date": 1662457994796,
+            "name": "Commit-0",
+            "content": ".billcont{\r\n    border: 20px solid black;\r\n    box-sizing: border-box;\r\n    border-radius: 60px;\r\n    border-left-color:lightgreen;\r\n    border-right-color:lightgreen;\r\n\r\n}\r\n.hbill{\r\n    text-align: center;\r\n    letter-spacing: 3px;\r\n    text-transform: uppercase;\r\n    margin-top: 8px;\r\n    -webkit-text-stroke-color:greenyellow;\r\n    -webkit-text-stroke-width:2px;\r\n\r\n}\r\n\r\n.bcontent{\r\n    padding: 32px;\r\n    box-sizing: border-box;\r\n    \r\n    \r\n}\r\n.biltabs{\r\n    overflow: auto;\r\n    white-space: nowrap;\r\n    padding: 10px;\r\n    border-bottom: 1px solid #e4e5e7;\r\n    margin-top: 50px;\r\n    \r\n}\r\n.biltabs li{\r\n    display: inline-block;\r\n    margin-right: 12px;\r\n    padding: 8px 12px;\r\n    cursor: pointer;\r\n    font-weight: bold;\r\n    color:gray;\r\n    letter-spacing: 3px;\r\n}\r\n.biltabs li a{\r\n    color:#1dbf73;\r\n    text-decoration: underline;\r\n}\r\n #bh{\r\n    margin-bottom: 40px;\r\n    margin-top:30px;\r\n    letter-spacing: 3px;\r\n}\r\n.smenu-tabs select {\r\nmargin-right: 20px;\r\nfont-weight: bold;\r\n}\r\n.smenu  #sinv{\r\n    box-sizing: border-box;\r\n    width: 350px;\r\n    padding: 8px 12px;\r\n    border: 1px solid #c5c6c9;\r\n    border-radius: 4px;\r\n    color: #404145;\r\n   margin-top: 40px;\r\n}\r\n.smenu #sres{\r\n    margin-right: 8px;\r\n    color:black;\r\n    display: flex;\r\n    margin-top: 24px;\r\n    justify-content: space-between;\r\n}\r\n.btable{\r\n    margin-top: 24px;\r\n    border: 1px solid #dadbdd;\r\n    border-radius: 6px;\r\n    overflow: hidden;\r\n}\r\n.btable .sbtable{\r\n    width: 100%;\r\n    table-layout: fixed;\r\n    border-collapse: collapse;\r\n    color: #404145;\r\n    font-size: 14px;\r\n}\r\n.tabhead{\r\n    background-color: #fafafa;\r\n}\r\n.tabhead tr{\r\n    display: table-row;\r\n}\r\n.tabth{\r\n    height: 44px;\r\n    font-size: 14px;\r\n    overflow: hidden;\r\n    text-align: left;\r\n    vertical-align: middle;\r\n    padding-left: 12px;\r\n    padding-right: 12px;\r\n    font-weight: 700;\r\n\r\n}\r\n.tabhead #check{\r\n    vertical-align: middle;\r\n    color: #b5b6ba;\r\n    display: inline-flex;\r\n    align-items: center;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n    flex-direction: row;\r\n    -webkit-box-align: center;\r\n    border: 1px solid black;\r\n}\r\n.invoice{\r\n    padding: 80px 40px;\r\n    text-align: center;\r\n    justify-content: center;\r\n    align-items: center;\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n}\r\n.invoice .expf{\r\n    display: inline-block;\r\n    box-sizing: border-box;\r\n    position: relative;\r\n    padding: 12px 24px;\r\n    border: 1px solid transparent;\r\n    border-radius: 4px;\r\n    font-weight: 600;\r\n    font-size: 16px;\r\n    line-height: 100%;\r\n    text-align: center;\r\n    cursor: pointer;\r\n    margin-top: 24px;\r\n    background-color: #1dbf73;\r\n    color: white;\r\n\r\n    \r\n}\r\n\r\n@media (min-width: 481px) and (max-width: 767px) {\r\n  .billcont{\r\n    border: 5px solid black;\r\n    border-radius: 0px;\r\n    width:300px;\r\n    position: relative;\r\n    left:3%;\r\n    margin-top: 10px;\r\n\r\n  }\r\n  .biltabs li{\r\n    display:flex;\r\n    font-size: 14px;\r\n   margin-left: 50px;\r\n    \r\n\r\n  }\r\n  .smenu-tabs select{\r\n    display: flex;\r\n    margin-bottom: 10px;\r\n    margin-left: 20px;\r\n    width:150px;\r\n  }\r\n  .smenu #sinv{\r\n    width:250px;\r\n    margin-top: 20px;\r\n    font-size: 12px;\r\n    position: relative;\r\n    right: 5%;\r\n  }\r\n  .sbtable{\r\n   display: none;\r\n   \r\n  }\r\n  .invoice img{\r\n    width:200px;\r\n    height: 100px;\r\n  }\r\n  \r\n   \r\n    \r\n  }\r\n  \r\n  \r\n  @media (min-width: 320px) and (max-width: 480px) {\r\n    \r\n    .billcont{\r\n        border: 5px solid black;\r\n        border-radius: 0px;\r\n        width:200px;\r\n        position: relative;\r\n        right:2%;\r\n        margin-top: 10px;\r\n    \r\n      }\r\n      .biltabs li{\r\n        display:flex;\r\n        font-size: 14px;\r\n       margin-left: 20px;\r\n        \r\n    \r\n      }\r\n      .smenu-tabs{\r\n        position: relative;\r\n        right: 8%;\r\n      }\r\n      .smenu-tabs select{\r\n        display: flex;\r\n        margin-bottom: 10px;\r\n        width:150px;\r\n      }\r\n      .smenu #sinv{\r\n        width:180px;\r\n        margin-top: 20px;\r\n        font-size: 8px;\r\n        position: relative;\r\n        right: 20%;\r\n        font-weight: bold;\r\n      }\r\n      .sbtable{\r\n       display: none;\r\n       \r\n      }\r\n      .invoice{\r\n        padding: 0;\r\n      }\r\n      .invoice img{\r\n        width:150px;\r\n        height: 100px;\r\n      }\r\n    \r\n  }"
+        }
+    ]
+}

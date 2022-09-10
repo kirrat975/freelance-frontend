@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/TermsOS.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1662458031460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1662458031460,
+            "name": "Commit-0",
+            "content": "#ftcont{\r\n    text-align: justify;\r\n    background-color: lightgreen;\r\n    letter-spacing: 3px;\r\n    border:5px solid black;\r\n    padding: 20px;\r\n    justify-content: space-evenly;\r\n    line-height: 30px;\r\n}\r\n\r\n.sftcont{\r\n    border: 20px solid black;\r\n    padding:30px;\r\n    border-top-color:lawngreen;\r\n    border-bottom-color:lawngreen;\r\n    border-left-color:white;\r\n    border-right-color:white;\r\n    border-radius: 100px;\r\n}\r\n.sftcont h1{\r\n    -webkit-text-stroke-color:seagreen;\r\n    -webkit-text-stroke-width:2px;\r\n    letter-spacing: 5px;\r\n    text-align: center;\r\n    text-transform: uppercase;\r\n    font-size: 50px;\r\n\r\n}\r\n.htos{\r\n    text-decoration: underline;\r\n    background-color: lime;\r\n    display: inline;\r\n    \r\n   \r\n}\r\n@media (min-width: 481px) and (max-width: 767px) {\r\n    #ftcont{\r\n        position: relative !important;\r\n        left: 5% ;\r\n        margin-top: 5px;\r\n    }\r\n    .sftcont{\r\n     \r\n      border:5px solid black!important;\r\n      padding: 20px !important;\r\n      border-radius:0px !important;\r\n      width:200px;\r\n      \r\n     \r\n    }\r\n\r\n    .sftcont h1{\r\n      font-size: 20px;\r\n    }\r\n    .htos {\r\n        font-size: 20px;\r\n        \r\n    }\r\n    ul{\r\n       display: inline!important;\r\n    }\r\n    p,li{\r\n        font-size: 12px;\r\n        line-height: 25px;\r\n        padding: 3px;\r\n        letter-spacing: 2px;\r\n    }\r\n\r\n     \r\n      \r\n    }\r\n    \r\n    \r\n    \r\n    @media (min-width: 320px) and (max-width: 480px) {\r\n      \r\n        #ftcont{\r\n            position: relative !important;\r\n            left: 10% ;\r\n            margin-top: 10px;\r\n        }\r\n        .sftcont{\r\n         \r\n          border:5px solid black!important;\r\n          padding: 20px !important;\r\n          border-radius:0px !important;\r\n          width:200px;\r\n          \r\n         \r\n        }\r\n    \r\n        .sftcont h1{\r\n          font-size: 20px;\r\n        }\r\n        .htos {\r\n            font-size: 20px;\r\n            \r\n        }\r\n        ul{\r\n           display: inline!important;\r\n        }\r\n        p,li{\r\n            font-size: 12px;\r\n            line-height: 25px;\r\n            padding: 3px;\r\n           \r\n        }\r\n      \r\n    }"
+        }
+    ]
+}

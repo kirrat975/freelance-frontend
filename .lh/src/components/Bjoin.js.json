@@ -1,0 +1,422 @@
+{
+    "sourceFile": "src/components/Bjoin.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 101,
+            "patches": [
+                {
+                    "date": 1660988818123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660988834128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n       phone:phone,\r\n       }\r\n       axios.post('http://localhost:9999/registerBuyer', register)\r\n             .then(res => console.log(res.data)).then(data => { alert('SignUp SuccessFully') })\r\n-      await signUp(email, password,5000);\r\n+      await signUp(email, password);\r\n       navigate(\"/signin\");\r\n     } catch (err) {\r\n       setError(err.reponse.data);\r\n     }\r\n"
+                },
+                {
+                    "date": 1660988848063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n     setError(\"\");\r\n     try {\r\n   \r\n       await signInwG();\r\n-      navigate(\"/signin\");\r\n+      navigate(\"/signin\",5000);\r\n       \r\n     } catch (err) {\r\n       \r\n       setError(err.response.data);\r\n"
+                },
+                {
+                    "date": 1660988895715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n     setError(\"\");\r\n     try {\r\n   \r\n       await signInwG();\r\n-      navigate(\"/signin\",5000);\r\n+      navigate(\"/signin\",(5000));\r\n       \r\n     } catch (err) {\r\n       \r\n       setError(err.response.data);\r\n"
+                },
+                {
+                    "date": 1660989038580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,10 @@\n     setError(\"\");\r\n     try {\r\n   \r\n       await signInwG();\r\n-      navigate(\"/signin\",(5000));\r\n+      setTimeout(() => console.log('Initial timeout!'), 1000);\r\n+      navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n       \r\n       setError(err.response.data);\r\n"
+                },
+                {
+                    "date": 1660989052799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n     setError(\"\");\r\n     try {\r\n   \r\n       await signInwG();\r\n-      setTimeout(() => console.log('Initial timeout!'), 1000);\r\n+      setTimeout(() => console.log('Initial timeout!'), 5000);\r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n       \r\n"
+                },
+                {
+                    "date": 1660989107806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n     setError(\"\");\r\n     try {\r\n   \r\n       await signInwG();\r\n-      setTimeout(() => console.log('Initial timeout!'), 5000);\r\n+      \r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n       \r\n"
+                },
+                {
+                    "date": 1660989488857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container gap-5 mt-2'>\r\n+    <div className='container gap-3 mt-2'>\r\n    \r\n     \r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n"
+                },
+                {
+                    "date": 1660989578908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container gap-3 mt-2'>\r\n+    <div className='container gap-5 '>\r\n    \r\n     \r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n"
+                },
+                {
+                    "date": 1660989591553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container gap-5 '>\r\n+    <div className='container gap-5 mt-2'>\r\n    \r\n     \r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n"
+                },
+                {
+                    "date": 1660989646445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n     <div className='container gap-5 mt-2'>\r\n    \r\n     \r\n-            <div>\r\n+            <div className='p-4'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className= \"col-sm-6 \">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n"
+                },
+                {
+                    "date": 1660989669408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,12 +59,12 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container gap-5 mt-2'>\r\n+    <div className='container gap-5 mt-2 p-4'>\r\n    \r\n     \r\n-            <div className='p-4'>\r\n+            <div className=''>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className= \"col-sm-6 \">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n"
+                },
+                {
+                    "date": 1660989685576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,12 +59,12 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container gap-5 mt-2 p-4'>\r\n+    <div className='container gap-5 mt-2'>\r\n    \r\n     \r\n-            <div className=''>\r\n+            <div className='p-4'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className= \"col-sm-6 \">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n"
+                },
+                {
+                    "date": 1660989691438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n     \r\n             <div className='p-4'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className= \"col-sm-6 \">\r\n+            <div className= \"col-sm-6 p-4 \">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660989721917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n     \r\n             <div className='p-4'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className= \"col-sm-6 p-4 \">\r\n+            <div className= \"col-md-6 p-4 \">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660989744588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,12 +62,12 @@\n   return (\r\n     <div className='container gap-5 mt-2'>\r\n    \r\n     \r\n-            <div className='p-4'>\r\n+            <div className='col-sm-6 p-4'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className= \"col-md-6 p-4 \">\r\n+            <div className= \"col-sm-6 p-4 \">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660989768282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container gap-5 mt-2'>\r\n+    <div className='container gap-5 mt-2 p-4'>\r\n    \r\n     \r\n             <div className='col-sm-6 p-4'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n"
+                },
+                {
+                    "date": 1660989777582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container gap-5 mt-2 p-4'>\r\n+    <div className='container gap-5 mt-2'>\r\n    \r\n     \r\n             <div className='col-sm-6 p-4'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n"
+                },
+                {
+                    "date": 1660989789478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,12 +62,12 @@\n   return (\r\n     <div className='container gap-5 mt-2'>\r\n    \r\n     \r\n-            <div className='col-sm-6 p-4'>\r\n+            <div className='col-sm-6 p-2'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className= \"col-sm-6 p-4 \">\r\n+            <div className= \"col-sm-6 p-2 \">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660990018879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,12 +62,12 @@\n   return (\r\n     <div className='container gap-5 mt-2'>\r\n    \r\n     \r\n-            <div className='col-sm-6 p-2'>\r\n+            <div className='col-sm-6'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className= \"col-sm-6 p-2 \">\r\n+            <div className= \"col-sm-6\">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660990050754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n     <div className='container gap-5 mt-2'>\r\n    \r\n     \r\n-            <div className='col-sm-6'>\r\n+            <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className= \"col-sm-6\">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n"
+                },
+                {
+                    "date": 1660990065848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container gap-5 mt-2'>\r\n+    <div className='container mt-2'>\r\n    \r\n     \r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n"
+                },
+                {
+                    "date": 1660990082725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container mt-2'>\r\n+    <div className='container mt-2 gap-3'>\r\n    \r\n     \r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n"
+                },
+                {
+                    "date": 1660990090061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container mt-2 gap-3'>\r\n+    <div className='container mt-2 gap-5'>\r\n    \r\n     \r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n"
+                },
+                {
+                    "date": 1660990137621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,10 @@\n   };\r\n   \r\n   return (\r\n     <div className='container mt-2 gap-5'>\r\n-   \r\n+\r\n+            <div>\r\n     \r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n@@ -109,8 +110,9 @@\n         </p>\r\n       </form>\r\n             </div>\r\n             </div>\r\n+            </div>\r\n             \r\n         \r\n   \r\n    \r\n"
+                },
+                {
+                    "date": 1660990153991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,11 +59,11 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container mt-2 gap-5'>\r\n+    <div className='container'>\r\n \r\n-            <div>\r\n+            <div className='mt-2 gap-5'>\r\n     \r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1660990188924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,11 +59,11 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container'>\r\n+    <div className='container mt-2 gap-5'>\r\n \r\n-            <div className='mt-2 gap-5'>\r\n+            \r\n     \r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n@@ -110,9 +110,8 @@\n         </p>\r\n       </form>\r\n             </div>\r\n             </div>\r\n-            </div>\r\n             \r\n         \r\n   \r\n    \r\n"
+                },
+                {
+                    "date": 1660990223039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,12 +63,13 @@\n     <div className='container mt-2 gap-5'>\r\n \r\n             \r\n     \r\n+           \r\n+            <div className= \"col-sm-6\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className= \"col-sm-6\">\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660990251281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n \r\n             \r\n     \r\n            \r\n-            <div className= \"col-sm-6\">\r\n+            <div className= \"d-flex col-sm-6\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n"
+                },
+                {
+                    "date": 1660990269824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,14 +59,14 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container mt-2 gap-5'>\r\n+    <div className='container '>\r\n \r\n             \r\n     \r\n            \r\n-            <div className= \"d-flex col-sm-6\">\r\n+            <div className= \"d-flex mt-2 gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n"
+                },
+                {
+                    "date": 1660990278883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n \r\n             \r\n     \r\n            \r\n-            <div className= \"d-flex mt-2 gap-5\">\r\n+            <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n"
+                },
+                {
+                    "date": 1660990335555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,8 +68,9 @@\n             <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n+            <div>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n@@ -109,8 +110,9 @@\n         <p className=\"forgot-password text-center\">\r\n           Already registered      <Link to=\"/signin\">  <Button variant=\"default\" id=\"sibtn\" >Sign In?</Button></Link>\r\n         </p>\r\n       </form>\r\n+      </div>\r\n             </div>\r\n             </div>\r\n             \r\n         \r\n"
+                },
+                {
+                    "date": 1660990353012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n             <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div>\r\n+            <div className='col-md-6'>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660990381506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container '>\r\n+    <div className='container'>\r\n \r\n             \r\n     \r\n            \r\n"
+                },
+                {
+                    "date": 1660990662115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n             \r\n     \r\n            \r\n             <div className= \"d-flex gap-5\">\r\n-            <div>\r\n+            <div className='col-md-6'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-md-6'>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n"
+                },
+                {
+                    "date": 1660990683473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,12 +65,12 @@\n             \r\n     \r\n            \r\n             <div className= \"d-flex gap-5\">\r\n-            <div className='col-md-6'>\r\n+            <div className='col-sm-6'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className='col-md-6'>\r\n+            <div className='col-sm-6'>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660990701626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n             <div className= \"d-flex gap-5\">\r\n             <div className='col-sm-6'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className='col-sm-6'>\r\n+            <div className='col-sm-6 p-2'>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660990706874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n             <div className= \"d-flex gap-5\">\r\n             <div className='col-sm-6'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className='col-sm-6 p-2'>\r\n+            <div className='col-sm-6'>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660990717768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n             <div className= \"d-flex gap-5\">\r\n             <div className='col-sm-6'>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div className='col-sm-6'>\r\n+            <div>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660990731079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,12 +65,12 @@\n             \r\n     \r\n            \r\n             <div className= \"d-flex gap-5\">\r\n-            <div className='col-sm-6'>\r\n+            <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n-            <div>\r\n+            <div className='col-sm-6'>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n"
+                },
+                {
+                    "date": 1660990983780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n \r\n             \r\n     \r\n            \r\n-            <div className= \"d-flex gap-5\">\r\n+            <div className= \"d-block gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660990990028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n \r\n             \r\n     \r\n            \r\n-            <div className= \"d-block gap-5\">\r\n+            <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660991007510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n \r\n             \r\n     \r\n            \r\n-            <div className= \"d-flex gap-5\">\r\n+            <div className= \"d-flex gap-5 p-4\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660991155062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n \r\n             \r\n     \r\n            \r\n-            <div className= \"d-flex gap-5 p-4\">\r\n+            <div className= \"d-flex flex-direction-row gap-5 p-4\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660991163897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n \r\n             \r\n     \r\n            \r\n-            <div className= \"d-flex flex-direction-row gap-5 p-4\">\r\n+            <div className= \"d-flex gap-5 p-4\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660991189097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container'>\r\n+    <div className='container p-4'>\r\n \r\n             \r\n     \r\n            \r\n"
+                },
+                {
+                    "date": 1660991195719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container p-4'>\r\n+    <div className='container'>\r\n \r\n             \r\n     \r\n            \r\n"
+                },
+                {
+                    "date": 1660991228620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n             </div>\r\n \r\n             <div id=\"fsep\"><p>OR</p></div>\r\n             </div>\r\n-        <div className=\"mb-3 p-1\">\r\n+        <div className=\" row mb-3 p-1\">\r\n           <input type=\"text\" value={name} className=\"form-control\" placeholder=\"Enter username\" required onChange={(e) => setuname(e.target.value)} />\r\n         </div>\r\n \r\n         <div className=\"mb-3 p-1\">\r\n"
+                },
+                {
+                    "date": 1660991247388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n             </div>\r\n \r\n             <div id=\"fsep\"><p>OR</p></div>\r\n             </div>\r\n-        <div className=\" row mb-3 p-1\">\r\n+        <div className=\"mb-3 p-1\">\r\n           <input type=\"text\" value={name} className=\"form-control\" placeholder=\"Enter username\" required onChange={(e) => setuname(e.target.value)} />\r\n         </div>\r\n \r\n         <div className=\"mb-3 p-1\">\r\n"
+                },
+                {
+                    "date": 1660991283836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,12 +61,9 @@\n   \r\n   return (\r\n     <div className='container'>\r\n \r\n-            \r\n-    \r\n-           \r\n-            <div className= \"d-flex gap-5 p-4\">\r\n+            <div className= \"gap-5 p-4\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660991289636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n   \r\n   return (\r\n     <div className='container'>\r\n \r\n-            <div className= \"gap-5 p-4\">\r\n+            <div className= \"d-flex gap-5 p-4\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660992669950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n   \r\n   return (\r\n     <div className='container'>\r\n \r\n-            <div className= \"d-flex gap-5 p-4\">\r\n+            <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660992881298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n     }\r\n   };\r\n   \r\n   return (\r\n-    <div className='container'>\r\n+   \r\n \r\n             <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n@@ -109,9 +109,9 @@\n         </p>\r\n       </form>\r\n       </div>\r\n             </div>\r\n-            </div>\r\n+          \r\n             \r\n         \r\n   \r\n    \r\n"
+                },
+                {
+                    "date": 1660992927620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n   };\r\n   \r\n   return (\r\n    \r\n-\r\n+            <div>\r\n             <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n@@ -109,8 +109,9 @@\n         </p>\r\n       </form>\r\n       </div>\r\n             </div>\r\n+            </div>\r\n           \r\n             \r\n         \r\n   \r\n"
+                },
+                {
+                    "date": 1660992938917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n   };\r\n   \r\n   return (\r\n    \r\n-            <div>\r\n+            <div className='p-5'>\r\n             <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1660993000098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,8 +61,9 @@\n   \r\n   return (\r\n    \r\n             <div className='p-5'>\r\n+            <div className='container'>\r\n             <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n@@ -110,8 +111,9 @@\n       </form>\r\n       </div>\r\n             </div>\r\n             </div>\r\n+            </div>\r\n           \r\n             \r\n         \r\n   \r\n"
+                },
+                {
+                    "date": 1660993144841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='container'>\r\n-            <div className= \"d-flex gap-5\">\r\n+            <div className= \"d-flex gap-5 p-3\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993160348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='container'>\r\n-            <div className= \"d-flex gap-5 p-3\">\r\n+            <div className= \"d-flex gap-5 p-3 m-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993169738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='container'>\r\n-            <div className= \"d-flex gap-5 p-3 m-5\">\r\n+            <div className= \"d-flex gap-5 p-3 m-10\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993176587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='container'>\r\n-            <div className= \"d-flex gap-5 p-3 m-10\">\r\n+            <div className= \"d-flex gap-5 p-3\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993185040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='container'>\r\n-            <div className= \"d-flex gap-5 p-3\">\r\n+            <div className= \"d-flex gap-5 p-3 m-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993196686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='container'>\r\n-            <div className= \"d-flex gap-5 p-3 m-5\">\r\n+            <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993244566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n   \r\n   return (\r\n    \r\n             <div className='p-5'>\r\n-            <div className='container'>\r\n+            <div className='bjcont'>\r\n             <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1660993329302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='bjcont'>\r\n-            <div className= \"d-flex gap-5\">\r\n+            <div className= \"d-flex gap-5 p-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993336457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='bjcont'>\r\n-            <div className= \"d-flex gap-5 p-5\">\r\n+            <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993440606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='bjcont'>\r\n-            <div className= \"d-flex gap-5\">\r\n+            <div className= \"d-flex gap-3\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993448394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='bjcont'>\r\n-            <div className= \"d-flex gap-3\">\r\n+            <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993455656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n   \r\n   return (\r\n    \r\n             <div className='p-5'>\r\n-            <div className='bjcont'>\r\n+            <div className='bjcont p-5'>\r\n             <div className= \"d-flex gap-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1660993601616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,10 +61,10 @@\n   \r\n   return (\r\n    \r\n             <div className='p-5'>\r\n-            <div className='bjcont p-5'>\r\n-            <div className= \"d-flex gap-5\">\r\n+            <div className='bjcont'>\r\n+            <div className= \"d-flex gap-3\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993613695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='bjcont'>\r\n-            <div className= \"d-flex gap-3\">\r\n+            <div className= \"d-flex gap-3 p-2\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993913404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='bjcont'>\r\n-            <div className= \"d-flex gap-3 p-2\">\r\n+            <div className= \"d-flex gap-3 p-2 m-50\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993918963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='bjcont'>\r\n-            <div className= \"d-flex gap-3 p-2 m-50\">\r\n+            <div className= \"d-flex gap-3 p-2 m-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1660993928529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n   return (\r\n    \r\n             <div className='p-5'>\r\n             <div className='bjcont'>\r\n-            <div className= \"d-flex gap-3 p-2 m-5\">\r\n+            <div className= \"d-flex gap-3 m-5\">\r\n             <div>\r\n               <img src={join} width=\"600px\" height=\"650px\"/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n"
+                },
+                {
+                    "date": 1661004970907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,12 +36,17 @@\n       phone:phone,\r\n       }\r\n       axios.post('http://localhost:9999/registerBuyer', register)\r\n             .then(res => console.log(res.data)).then(data => { alert('SignUp SuccessFully') })\r\n-      await signUp(email, password);\r\n-      navigate(\"/signin\");\r\n+            if(await signUp(email,password))\r\n+            {\r\n+              navigate(\"/signin\");\r\n+            }\r\n+      \r\n+      \r\n     } catch (err) {\r\n       setError(err.reponse.data);\r\n+      alert(\"Error in signing up\")\r\n     }\r\n   };\r\n   const handleGS = async (e) => {\r\n     e.preventDefault();\r\n"
+                },
+                {
+                    "date": 1661005034714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,24 +44,28 @@\n       \r\n       \r\n     } catch (err) {\r\n       setError(err.reponse.data);\r\n-      alert(\"Error in signing up\")\r\n+      alert(\"Error in signing up\");\r\n     }\r\n   };\r\n   const handleGS = async (e) => {\r\n     e.preventDefault();\r\n     \r\n     setError(\"\");\r\n     try {\r\n-  \r\n-      await signInwG();\r\n+      if(await signInwG())\r\n+      {\r\n+        navigate(\"/signin\");\r\n+      }\r\n       \r\n-      navigate(\"/signin\");\r\n       \r\n+     \r\n+      \r\n     } catch (err) {\r\n       \r\n       setError(err.response.data);\r\n+      alert(\"Error in signing up\");\r\n     }\r\n   };\r\n   \r\n   return (\r\n"
+                },
+                {
+                    "date": 1661005157127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,36 +36,27 @@\n       phone:phone,\r\n       }\r\n       axios.post('http://localhost:9999/registerBuyer', register)\r\n             .then(res => console.log(res.data)).then(data => { alert('SignUp SuccessFully') })\r\n-            if(await signUp(email,password))\r\n-            {\r\n-              navigate(\"/signin\");\r\n-            }\r\n-      \r\n-      \r\n+      await signUp(email, password);\r\n+      navigate(\"/signin\");\r\n     } catch (err) {\r\n       setError(err.reponse.data);\r\n-      alert(\"Error in signing up\");\r\n     }\r\n   };\r\n   const handleGS = async (e) => {\r\n     e.preventDefault();\r\n     \r\n     setError(\"\");\r\n     try {\r\n-      if(await signInwG())\r\n-      {\r\n-        navigate(\"/signin\");\r\n-      }\r\n+  \r\n+      await signInwG();\r\n       \r\n+      navigate(\"/signin\");\r\n       \r\n-     \r\n-      \r\n     } catch (err) {\r\n       \r\n       setError(err.response.data);\r\n-      alert(\"Error in signing up\");\r\n     }\r\n   };\r\n   \r\n   return (\r\n"
+                },
+                {
+                    "date": 1661005202050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,14 @@\n       \r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n-      \r\n+      const register={\r\n+        email:email,\r\n+        password:password,\r\n+        }\r\n+        axios.post('http://localhost:9999/registerBuyer', register)\r\n+              .then(res => console.log(res.data)).then(data => { alert('SignUp SuccessFully') })\r\n       setError(err.response.data);\r\n     }\r\n   };\r\n   \r\n"
+                },
+                {
+                    "date": 1661005849145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,11 +34,12 @@\n       address:address,\r\n       name:name,\r\n       phone:phone,\r\n       }\r\n-      axios.post('http://localhost:9999/registerBuyer', register)\r\n+      axios.post('https://localhost:9999/registerBuyer', register)\r\n             .then(res => console.log(res.data)).then(data => { alert('SignUp SuccessFully') })\r\n       await signUp(email, password);\r\n+\r\n       navigate(\"/signin\");\r\n     } catch (err) {\r\n       setError(err.reponse.data);\r\n     }\r\n@@ -53,14 +54,9 @@\n       \r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n-      const register={\r\n-        email:email,\r\n-        password:password,\r\n-        }\r\n-        axios.post('http://localhost:9999/registerBuyer', register)\r\n-              .then(res => console.log(res.data)).then(data => { alert('SignUp SuccessFully') })\r\n+      \r\n       setError(err.response.data);\r\n     }\r\n   };\r\n   \r\n"
+                },
+                {
+                    "date": 1661005930771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n       address:address,\r\n       name:name,\r\n       phone:phone,\r\n       }\r\n-      axios.post('https://localhost:9999/registerBuyer', register)\r\n+      axios.post('http://localhost:9999/registerBuyer', register)\r\n             .then(res => console.log(res.data)).then(data => { alert('SignUp SuccessFully') })\r\n       await signUp(email, password);\r\n \r\n       navigate(\"/signin\");\r\n"
+                },
+                {
+                    "date": 1661006014540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,10 +73,10 @@\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n             <div className='d-flex flex-column gap-2 '>\r\n-            <div><Button onClick={handleGS} variant=\"default\" id=\"gbtn\" ><span className='ispan'><FcGoogle/></span> Sign Up with Google</Button></div>\r\n-            <div><Button variant=\"default\" id=\"fbtn\" ><span className='ispan'><SocialIcon network='facebook' style={{ height: 25, width: 25 }}/>\r\n+            <div><Button type=\"submit\" onClick={handleGS} variant=\"default\" id=\"gbtn\" ><span className='ispan'><FcGoogle/></span> Sign Up with Google</Button></div>\r\n+            <div><Button type=\"submit\" variant=\"default\" id=\"fbtn\" ><span className='ispan'><SocialIcon network='facebook' style={{ height: 25, width: 25 }}/>\r\n             </span>Sign Up with Facebook</Button></div>\r\n             </div>\r\n \r\n             <div id=\"fsep\"><p>OR</p></div>\r\n"
+                },
+                {
+                    "date": 1661006515798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,11 +48,13 @@\n     e.preventDefault();\r\n     \r\n     setError(\"\");\r\n     try {\r\n-  \r\n-      await signInwG();\r\n       \r\n+        await signInwG().useUserAuth();\r\n+      \r\n+      \r\n+      \r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n       \r\n"
+                },
+                {
+                    "date": 1661006847699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,11 +50,25 @@\n     setError(\"\");\r\n     try {\r\n       \r\n         await signInwG().useUserAuth();\r\n+     \r\n+      navigate(\"/signin\");\r\n       \r\n+    } catch (err) {\r\n       \r\n+      setError(err.response.data);\r\n+    }\r\n+  };\r\n+\r\n+  const handleFS = async (e) => {\r\n+    e.preventDefault();\r\n+    \r\n+    setError(\"\");\r\n+    try {\r\n       \r\n+        await signInwG().useUserAuth();\r\n+     \r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n       \r\n@@ -76,9 +90,9 @@\n             <div>\r\n             <h1 id='jhead'>Join As Buyer</h1>\r\n             <div className='d-flex flex-column gap-2 '>\r\n             <div><Button type=\"submit\" onClick={handleGS} variant=\"default\" id=\"gbtn\" ><span className='ispan'><FcGoogle/></span> Sign Up with Google</Button></div>\r\n-            <div><Button type=\"submit\" variant=\"default\" id=\"fbtn\" ><span className='ispan'><SocialIcon network='facebook' style={{ height: 25, width: 25 }}/>\r\n+            <div><Button type=\"submit\" onClick={handleFS} variant=\"default\" id=\"fbtn\" ><span className='ispan'><SocialIcon network='facebook' style={{ height: 25, width: 25 }}/>\r\n             </span>Sign Up with Facebook</Button></div>\r\n             </div>\r\n \r\n             <div id=\"fsep\"><p>OR</p></div>\r\n"
+                },
+                {
+                    "date": 1661006892787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n     \r\n     setError(\"\");\r\n     try {\r\n       \r\n-        await signInwG().useUserAuth();\r\n+        await signInwG(email,password);\r\n      \r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n@@ -65,9 +65,9 @@\n     \r\n     setError(\"\");\r\n     try {\r\n       \r\n-        await signInwG().useUserAuth();\r\n+        await signInwF()\r\n      \r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n"
+                },
+                {
+                    "date": 1661006936236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n   const [password, setPassword] = useState(\"\");\r\n   const [name, setuname] = useState(\"\");\r\n   const [address, setaddr] = useState(\"\");\r\n   const [phone, setmnum] = useState(\"\");\r\n-  const { signUp,signInwG } = useUserAuth();\r\n+  const { signUp,signInwG,signInwF } = useUserAuth();\r\n   \r\n   let navigate = useNavigate();\r\n \r\n   const handleSubmit = async (e) => {\r\n@@ -65,9 +65,9 @@\n     \r\n     setError(\"\");\r\n     try {\r\n       \r\n-        await signInwF()\r\n+        await signInwF(email,password);\r\n      \r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n"
+                },
+                {
+                    "date": 1661006990544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n     \r\n     setError(\"\");\r\n     try {\r\n       \r\n-        await signInwF(email,password);\r\n+        await signInwF();\r\n      \r\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n"
+                },
+                {
+                    "date": 1661007513709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n       await signUp(email, password);\r\n \r\n       navigate(\"/signin\");\r\n     } catch (err) {\r\n-      setError(err.reponse.data);\r\n+      setError(err.message);\r\n     }\r\n   };\r\n   const handleGS = async (e) => {\r\n     e.preventDefault();\r\n@@ -55,9 +55,9 @@\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n       \r\n-      setError(err.response.data);\r\n+      setError(err.message);\r\n     }\r\n   };\r\n \r\n   const handleFS = async (e) => {\r\n@@ -71,9 +71,9 @@\n       navigate(\"/signin\");\r\n       \r\n     } catch (err) {\r\n       \r\n-      setError(err.response.data);\r\n+      setError(err.message);\r\n     }\r\n   };\r\n   \r\n   return (\r\n"
+                },
+                {
+                    "date": 1661012371011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n import { useUserAuth } from \"../context/UserAuthContext\";\r\n import axios from 'axios';\r\n \r\n import join from '../join.jpg';\r\n+import { isSignInWithEmailLink } from 'firebase/auth';\r\n function Bjoin() {\r\n   const [email, setEmail] = useState(\"\");\r\n   const [error, setError] = useState(\"\");\r\n   const [password, setPassword] = useState(\"\");\r\n@@ -50,11 +51,15 @@\n     setError(\"\");\r\n     try {\r\n       \r\n         await signInwG(email,password);\r\n+        if(isSignInWithEmailLink)\r\n+        {\r\n+          navigate(\"/signin\");\r\n+        }\r\n      \r\n-      navigate(\"/signin\");\r\n       \r\n+      \r\n     } catch (err) {\r\n       \r\n       setError(err.message);\r\n     }\r\n"
+                },
+                {
+                    "date": 1661012707372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,17 +9,17 @@\n import { useUserAuth } from \"../context/UserAuthContext\";\r\n import axios from 'axios';\r\n \r\n import join from '../join.jpg';\r\n-import { isSignInWithEmailLink } from 'firebase/auth';\r\n+\r\n function Bjoin() {\r\n   const [email, setEmail] = useState(\"\");\r\n   const [error, setError] = useState(\"\");\r\n   const [password, setPassword] = useState(\"\");\r\n   const [name, setuname] = useState(\"\");\r\n   const [address, setaddr] = useState(\"\");\r\n   const [phone, setmnum] = useState(\"\");\r\n-  const { signUp,signInwG,signInwF } = useUserAuth();\r\n+  const { signUp,signInwG,signInwF,user } = useUserAuth();\r\n   \r\n   let navigate = useNavigate();\r\n \r\n   const handleSubmit = async (e) => {\r\n@@ -51,12 +51,15 @@\n     setError(\"\");\r\n     try {\r\n       \r\n         await signInwG(email,password);\r\n-        if(isSignInWithEmailLink)\r\n-        {\r\n-          navigate(\"/signin\");\r\n-        }\r\n+       \r\n+       if(user)\r\n+       {\r\n+        navigate(\"/signin\");\r\n+       }\r\n+         \r\n+        \r\n      \r\n       \r\n       \r\n     } catch (err) {\r\n"
+                },
+                {
+                    "date": 1661012719706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,8 +56,9 @@\n        if(user)\r\n        {\r\n         navigate(\"/signin\");\r\n        }\r\n+       \r\n          \r\n         \r\n      \r\n       \r\n"
+                },
+                {
+                    "date": 1661012776457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,15 +50,16 @@\n     \r\n     setError(\"\");\r\n     try {\r\n       \r\n-        await signInwG(email,password);\r\n+        \r\n        \r\n        if(user)\r\n        {\r\n-        navigate(\"/signin\");\r\n+        await signInwG(email,password);\r\n+        \r\n        }\r\n-       \r\n+       navigate(\"/signin\");\r\n          \r\n         \r\n      \r\n       \r\n"
+                },
+                {
+                    "date": 1661012803791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,11 +55,10 @@\n        \r\n        if(user)\r\n        {\r\n         await signInwG(email,password);\r\n-        \r\n+        navigate(\"/signin\");\r\n        }\r\n-       navigate(\"/signin\");\r\n          \r\n         \r\n      \r\n       \r\n"
+                },
+                {
+                    "date": 1661012849772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,16 +50,12 @@\n     \r\n     setError(\"\");\r\n     try {\r\n       \r\n-        \r\n+        await signInwG(email,password);\r\n        \r\n-       if(user)\r\n-       {\r\n-        await signInwG(email,password);\r\n-        navigate(\"/signin\");\r\n-       }\r\n-         \r\n+       \r\n+          navigate(\"/signin\");\r\n         \r\n      \r\n       \r\n       \r\n"
+                },
+                {
+                    "date": 1661013494719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n   const [password, setPassword] = useState(\"\");\r\n   const [name, setuname] = useState(\"\");\r\n   const [address, setaddr] = useState(\"\");\r\n   const [phone, setmnum] = useState(\"\");\r\n+  const [isLoggedIn, setLoggedIn] = useState(false);\r\n   const { signUp,signInwG,signInwF,user } = useUserAuth();\r\n   \r\n   let navigate = useNavigate();\r\n \r\n@@ -52,14 +53,11 @@\n     try {\r\n       \r\n         await signInwG(email,password);\r\n        \r\n+          navigate(\"/signin\");\r\n        \r\n-          navigate(\"/signin\");\r\n-        \r\n-     \r\n       \r\n-      \r\n     } catch (err) {\r\n       \r\n       setError(err.message);\r\n     }\r\n"
+                },
+                {
+                    "date": 1661013636117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,10 +52,12 @@\n     setError(\"\");\r\n     try {\r\n       \r\n         await signInwG(email,password);\r\n-       \r\n+        if(isLoggedIn)\r\n+       {\r\n           navigate(\"/signin\");\r\n+       }\r\n        \r\n       \r\n     } catch (err) {\r\n       \r\n"
+                },
+                {
+                    "date": 1661013813721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import Button from 'react-bootstrap/Button';\r\n import { FcGoogle } from \"react-icons/fc\";\r\n import { SocialIcon } from 'react-social-icons';\r\n import { Alert } from 'react-bootstrap';\r\n-import { Link,useNavigate} from \"react-router-dom\";\r\n+import { Link} from \"react-router-dom\";\r\n import { useUserAuth } from \"../context/UserAuthContext\";\r\n import axios from 'axios';\r\n \r\n import join from '../join.jpg';\r\n"
+                },
+                {
+                    "date": 1661013896932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import Button from 'react-bootstrap/Button';\r\n import { FcGoogle } from \"react-icons/fc\";\r\n import { SocialIcon } from 'react-social-icons';\r\n import { Alert } from 'react-bootstrap';\r\n-import { Link} from \"react-router-dom\";\r\n+import { Link,useNavigate} from \"react-router-dom\";\r\n import { useUserAuth } from \"../context/UserAuthContext\";\r\n import axios from 'axios';\r\n \r\n import join from '../join.jpg';\r\n"
+                },
+                {
+                    "date": 1661013908580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n       \r\n         await signInwG(email,password);\r\n         if(isLoggedIn)\r\n        {\r\n-          navigate(\"/signin\");\r\n+          navigate(\"/signin\",{ replace: true });\r\n        }\r\n        \r\n       \r\n     } catch (err) {\r\n"
+                },
+                {
+                    "date": 1661013924892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,13 +52,13 @@\n     setError(\"\");\r\n     try {\r\n       \r\n         await signInwG(email,password);\r\n-        if(isLoggedIn)\r\n-       {\r\n+        \r\n+       \r\n           navigate(\"/signin\",{ replace: true });\r\n-       }\r\n        \r\n+       \r\n       \r\n     } catch (err) {\r\n       \r\n       setError(err.message);\r\n"
+                },
+                {
+                    "date": 1661018644990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,9 +86,9 @@\n             <div className='p-5'>\r\n             <div className='bjcont'>\r\n             <div className= \"d-flex gap-3 m-5\">\r\n             <div>\r\n-              <img src={join} width=\"600px\" height=\"650px\"/>\r\n+              <img src={join} width=\"600px\" height=\"650px\" className='sbs'/>\r\n             </div>\r\n             <div className='col-sm-6'>\r\n             {error && <Alert variant=\"danger\">{error}</Alert>}\r\n             <form onSubmit={handleSubmit} className=\"aform\">\r\n"
+                },
+                {
+                    "date": 1661106684354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n import { SocialIcon } from 'react-social-icons';\r\n import { Alert } from 'react-bootstrap';\r\n import { Link,useNavigate} from \"react-router-dom\";\r\n import { useUserAuth } from \"../context/UserAuthContext\";\r\n+import { GoogleAuthProvider } from 'firebase/auth';\r\n import axios from 'axios';\r\n \r\n import join from '../join.jpg';\r\n \r\n@@ -17,10 +18,9 @@\n   const [password, setPassword] = useState(\"\");\r\n   const [name, setuname] = useState(\"\");\r\n   const [address, setaddr] = useState(\"\");\r\n   const [phone, setmnum] = useState(\"\");\r\n-  const [isLoggedIn, setLoggedIn] = useState(false);\r\n-  const { signUp,signInwG,signInwF,user } = useUserAuth();\r\n+  const { signUp,signInwG,signInwF } = useUserAuth();\r\n   \r\n   let navigate = useNavigate();\r\n \r\n   const handleSubmit = async (e) => {\r\n@@ -51,9 +51,22 @@\n     \r\n     setError(\"\");\r\n     try {\r\n       \r\n-        await signInwG(email,password);\r\n+        await signInwG(email,password).then((result) => {\r\n+          const credential = GoogleAuthProvider.credentialFromResult(result);\r\n+          const token = credential.accessToken;\r\n+          const user = result.user;\r\n+          console.log({ credential, token, user });\r\n+        })\r\n+        .catch((error) => {\r\n+    \r\n+          const errorCode = error.code;\r\n+          const errorMessage = error.message;\r\n+          const email = error.email;\r\n+          const credential = GoogleAuthProvider.credentialFromError(error);\r\n+          console.log({ errorCode, errorMessage, email, credential });\r\n+      });\r\n         \r\n        \r\n           navigate(\"/signin\",{ replace: true });\r\n        \r\n"
+                },
+                {
+                    "date": 1661106780990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,23 +51,22 @@\n     \r\n     setError(\"\");\r\n     try {\r\n       \r\n-        await signInwG(email,password).then((result) => {\r\n-          const credential = GoogleAuthProvider.credentialFromResult(result);\r\n-          const token = credential.accessToken;\r\n-          const user = result.user;\r\n-          console.log({ credential, token, user });\r\n-        })\r\n-        .catch((error) => {\r\n-    \r\n-          const errorCode = error.code;\r\n-          const errorMessage = error.message;\r\n-          const email = error.email;\r\n-          const credential = GoogleAuthProvider.credentialFromError(error);\r\n-          console.log({ errorCode, errorMessage, email, credential });\r\n-      });\r\n-        \r\n+      await signInwG(email,password).then((result) => {\r\n+        const credential = GoogleAuthProvider.credentialFromResult(result);\r\n+        const token = credential.accessToken;\r\n+        const user = result.user;\r\n+        console.log({ credential, token, user });\r\n+    })\r\n+    .catch((error) => {\r\n+  \r\n+        const errorCode = error.code;\r\n+        const errorMessage = error.message;\r\n+        const email = error.email;\r\n+        const credential = GoogleAuthProvider.credentialFromError(error);\r\n+        console.log({ errorCode, errorMessage, email, credential });\r\n+    });\r\n        \r\n           navigate(\"/signin\",{ replace: true });\r\n        \r\n        \r\n"
+                },
+                {
+                    "date": 1661107600704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   const [password, setPassword] = useState(\"\");\r\n   const [name, setuname] = useState(\"\");\r\n   const [address, setaddr] = useState(\"\");\r\n   const [phone, setmnum] = useState(\"\");\r\n-  const { signUp,signInwG,signInwF } = useUserAuth();\r\n+  const { signUp,signInwG,signInwF,user } = useUserAuth();\r\n   \r\n   let navigate = useNavigate();\r\n \r\n   const handleSubmit = async (e) => {\r\n@@ -52,23 +52,16 @@\n     setError(\"\");\r\n     try {\r\n       \r\n       await signInwG(email,password).then((result) => {\r\n-        const credential = GoogleAuthProvider.credentialFromResult(result);\r\n-        const token = credential.accessToken;\r\n-        const user = result.user;\r\n-        console.log({ credential, token, user });\r\n+        if(user){\r\n+          navigate('/signin')\r\n+        }\r\n+        \r\n     })\r\n-    .catch((error) => {\r\n-  \r\n-        const errorCode = error.code;\r\n-        const errorMessage = error.message;\r\n-        const email = error.email;\r\n-        const credential = GoogleAuthProvider.credentialFromError(error);\r\n-        console.log({ errorCode, errorMessage, email, credential });\r\n-    });\r\n+    \r\n        \r\n-          navigate(\"/signin\",{ replace: true });\r\n+          \r\n        \r\n        \r\n       \r\n     } catch (err) {\r\n"
+                }
+            ],
+            "date": 1660988818123,
+            "name": "Commit-0",
+            "content": "import React,{useState}from 'react';\r\nimport '../Join.css';\r\nimport 'bootstrap/dist/css/bootstrap.min.css';\r\nimport Button from 'react-bootstrap/Button';\r\nimport { FcGoogle } from \"react-icons/fc\";\r\nimport { SocialIcon } from 'react-social-icons';\r\nimport { Alert } from 'react-bootstrap';\r\nimport { Link,useNavigate} from \"react-router-dom\";\r\nimport { useUserAuth } from \"../context/UserAuthContext\";\r\nimport axios from 'axios';\r\n\r\nimport join from '../join.jpg';\r\nfunction Bjoin() {\r\n  const [email, setEmail] = useState(\"\");\r\n  const [error, setError] = useState(\"\");\r\n  const [password, setPassword] = useState(\"\");\r\n  const [name, setuname] = useState(\"\");\r\n  const [address, setaddr] = useState(\"\");\r\n  const [phone, setmnum] = useState(\"\");\r\n  const { signUp,signInwG } = useUserAuth();\r\n  \r\n  let navigate = useNavigate();\r\n\r\n  const handleSubmit = async (e) => {\r\n    \r\n    \r\n    e.preventDefault();\r\n    \r\n    setError(\"\");\r\n    try {\r\n      const register={\r\n      email:email,\r\n      password:password,\r\n      address:address,\r\n      name:name,\r\n      phone:phone,\r\n      }\r\n      axios.post('http://localhost:9999/registerBuyer', register)\r\n            .then(res => console.log(res.data)).then(data => { alert('SignUp SuccessFully') })\r\n      await signUp(email, password,5000);\r\n      navigate(\"/signin\");\r\n    } catch (err) {\r\n      setError(err.reponse.data);\r\n    }\r\n  };\r\n  const handleGS = async (e) => {\r\n    e.preventDefault();\r\n    \r\n    setError(\"\");\r\n    try {\r\n  \r\n      await signInwG();\r\n      navigate(\"/signin\");\r\n      \r\n    } catch (err) {\r\n      \r\n      setError(err.response.data);\r\n    }\r\n  };\r\n  \r\n  return (\r\n    <div className='container gap-5 mt-2'>\r\n   \r\n    \r\n            <div>\r\n              <img src={join} width=\"600px\" height=\"650px\"/>\r\n            </div>\r\n            <div className= \"col-sm-6 \">\r\n            {error && <Alert variant=\"danger\">{error}</Alert>}\r\n            <form onSubmit={handleSubmit} className=\"aform\">\r\n            <div>\r\n            <h1 id='jhead'>Join As Buyer</h1>\r\n            <div className='d-flex flex-column gap-2 '>\r\n            <div><Button onClick={handleGS} variant=\"default\" id=\"gbtn\" ><span className='ispan'><FcGoogle/></span> Sign Up with Google</Button></div>\r\n            <div><Button variant=\"default\" id=\"fbtn\" ><span className='ispan'><SocialIcon network='facebook' style={{ height: 25, width: 25 }}/>\r\n            </span>Sign Up with Facebook</Button></div>\r\n            </div>\r\n\r\n            <div id=\"fsep\"><p>OR</p></div>\r\n            </div>\r\n        <div className=\"mb-3 p-1\">\r\n          <input type=\"text\" value={name} className=\"form-control\" placeholder=\"Enter username\" required onChange={(e) => setuname(e.target.value)} />\r\n        </div>\r\n\r\n        <div className=\"mb-3 p-1\">\r\n          <input type=\"email\" value={email} className=\"form-control\" placeholder=\"Enter email address\" required onChange={(e) => setEmail(e.target.value)}/>\r\n        </div>\r\n\r\n        <div className=\"mb-3 p-1\">\r\n          <input type=\"number\" value={phone} className=\"form-control\" placeholder=\"Enter your mobile number\" required onChange={(e) => setmnum(e.target.value)} />\r\n        </div>\r\n\r\n        <div className=\"mb-3 p-1\">\r\n          <input type=\"text\" value={address} className=\"form-control\" placeholder=\"Enter your address\" onChange={(e) => setaddr(e.target.value)}/>\r\n        </div>\r\n\r\n        <div className=\"mb-3 p-1\">\r\n          <input type=\"password\"  value={password} className=\"form-control\" placeholder=\"Enter your password\" required onChange={(e) => setPassword(e.target.value)}/>\r\n        </div>\r\n       \r\n        <div className=\"d-grid \">\r\n          <Button type=\"submit\" variant=\"default\" className=\"subtn\">\r\n            Sign Up\r\n          </Button>\r\n        </div>\r\n        <p className=\"forgot-password text-center\">\r\n          Already registered      <Link to=\"/signin\">  <Button variant=\"default\" id=\"sibtn\" >Sign In?</Button></Link>\r\n        </p>\r\n      </form>\r\n            </div>\r\n            </div>\r\n            \r\n        \r\n  \r\n   \r\n  )\r\n}\r\n\r\nexport default Bjoin;"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Bubillpage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1662668078973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662668182233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n import './Billing.css';\r\n import axios from \"axios\";\r\n \r\n-function B() {\r\n+function Bu() {\r\n     const order=JSON.parse(localStorage.getItem(\"order\"));\r\n     const orderid=JSON.parse(localStorage.getItem(\"ordata\"));\r\n     const borderid=orderid.map(x=>x._id)\r\n    \r\n"
+                },
+                {
+                    "date": 1662668440675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,8 @@\n         getOrder();\r\n         getOrderbyId();\r\n       \r\n       }, []);\r\n-      \r\n       const getOrder = async () => {\r\n        \r\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n@@ -26,9 +25,20 @@\n \r\n            \r\n         });\r\n     }\r\n+      const getOrder = async () => {\r\n+       \r\n+     \r\n+        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n+         console.log(response.data);\r\n+         localStorage.setItem(\"ordata\",JSON.stringify(response.data))\r\n+         \r\n \r\n+           \r\n+        });\r\n+    }\r\n+\r\n     const getOrderbyId = async () => {\r\n        \r\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrder/\"+borderid[0]).then((response)=>{\r\n"
+                }
+            ],
+            "date": 1662668078973,
+            "name": "Commit-0",
+            "content": "import {React ,useState,useEffect} from 'react';\r\nimport Card from 'react-bootstrap/Card';\r\n\r\nimport './Billing.css';\r\nimport axios from \"axios\";\r\n\r\nfunction Billing() {\r\n    const order=JSON.parse(localStorage.getItem(\"order\"));\r\n    const orderid=JSON.parse(localStorage.getItem(\"ordata\"));\r\n    const borderid=orderid.map(x=>x._id)\r\n   \r\n    const data=JSON.parse(localStorage.getItem(\"ordatabyid\"));\r\n\r\n    useEffect(() => {\r\n        getOrder();\r\n        getOrderbyId();\r\n      \r\n      }, []);\r\n      const getOrder = async () => {\r\n       \r\n     \r\n        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n         console.log(response.data);\r\n         localStorage.setItem(\"ordata\",JSON.stringify(response.data))\r\n         \r\n\r\n           \r\n        });\r\n    }\r\n\r\n    const getOrderbyId = async () => {\r\n       \r\n     \r\n        await axios.get(\"http://localhost:9999/retrieveOrder/\"+borderid[0]).then((response)=>{\r\n         console.log(response.data);\r\n         localStorage.setItem(\"ordatabyid\",JSON.stringify(response.data))\r\n       \r\n           \r\n        });\r\n    }\r\n\r\n\r\n  return (\r\n    <div className='p-5'>\r\n    <div className='billcont'>\r\n    <Card className='billcard' style={{ width: '600px'}} >\r\n  \r\n  <Card.Body>\r\n  <hr/>\r\n    <Card.Title>\r\n     <h1 id='billname'>Reciept</h1>\r\n        \r\n    </Card.Title>\r\n    <Card.Text>\r\n      <div className='cardtab'>\r\n     <table className='billtab'>\r\n        <tr>\r\n            <td>Buyer Id</td>\r\n            <td>{data.buyerId}</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Seller Id</td>\r\n            <td>{data.sellerId}</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Project Title</td>\r\n            <td>{data.title}</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Order Status</td>\r\n            <td>{data.status}</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Duration</td>\r\n            <td>{data.duration}</td>\r\n        </tr>\r\n        <tr>\r\n            <td>Amount given</td>\r\n            <td>{data.price}</td>\r\n        </tr>\r\n     </table>\r\n        \r\n      </div>\r\n    </Card.Text>\r\n  \r\n  </Card.Body>\r\n</Card>\r\n   \r\n      \r\n        </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Billing;"
+        }
+    ]
+}

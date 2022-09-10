@@ -1,0 +1,158 @@
+{
+    "sourceFile": "src/components/BuyerOrders.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 35,
+            "patches": [
+                {
+                    "date": 1662308760434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662309154645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,33 @@\n-import React from 'react'\r\n+import {React ,useState,useEffect} from 'react';\r\n+import axios from \"axios\";\r\n \r\n+\r\n function BuyerOrders() {\r\n+    const [Suserdata, setSUserData] = useState([]);\r\n+    const order=JSON.parse(localStorage.getItem(\"order\"));\r\n+    const orderemail=order.map(x=>x.email);\r\n+    console.log(orderemail);\r\n+    useEffect(() => {\r\n+        getOrder();\r\n+      \r\n+      }, []);\r\n+    \r\n+      const getOrder = async () => {\r\n+       \r\n+     \r\n+        await axios.get(\"http://localhost:9999/retrieveOrders/\").then((response)=>{\r\n+         \r\n+           \r\n+            setSUserData(response.data);\r\n+        });\r\n+    }\r\n   return (\r\n     <div>\r\n-        <div><h1>My Orders</h1></div>\r\n+        <div>\r\n+        <h1>My Orders</h1>\r\n+\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662309181886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"order\"));\r\n-    const orderemail=order.map(x=>x.email);\r\n-    console.log(orderemail);\r\n+    //const orderemail=order.map(x=>x.email);\r\n+    console.log(order.email);\r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1662309361984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,22 +4,22 @@\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"order\"));\r\n-    //const orderemail=order.map(x=>x.email);\r\n-    console.log(order.email);\r\n+   \r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n     \r\n       const getOrder = async () => {\r\n        \r\n      \r\n-        await axios.get(\"http://localhost:9999/retrieveOrders/\").then((response)=>{\r\n+        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n            \r\n             setSUserData(response.data);\r\n+            console.log(response.data)\r\n         });\r\n     }\r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1662309535064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n   return (\r\n     <div>\r\n         <div>\r\n         <h1>My Orders</h1>\r\n+        <h2>{Suserdata._id}</h2>\r\n \r\n         </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1662309620790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,16 +17,16 @@\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n            \r\n             setSUserData(response.data);\r\n-            console.log(response.data)\r\n+            console.log(typeof(response.data))\r\n         });\r\n     }\r\n   return (\r\n     <div>\r\n         <div>\r\n         <h1>My Orders</h1>\r\n-        <h2>{Suserdata._id}</h2>\r\n+        \r\n \r\n         </div>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1662309664751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n            \r\n-            setSUserData(response.data);\r\n-            console.log(typeof(response.data))\r\n+            setSUserData(JSON.parse(response.data));\r\n+           \r\n         });\r\n     }\r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1662309676338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n            \r\n             setSUserData(JSON.parse(response.data));\r\n+            \r\n            \r\n         });\r\n     }\r\n   return (\r\n"
+                },
+                {
+                    "date": 1662309797485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,11 @@\n        \r\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n+           const nresp=JSON.parse(response.data);\r\n+           console.log(nresp)\r\n            \r\n-            setSUserData(JSON.parse(response.data));\r\n             \r\n            \r\n         });\r\n     }\r\n"
+                },
+                {
+                    "date": 1662309934949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,13 +15,12 @@\n        \r\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n-           const nresp=JSON.parse(response.data);\r\n-           console.log(nresp)\r\n+           console.log(response.data)\r\n+            setSUserData(response.data);\r\n+\r\n            \r\n-            \r\n-           \r\n         });\r\n     }\r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1662310007883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n        \r\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n-           console.log(response.data)\r\n+\r\n+           console.log(JSON.stringify(response.data))\r\n+\r\n             setSUserData(response.data);\r\n \r\n            \r\n         });\r\n"
+                },
+                {
+                    "date": 1662310029244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n \r\n-           console.log(JSON.stringify(response.data))\r\n+          \r\n \r\n             setSUserData(response.data);\r\n \r\n            \r\n"
+                },
+                {
+                    "date": 1662310049379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n \r\n function BuyerOrders() {\r\n-    const [Suserdata, setSUserData] = useState([]);\r\n+    const [Suserdata, setSUserData] = useState();\r\n     const order=JSON.parse(localStorage.getItem(\"order\"));\r\n    \r\n     useEffect(() => {\r\n         getOrder();\r\n"
+                },
+                {
+                    "date": 1662310063225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import axios from \"axios\";\r\n \r\n \r\n function BuyerOrders() {\r\n-    const [Suserdata, setSUserData] = useState();\r\n+    const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"order\"));\r\n    \r\n     useEffect(() => {\r\n         getOrder();\r\n"
+                },
+                {
+                    "date": 1662446351949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,11 @@\n \r\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n-    const order=JSON.parse(localStorage.getItem(\"order\"));\r\n+    const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n    \r\n+   \r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n@@ -17,18 +18,56 @@\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n \r\n           \r\n-\r\n+        console.log(response.data);\r\n+      \r\n+        \r\n             setSUserData(response.data);\r\n \r\n            \r\n         });\r\n     }\r\n   return (\r\n     <div>\r\n-        <div>\r\n-        <h1>My Orders</h1>\r\n+        <div className='p-4'>\r\n+        <h1>My orders</h1>\r\n+        <table className='tabreq'>\r\n+                <thead>\r\n+                    <tr>\r\n+                        <th>Buyer Id</th>\r\n+                        <th>Seller Id</th>\r\n+                        <th>title</th>\r\n+                        <th>description</th>\r\n+                        <th>Category</th>\r\n+                        <th>Duration</th>\r\n+                        <th>Price</th>\r\n+                        <th>Status</th>\r\n+                        <th>Update Status</th>\r\n+                       \r\n+                    \r\n+                    </tr>\r\n+                </thead>\r\n+                <tbody>\r\n+                {Suserdata.map(data=>(\r\n+                       <tr>\r\n+                        <td >{data.buyerId}</td>\r\n+                        <td >{data.sellerId}</td>\r\n+                        <td>{data.title}</td>\r\n+                        <td>{data.description}</td>\r\n+                        <td>{data.category}</td>\r\n+                        <td>{data.duration}</td>\r\n+                        <td>Rs.{data.price}</td>\r\n+                        <td>{data.status}</td>\r\n+                        <td><button>Update status</button></td>\r\n+\r\n+                       </tr>\r\n+\r\n+\r\n+    ))}\r\n+   \r\n+                </tbody>\r\n+            </table>\r\n         \r\n \r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1662446412615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,16 +4,17 @@\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n+    console.log(order)\r\n    \r\n    \r\n     useEffect(() => {\r\n-        getOrder();\r\n+      //  getOrder();\r\n       \r\n       }, []);\r\n     \r\n-      const getOrder = async () => {\r\n+     /* const getOrder = async () => {\r\n        \r\n      \r\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n@@ -25,9 +26,9 @@\n             setSUserData(response.data);\r\n \r\n            \r\n         });\r\n-    }\r\n+    }*/\r\n   return (\r\n     <div>\r\n         <div className='p-4'>\r\n         <h1>My orders</h1>\r\n"
+                },
+                {
+                    "date": 1662446445121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n-    console.log(order)\r\n+    console.log(order._id)\r\n    \r\n    \r\n     useEffect(() => {\r\n       //  getOrder();\r\n"
+                },
+                {
+                    "date": 1662446467081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,20 +4,20 @@\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n-    console.log(order._id)\r\n+  \r\n    \r\n    \r\n     useEffect(() => {\r\n-      //  getOrder();\r\n+       getOrder();\r\n       \r\n       }, []);\r\n     \r\n-     /* const getOrder = async () => {\r\n+      const getOrder = async () => {\r\n        \r\n      \r\n-        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n+        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order._id).then((response)=>{\r\n          \r\n \r\n           \r\n         console.log(response.data);\r\n@@ -26,9 +26,9 @@\n             setSUserData(response.data);\r\n \r\n            \r\n         });\r\n-    }*/\r\n+    }\r\n   return (\r\n     <div>\r\n         <div className='p-4'>\r\n         <h1>My orders</h1>\r\n"
+                },
+                {
+                    "date": 1662446497719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     \r\n       const getOrder = async () => {\r\n        \r\n      \r\n-        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order._id).then((response)=>{\r\n+        await axios.get(\"http://localhost:9999/retrieveOrder/\"+order._id).then((response)=>{\r\n          \r\n \r\n           \r\n         console.log(response.data);\r\n"
+                },
+                {
+                    "date": 1662446606591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,21 +3,20 @@\n \r\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n-    const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n-  \r\n+    const order=JSON.parse(localStorage.getItem(\"order\"));\r\n    \r\n    \r\n     useEffect(() => {\r\n-       getOrder();\r\n+        getOrder();\r\n       \r\n       }, []);\r\n     \r\n       const getOrder = async () => {\r\n        \r\n      \r\n-        await axios.get(\"http://localhost:9999/retrieveOrder/\"+order._id).then((response)=>{\r\n+        await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n \r\n           \r\n         console.log(response.data);\r\n"
+                },
+                {
+                    "date": 1662447047250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n-    const order=JSON.parse(localStorage.getItem(\"order\"));\r\n+    const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n    \r\n    \r\n     useEffect(() => {\r\n         getOrder();\r\n"
+                },
+                {
+                    "date": 1662447097491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n-    const order=JSON.parse(localStorage.getItem(\"sord\"));\r\n+    const order=JSON.parse(localStorage.getItem(\"order\"));\r\n    \r\n    \r\n     useEffect(() => {\r\n         getOrder();\r\n"
+                },
+                {
+                    "date": 1662447212421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n \r\n function BuyerOrders() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"order\"));\r\n+    const buyer=JSON.parse(localStorage.getItem(\"buyer\"));\r\n+    const buyerId=buyer.map(x=>x._id);\r\n+\r\n    \r\n    \r\n     useEffect(() => {\r\n         getOrder();\r\n"
+                },
+                {
+                    "date": 1662447222098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"order\"));\r\n     const buyer=JSON.parse(localStorage.getItem(\"buyer\"));\r\n     const buyerId=buyer.map(x=>x._id);\r\n+    console.log(buyerId)\r\n \r\n    \r\n    \r\n     useEffect(() => {\r\n"
+                },
+                {
+                    "date": 1662447228455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"order\"));\r\n     const buyer=JSON.parse(localStorage.getItem(\"buyer\"));\r\n     const buyerId=buyer.map(x=>x._id);\r\n-    console.log(buyerId)\r\n+    console.log(buyerId[0])\r\n \r\n    \r\n    \r\n     useEffect(() => {\r\n"
+                },
+                {
+                    "date": 1662447367439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,11 @@\n     const [Suserdata, setSUserData] = useState([]);\r\n     const order=JSON.parse(localStorage.getItem(\"order\"));\r\n     const buyer=JSON.parse(localStorage.getItem(\"buyer\"));\r\n     const buyerId=buyer.map(x=>x._id);\r\n-    console.log(buyerId[0])\r\n-\r\n    \r\n    \r\n+   \r\n     useEffect(() => {\r\n         getOrder();\r\n       \r\n       }, []);\r\n@@ -22,11 +21,11 @@\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n \r\n           \r\n-        console.log(response.data);\r\n+        console.log(response.data[0].buyerId);\r\n       \r\n-        \r\n+       // if(buyerId[0]===)\r\n             setSUserData(response.data);\r\n \r\n            \r\n         });\r\n"
+                },
+                {
+                    "date": 1662447418805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,12 +21,15 @@\n         await axios.get(\"http://localhost:9999/retrieveOrders/\"+order.email).then((response)=>{\r\n          \r\n \r\n           \r\n-        console.log(response.data[0].buyerId);\r\n+        console.log(response.data);\r\n       \r\n-       // if(buyerId[0]===)\r\n+        if(buyerId[0]===response.data[0].buyerId)\r\n+        {\r\n             setSUserData(response.data);\r\n+        }\r\n+        \r\n \r\n            \r\n         });\r\n     }\r\n"
+                },
+                {
+                    "date": 1662447465814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,11 @@\n         if(buyerId[0]===response.data[0].buyerId)\r\n         {\r\n             setSUserData(response.data);\r\n         }\r\n-        \r\n+        else{\r\n+            alert(\"Buyer doesn't match\")\r\n+        }\r\n \r\n            \r\n         });\r\n     }\r\n"
+                },
+                {
+                    "date": 1662447689205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n import {React ,useState,useEffect} from 'react';\r\n+import './SBorder.css';\r\n+\r\n import axios from \"axios\";\r\n \r\n \r\n function BuyerOrders() {\r\n@@ -38,9 +40,9 @@\n   return (\r\n     <div>\r\n         <div className='p-4'>\r\n         <h1>My orders</h1>\r\n-        <table className='tabreq'>\r\n+        <table className='tabordr'>\r\n                 <thead>\r\n                     <tr>\r\n                         <th>Buyer Id</th>\r\n                         <th>Seller Id</th>\r\n"
+                },
+                {
+                    "date": 1662447762552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n                         <td>{data.category}</td>\r\n                         <td>{data.duration}</td>\r\n                         <td>Rs.{data.price}</td>\r\n                         <td>{data.status}</td>\r\n-                        <td><button>Update status</button></td>\r\n+                        <td><button id=\"bupd\">Update status</button></td>\r\n \r\n                        </tr>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1662447782203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n                         <td>{data.category}</td>\r\n                         <td>{data.duration}</td>\r\n                         <td>Rs.{data.price}</td>\r\n                         <td>{data.status}</td>\r\n-                        <td><button id=\"bupd\">Update status</button></td>\r\n+                        <td><button id=\"bsupd\">Update status</button></td>\r\n \r\n                        </tr>\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1662453571139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import {React ,useState,useEffect} from 'react';\r\n+import Bheader from './Bheader';\r\n import './SBorder.css';\r\n \r\n import axios from \"axios\";\r\n \r\n@@ -39,8 +40,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <div className='p-4'>\r\n+        <Bheader/>\r\n         <h1>My orders</h1>\r\n         <table className='tabordr'>\r\n                 <thead>\r\n                     <tr>\r\n"
+                },
+                {
+                    "date": 1662457524451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n     <div>\r\n         <div className='p-4'>\r\n         <Bheader/>\r\n         <h1>My orders</h1>\r\n+        <div>\r\n         <table className='tabordr'>\r\n                 <thead>\r\n                     <tr>\r\n                         <th>Buyer Id</th>\r\n@@ -79,9 +80,9 @@\n    \r\n                 </tbody>\r\n             </table>\r\n         \r\n-\r\n+            </div>\r\n         </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1662457560825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     <div>\r\n         <div className='p-4'>\r\n         <Bheader/>\r\n         <h1>My orders</h1>\r\n-        <div>\r\n+        <div className='botabcont'>\r\n         <table className='tabordr'>\r\n                 <thead>\r\n                     <tr>\r\n                         <th>Buyer Id</th>\r\n"
+                },
+                {
+                    "date": 1662530369217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import {React ,useState,useEffect} from 'react';\r\n import Bheader from './Bheader';\r\n-\r\n+import {Modal, ModalFooter} from \"react-bootstrap\";\r\n import './SBorder.css';\r\n \r\n import axios from \"axios\";\r\n \r\n"
+                },
+                {
+                    "date": 1662531777529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,9 @@\n         <Modal.Body>\r\n         \r\n         <form className='swform' onSubmit={(e)=>{handleSubmit(e)}}>\r\n             <div className='inmod'>\r\n-            <p>Are you satisfied with seller's order/delievered work?If yes tick on </p>\r\n+            <p>Are you satisfied with seller's order/delievered work?If yes tick on c</p>\r\n           </div>\r\n           <div>\r\n           <button id=\"swbtn\"> Upload</button>\r\n           </div>\r\n"
+                }
+            ],
+            "date": 1662308760434,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction BuyerOrders() {\r\n  return (\r\n    <div>\r\n        <div><h1>My Orders</h1></div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default BuyerOrders"
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+
+.bhpg{
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-text-stroke-color: royalblue;
+    -webkit-text-stroke-width:2px;
+    letter-spacing: 5px;
+    font-family: cursive;
+    font-weight: bold;
+}
+.navbar{
+    margin-top: 10px!important;
+    background-color: mediumaquamarine!important;
+    justify-content: center;
+    
+}
+#lserv{
+    text-align: justify;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.cardcont{
+    display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content:center;
+  border: 5px solid black;
+  padding: 5px;
+  margin-top: 30px;
+  background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+
+.mcard{
+    width: 18rem;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 18px;
+    text-align:center;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px 3px darkgreen;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition:transform ease 0.5s;
+    background-image:radial-gradient(circle at 10% 20%, rgb(85, 149, 27) 0.1%, rgb(183, 219, 87) 90%);;
+
+    
+  }
+  #uname{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+  #service{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #pmail{
+    font-size:20px;
+    margin-top: 3px;
+   
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+  
+    .navbar{
+        display: inline-block!important;
+        left:18%;
+    }
+
+    header ul{
+        display:inline;
+        font-size: 14px;
+    }
+    li{
+        
+        padding: 10px;
+        margin-top: 3px;
+    }
+    li button{
+        width: 200px;
+        position: relative;
+        left:10%;
+    }
+    #lserv{
+       margin-left: 50px;
+    }
+    .cardcont{
+        display: inline-block;
+        position: relative;
+        left: 8%;
+      
+    }
+
+    
+  }
+  
+  
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .bhpg{
+
+        margin-left: 70px;
+    }
+    .navbar{
+        display: inline-block!important;
+        left:20%!important;
+    }
+
+    header ul{
+        display:inline;
+        font-size: 14px;
+    }
+    li{
+        
+        padding: 10px;
+        margin-top: 3px;
+    }
+    li button{
+        width: 200px;
+        position: relative;
+        left:10%;
+    }
+    #lserv{
+       margin-left: 50px;
+    }
+    .cardcont{
+        display: inline-block;
+        position: relative;
+        right:2%;
+      
+    } 
+    
+    
+  }

@@ -1,0 +1,161 @@
+#sellh{
+    -webkit-text-stroke-color: darkslateblue;
+    -webkit-text-stroke-width:2px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.tabpro{
+   border:3px solid black;
+   padding:10px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.tabpro th{
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid black;
+    width:30%;
+    padding: 5px;
+    background-color: lightgreen;
+    letter-spacing: 3px;
+   
+}
+.tabpro tr td{
+    margin-right: 20px;
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+    width:30%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: lightskyblue;
+    
+}
+#bid{
+    padding: 5px;
+    background-color:green;
+    font-weight: bold;
+    width:60px;
+    border-radius: 20px;
+}
+.tabpro td:hover{
+    background-color: khaki;
+}
+#bid:hover{
+    background-color: lightsalmon;
+}
+.modform{
+border:2px solid black;
+padding: 10px;
+
+}
+
+.modinp{
+width:300px;
+text-align: center;
+padding: 3px;
+position: relative;
+left:20%;
+margin-top: 20px;
+}
+#modtexta{
+    width:300px;
+    height: 100px;
+    position: relative;
+    left:20%;
+    text-align: center;
+}
+#modsel{
+    width:200px;
+    padding: 2px;
+    text-align: center;
+    position: relative;
+    left:30%;
+}
+#modsub{
+    width:200px;
+    padding: 2px;
+    text-align: center;
+    position: relative;
+    left:30%;
+    background-color:#1dbf73;
+}
+#modcan{
+    padding: 5px;
+    position: relative;
+    right: 35%;
+    width:100px;
+    background-color: lightblue;
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    
+   .sdtab{
+        overflow-x: auto;
+      
+    }
+    .modform{
+        width:300px;
+        border: none;
+
+    }
+    
+    .modal-title{
+        margin-left: 150px;
+    }
+    #modsub{
+        left:40%;
+    }
+    
+}
+@media (min-width: 320px) and (max-width: 480px)
+{
+    
+    .navbar{
+        display: inline-block!important;
+        left: 20%!important;
+       
+    }
+    .sdtab{
+        overflow-x: auto;
+        width:100%;
+        margin-bottom: 15px;
+        padding: 5px;
+      
+    }
+    .modform{
+        width:100px;
+        border: none;
+
+    }
+    .modal-dialog{
+        width: 300px !important;
+    }
+    
+    .modal-title{
+        margin-left: 50px;
+    }
+    #modsub{
+        left:28%;
+    }
+    .modinp{
+        width:200px;
+    }
+    #modtexta{
+        width:200px
+    }
+    #modsel{
+        width:200px;
+        left:25%;
+    }
+    
+    
+    
+} 
+
+
+    
+
+

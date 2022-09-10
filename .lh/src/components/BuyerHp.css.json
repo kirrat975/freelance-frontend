@@ -1,0 +1,326 @@
+{
+    "sourceFile": "src/components/BuyerHp.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 77,
+            "patches": [
+                {
+                    "date": 1661236731016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1661264744767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,15 @@\n .navbar{\r\n     background-color: mediumaquamarine!important;\r\n-}\n\\ No newline at end of file\n+}\r\n+.mcard{\r\n+    width: 18rem;\r\n+    padding: 5px;\r\n+    border: 5px solid black;\r\n+    margin: 18px;\r\n+    text-align:center;\r\n+    border-radius: 4px;\r\n+    box-shadow: 5px 5px 5px 5px darkgreen;\r\n+    font-family: sans-serif;\r\n+    transition:transform ease 0.5s;\r\n+    \r\n+  }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661264916077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n .navbar{\r\n     background-color: mediumaquamarine!important;\r\n }\r\n+.cardcont{\r\n+    display: grid;\r\n+  grid-template-columns: auto auto auto;\r\n+  justify-content:center;\r\n+}\r\n .mcard{\r\n     width: 18rem;\r\n     padding: 5px;\r\n     border: 5px solid black;\r\n"
+                },
+                {
+                    "date": 1661267305158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     border: 5px solid black;\r\n     margin: 18px;\r\n     text-align:center;\r\n     border-radius: 4px;\r\n-    box-shadow: 5px 5px 5px 5px darkgreen;\r\n+    box-shadow: 3px 3px 3px 3px darkgreen;\r\n     font-family: sans-serif;\r\n     transition:transform ease 0.5s;\r\n     \r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661267447063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,7 @@\n     border-radius: 4px;\r\n     box-shadow: 3px 3px 3px 3px darkgreen;\r\n     font-family: sans-serif;\r\n     transition:transform ease 0.5s;\r\n+    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));\r\n     \r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661267616894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,8 @@\n     font-family: sans-serif;\r\n     transition:transform ease 0.5s;\r\n     background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));\r\n     \r\n+  }\r\n+  #uname{\r\n+    font-size: 14px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661267624748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,6 @@\n     background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));\r\n     \r\n   }\r\n   #uname{\r\n-    font-size: 14px;\r\n+    font-size: 20px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661267632580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,6 @@\n     background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));\r\n     \r\n   }\r\n   #uname{\r\n-    font-size: 20px;\r\n+    font-size: 30px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661267654419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,6 @@\n     \r\n   }\r\n   #uname{\r\n     font-size: 30px;\r\n+    text-transform: uppercase;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661267670158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,8 @@\n   }\r\n   #uname{\r\n     font-size: 30px;\r\n     text-transform: uppercase;\r\n+  }\r\n+  #service{\r\n+    font-size: 18px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661267679384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,6 +23,6 @@\n     font-size: 30px;\r\n     text-transform: uppercase;\r\n   }\r\n   #service{\r\n-    font-size: 18px;\r\n+    font-size: 20px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661267708122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n     box-shadow: 3px 3px 3px 3px darkgreen;\r\n     font-family: sans-serif;\r\n     transition:transform ease 0.5s;\r\n     background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));\r\n+    color:white;\r\n     \r\n   }\r\n   #uname{\r\n     font-size: 30px;\r\n"
+                },
+                {
+                    "date": 1661267722571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     box-shadow: 3px 3px 3px 3px darkgreen;\r\n     font-family: sans-serif;\r\n     transition:transform ease 0.5s;\r\n     background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));\r\n-    color:white;\r\n+\r\n     \r\n   }\r\n   #uname{\r\n     font-size: 30px;\r\n"
+                },
+                {
+                    "date": 1661267797145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,11 @@\n+#bhop{\r\n+    text-align: center;\r\n+}\r\n .navbar{\r\n     background-color: mediumaquamarine!important;\r\n }\r\n+\r\n .cardcont{\r\n     display: grid;\r\n   grid-template-columns: auto auto auto;\r\n   justify-content:center;\r\n"
+                },
+                {
+                    "date": 1661267812601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n #bhop{\r\n     text-align: center;\r\n+    text-transform: capitalize;\r\n }\r\n .navbar{\r\n     background-color: mediumaquamarine!important;\r\n }\r\n"
+                },
+                {
+                    "date": 1661267850639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+\r\n #bhop{\r\n     text-align: center;\r\n     text-transform: capitalize;\r\n }\r\n"
+                },
+                {
+                    "date": 1661267902280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n #bhop{\r\n-    text-align: center;\r\n-    text-transform: capitalize;\r\n+    text-align: center!important;\r\n+    text-transform: capitalize!important;\r\n }\r\n .navbar{\r\n     background-color: mediumaquamarine!important;\r\n }\r\n"
+                },
+                {
+                    "date": 1661267909601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n #bhop{\r\n-    text-align: center!important;\r\n-    text-transform: capitalize!important;\r\n+    text-align: center;\r\n+    text-transform: capitalize;\r\n }\r\n .navbar{\r\n     background-color: mediumaquamarine!important;\r\n }\r\n"
+                },
+                {
+                    "date": 1661267973923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n-#bhop{\r\n+.bhpg{\r\n     text-align: center;\r\n     text-transform: capitalize;\r\n }\r\n .navbar{\r\n"
+                },
+                {
+                    "date": 1661268000935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n \r\n .bhpg{\r\n     text-align: center;\r\n-    text-transform: capitalize;\r\n+    text-transform: uppercase;\r\n }\r\n .navbar{\r\n     background-color: mediumaquamarine!important;\r\n }\r\n"
+                },
+                {
+                    "date": 1661268016359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n     text-align: center;\r\n     text-transform: uppercase;\r\n }\r\n .navbar{\r\n+    margin-top: 3px!important;\r\n     background-color: mediumaquamarine!important;\r\n }\r\n \r\n .cardcont{\r\n"
+                },
+                {
+                    "date": 1661268028492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     text-align: center;\r\n     text-transform: uppercase;\r\n }\r\n .navbar{\r\n-    margin-top: 3px!important;\r\n+    margin-top: 5px!important;\r\n     background-color: mediumaquamarine!important;\r\n }\r\n \r\n .cardcont{\r\n"
+                },
+                {
+                    "date": 1661268064290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n \r\n .bhpg{\r\n     text-align: center;\r\n     text-transform: uppercase;\r\n+    -webkit-text-stroke-color: royalblue;\r\n+    -webkit-text-stroke-width:2px;\r\n }\r\n .navbar{\r\n-    margin-top: 5px!important;\r\n+    margin-top: 10px!important;\r\n     background-color: mediumaquamarine!important;\r\n }\r\n \r\n .cardcont{\r\n"
+                },
+                {
+                    "date": 1661268079380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n     text-align: center;\r\n     text-transform: uppercase;\r\n     -webkit-text-stroke-color: royalblue;\r\n     -webkit-text-stroke-width:2px;\r\n+    letter-spacing: 5px;\r\n }\r\n .navbar{\r\n     margin-top: 10px!important;\r\n     background-color: mediumaquamarine!important;\r\n"
+                },
+                {
+                    "date": 1661268098891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n     text-transform: uppercase;\r\n     -webkit-text-stroke-color: royalblue;\r\n     -webkit-text-stroke-width:2px;\r\n     letter-spacing: 5px;\r\n+    font-family: cursive;\r\n+    font-weight: bold;\r\n }\r\n .navbar{\r\n     margin-top: 10px!important;\r\n     background-color: mediumaquamarine!important;\r\n"
+                },
+                {
+                    "date": 1661268229203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,17 @@\n .navbar{\r\n     margin-top: 10px!important;\r\n     background-color: mediumaquamarine!important;\r\n }\r\n-\r\n+#lserv{\r\n+    text-align: justify;\r\n+}\r\n .cardcont{\r\n     display: grid;\r\n   grid-template-columns: auto auto auto;\r\n   justify-content:center;\r\n }\r\n+\r\n .mcard{\r\n     width: 18rem;\r\n     padding: 5px;\r\n     border: 5px solid black;\r\n"
+                },
+                {
+                    "date": 1661268234692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n     background-color: mediumaquamarine!important;\r\n }\r\n #lserv{\r\n     text-align: justify;\r\n+    text-transform: capitalize;\r\n }\r\n .cardcont{\r\n     display: grid;\r\n   grid-template-columns: auto auto auto;\r\n"
+                },
+                {
+                    "date": 1661268242435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n }\r\n #lserv{\r\n     text-align: justify;\r\n     text-transform: capitalize;\r\n+    margin-top: 5px;\r\n }\r\n .cardcont{\r\n     display: grid;\r\n   grid-template-columns: auto auto auto;\r\n"
+                },
+                {
+                    "date": 1661268268113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n .cardcont{\r\n     display: grid;\r\n   grid-template-columns: auto auto auto;\r\n   justify-content:center;\r\n+  border: 5px solid black;\r\n }\r\n \r\n .mcard{\r\n     width: 18rem;\r\n"
+                },
+                {
+                    "date": 1661268280369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n     display: grid;\r\n   grid-template-columns: auto auto auto;\r\n   justify-content:center;\r\n   border: 5px solid black;\r\n+  padding: 5px;\r\n }\r\n \r\n .mcard{\r\n     width: 18rem;\r\n"
+                },
+                {
+                    "date": 1661268291296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n   grid-template-columns: auto auto auto;\r\n   justify-content:center;\r\n   border: 5px solid black;\r\n   padding: 5px;\r\n+  margin-top: 5px;\r\n }\r\n \r\n .mcard{\r\n     width: 18rem;\r\n"
+                },
+                {
+                    "date": 1661268303095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   grid-template-columns: auto auto auto;\r\n   justify-content:center;\r\n   border: 5px solid black;\r\n   padding: 5px;\r\n-  margin-top: 5px;\r\n+  margin-top: 10px;\r\n }\r\n \r\n .mcard{\r\n     width: 18rem;\r\n"
+                },
+                {
+                    "date": 1661268309707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   grid-template-columns: auto auto auto;\r\n   justify-content:center;\r\n   border: 5px solid black;\r\n   padding: 5px;\r\n-  margin-top: 10px;\r\n+  margin-top: 30px;\r\n }\r\n \r\n .mcard{\r\n     width: 18rem;\r\n"
+                },
+                {
+                    "date": 1661268323010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n }\r\n #lserv{\r\n     text-align: justify;\r\n     text-transform: capitalize;\r\n-    margin-top: 5px;\r\n+    margin-top: 10px;\r\n }\r\n .cardcont{\r\n     display: grid;\r\n   grid-template-columns: auto auto auto;\r\n"
+                },
+                {
+                    "date": 1661268737600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n     border-radius: 4px;\r\n     box-shadow: 3px 3px 3px 3px darkgreen;\r\n     font-family: sans-serif;\r\n     transition:transform ease 0.5s;\r\n-    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));\r\n+    background-image:radial-gradient(circle at 10% 20%, rgb(85, 149, 27) 0.1%, rgb(183, 219, 87) 90%);;\r\n \r\n     \r\n   }\r\n   #uname{\r\n"
+                },
+                {
+                    "date": 1661268790471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n   justify-content:center;\r\n   border: 5px solid black;\r\n   padding: 5px;\r\n   margin-top: 30px;\r\n+  background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));\r\n }\r\n \r\n .mcard{\r\n     width: 18rem;\r\n"
+                },
+                {
+                    "date": 1661269172221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,5 +46,38 @@\n     text-transform: uppercase;\r\n   }\r\n   #service{\r\n     font-size: 20px;\r\n+  }\r\n+\r\n+  @media (min-width: 481px) and (max-width: 767px) {\r\n+  \r\n+    .navbar{\r\n+        display: inline-block!important;\r\n+        right:2%;\r\n+    }\r\n+\r\n+    header ul{\r\n+        display:inline;\r\n+        \r\n+        font-size: 14px;\r\n+    }\r\n+    li{\r\n+        \r\n+        padding: 10px;\r\n+        margin-top: 5px;\r\n+    }\r\n+    li button{\r\n+        width: 200px;\r\n+        position: relative;\r\n+        left:28%;\r\n+    }\r\n+    \r\n+  }\r\n+  \r\n+  \r\n+  \r\n+  @media (min-width: 320px) and (max-width: 480px) {\r\n+    \r\n+    \r\n+    \r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661269197835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n   @media (min-width: 481px) and (max-width: 767px) {\r\n   \r\n     .navbar{\r\n         display: inline-block!important;\r\n-        right:2%;\r\n+        right:5%;\r\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n"
+                },
+                {
+                    "date": 1661269207714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n   @media (min-width: 481px) and (max-width: 767px) {\r\n   \r\n     .navbar{\r\n         display: inline-block!important;\r\n-        right:5%;\r\n+        right:10%;\r\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n"
+                },
+                {
+                    "date": 1661269214899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n   @media (min-width: 481px) and (max-width: 767px) {\r\n   \r\n     .navbar{\r\n         display: inline-block!important;\r\n-        right:10%;\r\n+        left:10%;\r\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n"
+                },
+                {
+                    "date": 1661269221334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n   @media (min-width: 481px) and (max-width: 767px) {\r\n   \r\n     .navbar{\r\n         display: inline-block!important;\r\n-        left:10%;\r\n+        left:15%;\r\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n"
+                },
+                {
+                    "date": 1661269232442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n   @media (min-width: 481px) and (max-width: 767px) {\r\n   \r\n     .navbar{\r\n         display: inline-block!important;\r\n-        left:15%;\r\n+        left:18%;\r\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n"
+                },
+                {
+                    "date": 1661269249494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,8 @@\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n-        \r\n         font-size: 14px;\r\n     }\r\n     li{\r\n         \r\n@@ -68,9 +67,9 @@\n     }\r\n     li button{\r\n         width: 200px;\r\n         position: relative;\r\n-        left:28%;\r\n+        left:20%;\r\n     }\r\n     \r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1661269260722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n     }\r\n     li button{\r\n         width: 200px;\r\n         position: relative;\r\n-        left:20%;\r\n+        left:15%;\r\n     }\r\n     \r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1661269267553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n     }\r\n     li button{\r\n         width: 200px;\r\n         position: relative;\r\n-        left:15%;\r\n+        left:10%;\r\n     }\r\n     \r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1661269275572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n     }\r\n     li{\r\n         \r\n         padding: 10px;\r\n-        margin-top: 5px;\r\n+        margin-top: 3px;\r\n     }\r\n     li button{\r\n         width: 200px;\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661269328479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,8 +69,12 @@\n         width: 200px;\r\n         position: relative;\r\n         left:10%;\r\n     }\r\n+    #lserv{\r\n+       margin-left: 10px;\r\n+    }\r\n+\r\n     \r\n   }\r\n   \r\n   \r\n"
+                },
+                {
+                    "date": 1661269335957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n         position: relative;\r\n         left:10%;\r\n     }\r\n     #lserv{\r\n-       margin-left: 10px;\r\n+       margin-left: 20px;\r\n     }\r\n \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661269342592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n         position: relative;\r\n         left:10%;\r\n     }\r\n     #lserv{\r\n-       margin-left: 20px;\r\n+       margin-left: 30px;\r\n     }\r\n \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661269349876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n         position: relative;\r\n         left:10%;\r\n     }\r\n     #lserv{\r\n-       margin-left: 30px;\r\n+       margin-left: 50px;\r\n     }\r\n \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661269390767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,8 +72,12 @@\n     }\r\n     #lserv{\r\n        margin-left: 50px;\r\n     }\r\n+    .cardcont{\r\n+        display: grid;\r\n+      \r\n+    }\r\n \r\n     \r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1661269404761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n     #lserv{\r\n        margin-left: 50px;\r\n     }\r\n     .cardcont{\r\n-        display: grid;\r\n+        display: inline-block;\r\n       \r\n     }\r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1661269426425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,8 +83,33 @@\n   \r\n   \r\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n+    .navbar{\r\n+        display: inline-block!important;\r\n+        left:18%;\r\n+    }\r\n+\r\n+    header ul{\r\n+        display:inline;\r\n+        font-size: 14px;\r\n+    }\r\n+    li{\r\n+        \r\n+        padding: 10px;\r\n+        margin-top: 3px;\r\n+    }\r\n+    li button{\r\n+        width: 200px;\r\n+        position: relative;\r\n+        left:10%;\r\n+    }\r\n+    #lserv{\r\n+       margin-left: 50px;\r\n+    }\r\n+    .cardcont{\r\n+        display: inline-block;\r\n+      \r\n+    } \r\n     \r\n     \r\n-    \r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661269478879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,8 +83,12 @@\n   \r\n   \r\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n+    .bhpg{\r\n+\r\n+        margin-left: 10px;\r\n+    }\r\n     .navbar{\r\n         display: inline-block!important;\r\n         left:18%;\r\n     }\r\n"
+                },
+                {
+                    "date": 1661269487788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n     .bhpg{\r\n \r\n-        margin-left: 10px;\r\n+        margin-left: 20px;\r\n     }\r\n     .navbar{\r\n         display: inline-block!important;\r\n         left:18%;\r\n"
+                },
+                {
+                    "date": 1661269495672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n     .bhpg{\r\n \r\n-        margin-left: 20px;\r\n+        margin-left: 50px;\r\n     }\r\n     .navbar{\r\n         display: inline-block!important;\r\n         left:18%;\r\n"
+                },
+                {
+                    "date": 1661269501483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n     .bhpg{\r\n \r\n-        margin-left: 50px;\r\n+        margin-left: 60px;\r\n     }\r\n     .navbar{\r\n         display: inline-block!important;\r\n         left:18%;\r\n"
+                },
+                {
+                    "date": 1661269541048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n     .bhpg{\r\n \r\n-        margin-left: 60px;\r\n+        margin-left: 70px;\r\n     }\r\n     .navbar{\r\n         display: inline-block!important;\r\n         left:18%;\r\n@@ -111,8 +111,10 @@\n        margin-left: 50px;\r\n     }\r\n     .cardcont{\r\n         display: inline-block;\r\n+        position: relative;\r\n+        left:5%;\r\n       \r\n     } \r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1661269550724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n     }\r\n     .cardcont{\r\n         display: inline-block;\r\n         position: relative;\r\n-        left:5%;\r\n+        right:5%;\r\n       \r\n     } \r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1661269558517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,9 +112,9 @@\n     }\r\n     .cardcont{\r\n         display: inline-block;\r\n         position: relative;\r\n-        right:5%;\r\n+        right:8%;\r\n       \r\n     } \r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1661273565861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n     text-align:center;\r\n     border-radius: 4px;\r\n     box-shadow: 3px 3px 3px 3px darkgreen;\r\n     font-family: sans-serif;\r\n+    font-weight: bold;\r\n     transition:transform ease 0.5s;\r\n     background-image:radial-gradient(circle at 10% 20%, rgb(85, 149, 27) 0.1%, rgb(183, 219, 87) 90%);;\r\n \r\n     \r\n@@ -47,8 +48,12 @@\n   }\r\n   #service{\r\n     font-size: 20px;\r\n   }\r\n+  #pmail{\r\n+    font-size: 16px;\r\n+   \r\n+  }\r\n \r\n   @media (min-width: 481px) and (max-width: 767px) {\r\n   \r\n     .navbar{\r\n"
+                },
+                {
+                    "date": 1661273580518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n   #service{\r\n     font-size: 20px;\r\n   }\r\n   #pmail{\r\n-    font-size: 16px;\r\n+    font-size:206px;\r\n    \r\n   }\r\n \r\n   @media (min-width: 481px) and (max-width: 767px) {\r\n"
+                },
+                {
+                    "date": 1661273595105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,10 @@\n   #service{\r\n     font-size: 20px;\r\n   }\r\n   #pmail{\r\n-    font-size:206px;\r\n+    font-size:20px;\r\n+    margin-top: 3px;\r\n    \r\n   }\r\n \r\n   @media (min-width: 481px) and (max-width: 767px) {\r\n"
+                },
+                {
+                    "date": 1661273609008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,8 +47,9 @@\n     text-transform: uppercase;\r\n   }\r\n   #service{\r\n     font-size: 20px;\r\n+    font-weight: bold;\r\n   }\r\n   #pmail{\r\n     font-size:20px;\r\n     margin-top: 3px;\r\n"
+                },
+                {
+                    "date": 1661273618816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,9 @@\n   }\r\n   #uname{\r\n     font-size: 30px;\r\n     text-transform: uppercase;\r\n+    font-weight: bold;\r\n   }\r\n   #service{\r\n     font-size: 20px;\r\n     font-weight: bold;\r\n"
+                },
+                {
+                    "date": 1661273637535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n }\r\n \r\n .mcard{\r\n     width: 18rem;\r\n-    padding: 5px;\r\n+    padding: 10px;\r\n     border: 5px solid black;\r\n     margin: 18px;\r\n     text-align:center;\r\n     border-radius: 4px;\r\n"
+                },
+                {
+                    "date": 1661273674524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,9 @@\n   #uname{\r\n     font-size: 30px;\r\n     text-transform: uppercase;\r\n     font-weight: bold;\r\n+    letter-spacing: 3px;\r\n   }\r\n   #service{\r\n     font-size: 20px;\r\n     font-weight: bold;\r\n"
+                },
+                {
+                    "date": 1661324773159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n }\r\n .navbar{\r\n     margin-top: 10px!important;\r\n     background-color: mediumaquamarine!important;\r\n+    justify-content: center;\r\n }\r\n #lserv{\r\n     text-align: justify;\r\n     text-transform: capitalize;\r\n"
+                },
+                {
+                    "date": 1662453771097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n }\r\n .navbar{\r\n     margin-top: 10px!important;\r\n     background-color: mediumaquamarine!important;\r\n-    justify-content: center;\r\n+    justify-content: space-around;\r\n+\r\n }\r\n #lserv{\r\n     text-align: justify;\r\n     text-transform: capitalize;\r\n"
+                },
+                {
+                    "date": 1662453780773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n }\r\n .navbar{\r\n     margin-top: 10px!important;\r\n     background-color: mediumaquamarine!important;\r\n-    justify-content: space-around;\r\n-\r\n+    justify-content: center;\r\n+    \r\n }\r\n #lserv{\r\n     text-align: justify;\r\n     text-transform: capitalize;\r\n"
+                },
+                {
+                    "date": 1662457816942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,8 +85,10 @@\n        margin-left: 50px;\r\n     }\r\n     .cardcont{\r\n         display: inline-block;\r\n+        position: relative;\r\n+        left: 5%;\r\n       \r\n     }\r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1662457824026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,9 +86,9 @@\n     }\r\n     .cardcont{\r\n         display: inline-block;\r\n         position: relative;\r\n-        left: 5%;\r\n+        left: 8%;\r\n       \r\n     }\r\n \r\n     \r\n"
+                },
+                {
+                    "date": 1662457872421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n         margin-left: 70px;\r\n     }\r\n     .navbar{\r\n         display: inline-block!important;\r\n-        left:18%;\r\n+        left:20%;\r\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n"
+                },
+                {
+                    "date": 1662457900475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n         margin-left: 70px;\r\n     }\r\n     .navbar{\r\n         display: inline-block!important;\r\n-        left:20%;\r\n+        left:25%;\r\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n"
+                },
+                {
+                    "date": 1662457935775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n         margin-left: 70px;\r\n     }\r\n     .navbar{\r\n         display: inline-block!important;\r\n-        left:25%;\r\n+        left:25%!!important;\r\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n"
+                },
+                {
+                    "date": 1662457946048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n         margin-left: 70px;\r\n     }\r\n     .navbar{\r\n         display: inline-block!important;\r\n-        left:25%!!important;\r\n+        left:20%!important;\r\n     }\r\n \r\n     header ul{\r\n         display:inline;\r\n"
+                },
+                {
+                    "date": 1662457959178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     }\r\n     .cardcont{\r\n         display: inline-block;\r\n         position: relative;\r\n-        right:8%;\r\n+        right:10%;\r\n       \r\n     } \r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1662457966304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     }\r\n     .cardcont{\r\n         display: inline-block;\r\n         position: relative;\r\n-        right:10%;\r\n+        right:2%;\r\n       \r\n     } \r\n     \r\n     \r\n"
+                }
+            ],
+            "date": 1661236731015,
+            "name": "Commit-0",
+            "content": ".navbar{\r\n    background-color: mediumaquamarine!important;\r\n}"
+        }
+    ]
+}

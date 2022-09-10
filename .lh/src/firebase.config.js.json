@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/firebase.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1660313205454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660315244163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n import { getAuth } from \"firebase/auth\";\r\n \r\n \r\n const firebaseConfig = {\r\n-  apiKey: \"process.env.REACT_APP_FIREBASE_API_KEY\",\r\n-  authDomain: \"process.env.REACT_APP_FIREBASE_API_KEY\",\r\n-  projectId: \"process.env.REACT_APP_FIREBASE_PROJECT_ID\",\r\n-  storageBucket: \"process.env.REACT_APP_FIREBASE_STORAGE_BUCKET\",\r\n-  messagingSenderId: \"process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID\",\r\n-  appId: \"process.env.REACT_APP_FIREBASE_APP_ID\",\r\n+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,\r\n+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,\r\n+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,\r\n+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,\r\n+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,\r\n+  appId: process.env.REACT_APP_FIREBASE_APP_ID,\r\n  \r\n };\r\n console.log(firebaseConfig)\r\n console.log(process.env)\r\n"
+                }
+            ],
+            "date": 1660313205454,
+            "name": "Commit-0",
+            "content": "import { initializeApp } from \"firebase/app\";\r\nimport { getAuth } from \"firebase/auth\";\r\n\r\n\r\nconst firebaseConfig = {\r\n  apiKey: \"process.env.REACT_APP_FIREBASE_API_KEY\",\r\n  authDomain: \"process.env.REACT_APP_FIREBASE_API_KEY\",\r\n  projectId: \"process.env.REACT_APP_FIREBASE_PROJECT_ID\",\r\n  storageBucket: \"process.env.REACT_APP_FIREBASE_STORAGE_BUCKET\",\r\n  messagingSenderId: \"process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID\",\r\n  appId: \"process.env.REACT_APP_FIREBASE_APP_ID\",\r\n \r\n};\r\nconsole.log(firebaseConfig)\r\nconsole.log(process.env)\r\n\r\n// Initialize Firebase\r\nconst app = initializeApp(firebaseConfig);\r\nexport const auth = getAuth(app);\r\nexport default app;"
+        }
+    ]
+}

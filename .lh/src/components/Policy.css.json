@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/Policy.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1662458010334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1662458010334,
+            "name": "Commit-0",
+            "content": "#pcont{\r\n    text-align: center;\r\n    background-color: burlywood;\r\n    letter-spacing: 3px;\r\n    border:5px solid black;\r\n    padding: 10px;\r\n   \r\n}\r\n#pcont h1{\r\n    -webkit-text-stroke-color: brown;\r\n    -webkit-text-stroke-width:2px;\r\n    color:white;\r\n    font-family: cursive;\r\n    font-weight: bold;\r\n}\r\n#pcont h3{\r\n    text-decoration: underline;\r\n    font-weight: bold;\r\n    font-family: cursive;\r\n}\r\n#pcont p{\r\n    font-weight: 400;\r\n}\r\n"
+        }
+    ]
+}

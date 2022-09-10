@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/components/BidRequest.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1662054673409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662054830065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,60 @@\n-import React from 'react'\r\n+import {React,useState} from 'react';\r\n \r\n+\r\n function BidRequest() {\r\n+    const [title, setTitle] = useState(\"\");\r\n+\r\n+    const [description, setdescription] = useState(\"\");\r\n+\r\n+    const [category, setcategory] = useState(\"\");\r\n+    \r\n+    const [price, setprice] = useState(\"\");\r\n+\r\n+    const [duration, setduration] = useState(\"\");\r\n+\r\n+    const seller=JSON.parse(localStorage.getItem(\"seller\"));\r\n+    const sellerId=seller.map(x=>x._id);\r\n+    \r\n   return (\r\n-    <div>BidRequest</div>\r\n+    <div>\r\n+        <div>\r\n+        <form className='modform'>\r\n+            <div className='inmod'>\r\n+          <div className='mb-3'>\r\n+          <input type=\"text\" value={title} placeholder='Enter your offer title' className='modinp' required onChange={(e) => setTitle(e.target.value)}/>\r\n+          </div>\r\n+          <div className='mb-3'>\r\n+            <textarea maxLength=\"2500\" value={description} placeholder='I am going to offer....' id=\"modtexta\" required onChange={(e) => setdescription(e.target.value)}></textarea>\r\n+          </div>\r\n+          <div>\r\n+          <select id='modsel' value={category} required onChange={(e) => setcategory(e.target.value)}>\r\n+                    <option  value=\"\">Select...</option>\r\n+                    <option  value=\"Graphics and Design\">Graphics & Design</option>\r\n+                    <option value=\"Digital Markting\">Digital Marketing</option>\r\n+                    <option value=\"Writing & Translation\" >Writing & Translation</option>\r\n+                    <option value=\"Video & Animation\" >Video & Animation</option>\r\n+                    <option value=\"Music & Audio\" >Music & Audio</option>\r\n+                    <option value=\"Programming & Tech\" >Programming & Tech</option>\r\n+                    <option value=\"Data\">Data</option>\r\n+                    <option  value=\"Business\" >Business</option>\r\n+                    <option value=\"lifestyle\">Lifestyle</option>\r\n+                    </select>\r\n+          </div>\r\n+          <div className='mb-3'>\r\n+           <input type=\"text\" value={duration} placeholder='Enter your offer duration' className='modinp' required onChange={(e) => setduration(e.target.value)}/>\r\n+          </div>\r\n+          <div className='mb-3'>\r\n+           <input type=\"number\" value={price} placeholder='Enter your offered price' className='modinp' required onChange={(e) => setprice(e.target.value)}/>\r\n+          </div>\r\n+          <div>\r\n+          <button type='submit' id='modsub'>Submit</button>\r\n+          </div>\r\n+          </div>\r\n+        </form>\r\n+        \r\n+        </div>\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default BidRequest;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662054850924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n           <div className='mb-3'>\r\n            <input type=\"number\" value={price} placeholder='Enter your offered price' className='modinp' required onChange={(e) => setprice(e.target.value)}/>\r\n           </div>\r\n           <div>\r\n-          <button type='submit' id='modsub'>Submit</button>\r\n+          <button type='submit' id='modsub' >Submit</button>\r\n           </div>\r\n           </div>\r\n         </form>\r\n         \r\n"
+                },
+                {
+                    "date": 1662055065997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import {React,useState} from 'react';\r\n+import './Bidofreq.css';\r\n \r\n-\r\n function BidRequest() {\r\n     const [title, setTitle] = useState(\"\");\r\n \r\n     const [description, setdescription] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1662055167256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n     \r\n   return (\r\n     <div>\r\n         <div>\r\n+        <h1>Bid/Offer Request</h1>\r\n         <form className='modform'>\r\n             <div className='inmod'>\r\n           <div className='mb-3'>\r\n           <input type=\"text\" value={title} placeholder='Enter your offer title' className='modinp' required onChange={(e) => setTitle(e.target.value)}/>\r\n"
+                },
+                {
+                    "date": 1662055207955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         <div>\r\n         <h1>Bid/Offer Request</h1>\r\n         <form className='modform'>\r\n             <div className='inmod'>\r\n-          <div className='mb-3'>\r\n+          <div className='mb-3 row'>\r\n           <input type=\"text\" value={title} placeholder='Enter your offer title' className='modinp' required onChange={(e) => setTitle(e.target.value)}/>\r\n           </div>\r\n           <div className='mb-3'>\r\n             <textarea maxLength=\"2500\" value={description} placeholder='I am going to offer....' id=\"modtexta\" required onChange={(e) => setdescription(e.target.value)}></textarea>\r\n"
+                },
+                {
+                    "date": 1662055233016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,13 @@\n     const sellerId=seller.map(x=>x._id);\r\n     \r\n   return (\r\n     <div>\r\n-        <div>\r\n+        <div className='p-4'>\r\n         <h1>Bid/Offer Request</h1>\r\n         <form className='modform'>\r\n             <div className='inmod'>\r\n-          <div className='mb-3 row'>\r\n+          <div className='mb-3'>\r\n           <input type=\"text\" value={title} placeholder='Enter your offer title' className='modinp' required onChange={(e) => setTitle(e.target.value)}/>\r\n           </div>\r\n           <div className='mb-3'>\r\n             <textarea maxLength=\"2500\" value={description} placeholder='I am going to offer....' id=\"modtexta\" required onChange={(e) => setdescription(e.target.value)}></textarea>\r\n"
+                },
+                {
+                    "date": 1662055824406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import {React,useState} from 'react';\r\n import './Bidofreq.css';\r\n \r\n-function BidRequest() {\r\n+function BidRequest(props) {\r\n     const [title, setTitle] = useState(\"\");\r\n \r\n     const [description, setdescription] = useState(\"\");\r\n \r\n"
+                },
+                {
+                    "date": 1662055925745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,12 @@\n     const [duration, setduration] = useState(\"\");\r\n \r\n     const seller=JSON.parse(localStorage.getItem(\"seller\"));\r\n     const sellerId=seller.map(x=>x._id);\r\n+\r\n+    const handleBidOffer=async()=>{\r\n+        console.log(props.buyerId);\r\n+    }\r\n     \r\n   return (\r\n     <div>\r\n         <div className='p-4'>\r\n@@ -47,9 +51,9 @@\n           <div className='mb-3'>\r\n            <input type=\"number\" value={price} placeholder='Enter your offered price' className='modinp' required onChange={(e) => setprice(e.target.value)}/>\r\n           </div>\r\n           <div>\r\n-          <button type='submit' id='modsub' >Submit</button>\r\n+          <button type='submit' onClick={handleBidOffer} id='modsub' >Submit</button>\r\n           </div>\r\n           </div>\r\n         </form>\r\n         \r\n"
+                },
+                {
+                    "date": 1662056468745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \r\n     const seller=JSON.parse(localStorage.getItem(\"seller\"));\r\n     const sellerId=seller.map(x=>x._id);\r\n \r\n-    const handleBidOffer=async()=>{\r\n+    const handleBidOffer=async(props)=>{\r\n         console.log(props.buyerId);\r\n     }\r\n     \r\n   return (\r\n"
+                },
+                {
+                    "date": 1662056751796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import {React,useState} from 'react';\r\n-import './Bidofreq.css';\r\n \r\n+\r\n function BidRequest(props) {\r\n     const [title, setTitle] = useState(\"\");\r\n \r\n     const [description, setdescription] = useState(\"\");\r\n@@ -15,8 +15,9 @@\n     const seller=JSON.parse(localStorage.getItem(\"seller\"));\r\n     const sellerId=seller.map(x=>x._id);\r\n \r\n     const handleBidOffer=async(props)=>{\r\n+     \r\n         console.log(props.buyerId);\r\n     }\r\n     \r\n   return (\r\n"
+                }
+            ],
+            "date": 1662054673409,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction BidRequest() {\r\n  return (\r\n    <div>BidRequest</div>\r\n  )\r\n}\r\n\r\nexport default BidRequest;"
+        }
+    ]
+}

@@ -1,0 +1,482 @@
+{
+    "sourceFile": "src/components/BuyerHp.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 116,
+            "patches": [
+                {
+                    "date": 1661236187214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1661236463427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n function BuyerHp() {\r\n   return (\r\n-    <div>BuyerHp</div>\r\n+    <div>\r\n+        <h1>Buyer HomePage</h1>\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default BuyerHp;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661236660966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,17 @@\n \r\n function BuyerHp() {\r\n   return (\r\n     <div>\r\n+       \r\n+        <div>\r\n         <h1>Buyer HomePage</h1>\r\n+        <header>\r\n+            <nav className='navbar'>\r\n+\r\n+            </nav>\r\n+        </header>\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1661236706753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react'\r\n-\r\n+import './BuyerHp.css'\r\n function BuyerHp() {\r\n   return (\r\n     <div>\r\n        \r\n"
+                },
+                {
+                    "date": 1661238426559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,19 @@\n-import React from 'react'\r\n-import './BuyerHp.css'\r\n+import React from 'react';\r\n+import './BuyerHp.css';\r\n+import { Link,useNavigate} from \"react-router-dom\";\r\n function BuyerHp() {\r\n   return (\r\n     <div>\r\n        \r\n         <div>\r\n         <h1>Buyer HomePage</h1>\r\n         <header>\r\n             <nav className='navbar'>\r\n-\r\n+            <ul>\r\n+                <li><button>Dashboard</button></li>\r\n+                <li><button>Profile</button></li>\r\n+            </ul>\r\n             </nav>\r\n         </header>\r\n         </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1661239234395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n             <nav className='navbar'>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n                 <li><button>Profile</button></li>\r\n+                <li><button>logout</button></li>\r\n             </ul>\r\n             </nav>\r\n         </header>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1661239240309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n             <nav className='navbar'>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n                 <li><button>Profile</button></li>\r\n-                <li><button>logout</button></li>\r\n+                <li><button>Logout</button></li>\r\n             </ul>\r\n             </nav>\r\n         </header>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1661239673317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n         <header>\r\n             <nav className='navbar'>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n+                <li><button>Post a Request/Job</button></li>\r\n                 <li><button>Profile</button></li>\r\n                 <li><button>Logout</button></li>\r\n             </ul>\r\n             </nav>\r\n"
+                },
+                {
+                    "date": 1661245215352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,21 @@\n-import React from 'react';\r\n+import {React,useState,useEffect }from 'react';\r\n import './BuyerHp.css';\r\n import { Link,useNavigate} from \"react-router-dom\";\r\n+import {Container,Col} from 'react-bootstrap';\r\n+import Card from 'react-bootstrap/Card';\r\n+import axios from \"axios\";\r\n function BuyerHp() {\r\n+    const [Suserdata, setSUserData] = useState({});\r\n+\r\n+    useEffect(() => {\r\n+        getSeller();\r\n+      }, []);\r\n+    \r\n+      const getSeller = async () => {\r\n+        const response = await axios.get('http://localhost:9999/retrieveSellers/:email');\r\n+        setSUserData(response.data);\r\n+      };\r\n   return (\r\n     <div>\r\n        \r\n         <div>\r\n@@ -17,8 +30,37 @@\n             </ul>\r\n             </nav>\r\n         </header>\r\n         </div>\r\n+        <div>\r\n+        <Container className=''>\r\n+                  <Col className=''>\r\n+                      {Suserdata.map((email, index) => {\r\n+    return(\r\n+        <div className='justify-content-center' >\r\n+<div>\r\n+<Card className='mcard card bg-dark p-2 m-5' >\r\n+<Card.Body>\r\n+   \r\n+    <Card.Title> <h1 className=''>{email.name}</h1></Card.Title>\r\n+    <Card.Text>\r\n+    <h2 className='' >{email.service}</h2>\r\n+    <h3 className=''>{email.rating}</h3>\r\n+    <p className=''>{email.orders}</p>\r\n+    </Card.Text>\r\n+</Card.Body>\r\n+\r\n+</Card>\r\n+</div>\r\n+\r\n+</div>\r\n+    )\r\n+})}\r\n+\r\n+    </Col>\r\n+\r\n+    </Container>\r\n+        </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1661245467477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,16 @@\n import Card from 'react-bootstrap/Card';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState({});\r\n+    const Surl = \"http://localhost:9999/retrieveSellers/:email\";\r\n \r\n     useEffect(() => {\r\n         getSeller();\r\n       }, []);\r\n     \r\n       const getSeller = async () => {\r\n-        const response = await axios.get('http://localhost:9999/retrieveSellers/:email');\r\n+        const response = await axios.get(Surl);\r\n         setSUserData(response.data);\r\n       };\r\n   return (\r\n     <div>\r\n@@ -33,20 +34,20 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Suserdata.map((email, index) => {\r\n+                      {Surl.map((email, index) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{email.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-    <h2 className='' >{email.service}</h2>\r\n-    <h3 className=''>{email.rating}</h3>\r\n-    <p className=''>{email.orders}</p>\r\n+    <h2 className='' >{Suserdata.service}</h2>\r\n+    <h3 className=''>{Suserdata.rating}</h3>\r\n+    <p className=''>{Suserdata.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661245601665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Surl.map((email, index) => {\r\n+                      {this.data.map((email, index) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n"
+                },
+                {
+                    "date": 1661245678188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {this.data.map((email, index) => {\r\n+                      {this.setSUserData.map((email, index) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n"
+                },
+                {
+                    "date": 1661245723422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {this.setSUserData.map((email, index) => {\r\n+                      {getSeller.map((email, index) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n"
+                },
+                {
+                    "date": 1661245742920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {getSeller.map((email, index) => {\r\n+                      {this.getSeller.map((email, index) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n"
+                },
+                {
+                    "date": 1661246040387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,20 +34,20 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {this.getSeller.map((email, index) => {\r\n+                      {Suserdata.map((email) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{email.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-    <h2 className='' >{Suserdata.service}</h2>\r\n-    <h3 className=''>{Suserdata.rating}</h3>\r\n-    <p className=''>{Suserdata.orders}</p>\r\n+    <h2 className='' >{email.service}</h2>\r\n+    <h3 className=''>{email.rating}</h3>\r\n+    <p className=''>{email.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661246082244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n-    const [Suserdata, setSUserData] = useState({});\r\n+    const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers/:email\";\r\n \r\n     useEffect(() => {\r\n         getSeller();\r\n"
+                },
+                {
+                    "date": 1661246141923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n-    const [Suserdata, setSUserData] = useState([]);\r\n+    const [Suserdata, setSUserData] = useState(\"\");\r\n     const Surl = \"http://localhost:9999/retrieveSellers/:email\";\r\n \r\n     useEffect(() => {\r\n         getSeller();\r\n"
+                },
+                {
+                    "date": 1661246153543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n-    const [Suserdata, setSUserData] = useState(\"\");\r\n+    const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers/:email\";\r\n \r\n     useEffect(() => {\r\n         getSeller();\r\n"
+                },
+                {
+                    "date": 1661246797371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,20 +34,20 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Suserdata.map((email) => {\r\n+                      {Object.keys(Suserdata).map((key,i) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' >\r\n+<Card className='mcard card bg-dark p-2 m-5' key={i} >\r\n <Card.Body>\r\n    \r\n-    <Card.Title> <h1 className=''>{email.name}</h1></Card.Title>\r\n+    <Card.Title> <h1 className=''>{key.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-    <h2 className='' >{email.service}</h2>\r\n-    <h3 className=''>{email.rating}</h3>\r\n-    <p className=''>{email.orders}</p>\r\n+    <h2 className='' >{key.service}</h2>\r\n+    <h3 className=''>{key.rating}</h3>\r\n+    <p className=''>{key.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661246825577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n                       {Object.keys(Suserdata).map((key,i) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' key={i} >\r\n+<Card className='mcard card bg-dark p-2 m-5' key={key} >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{key.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661246925027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,19 +4,12 @@\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n-    const [Suserdata, setSUserData] = useState([]);\r\n+  \r\n     const Surl = \"http://localhost:9999/retrieveSellers/:email\";\r\n \r\n-    useEffect(() => {\r\n-        getSeller();\r\n-      }, []);\r\n-    \r\n-      const getSeller = async () => {\r\n-        const response = await axios.get(Surl);\r\n-        setSUserData(response.data);\r\n-      };\r\n+   \r\n   return (\r\n     <div>\r\n        \r\n         <div>\r\n@@ -34,9 +27,9 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Object.keys(Suserdata).map((key,i) => {\r\n+                      {axios.get(Surl).map((key,i) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' key={key} >\r\n"
+                },
+                {
+                    "date": 1661247190161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,19 @@\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n-  \r\n+    const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers/:email\";\r\n \r\n-   \r\n+    useEffect(() => {\r\n+        getSeller();\r\n+      }, []);\r\n+    \r\n+      const getSeller = async () => {\r\n+        const response = await axios.get(Surl);\r\n+        setSUserData(response.data);\r\n+      };\r\n   return (\r\n     <div>\r\n        \r\n         <div>\r\n@@ -27,20 +34,20 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {axios.get(Surl).map((key,i) => {\r\n+                      {Suserdata.map((Suserdata,i) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' key={key} >\r\n+<Card className='mcard card bg-dark p-2 m-5' key={i} >\r\n <Card.Body>\r\n    \r\n-    <Card.Title> <h1 className=''>{key.name}</h1></Card.Title>\r\n+    <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-    <h2 className='' >{key.service}</h2>\r\n-    <h3 className=''>{key.rating}</h3>\r\n-    <p className=''>{key.orders}</p>\r\n+    <h2 className='' >{Suserdata.service}</h2>\r\n+    <h3 className=''>{Suserdata.rating}</h3>\r\n+    <p className=''>{Suserdata.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661247222341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,11 +36,11 @@\n         <Container className=''>\r\n                   <Col className=''>\r\n                       {Suserdata.map((Suserdata,i) => {\r\n     return(\r\n-        <div className='justify-content-center' >\r\n+        <div className='justify-content-center' key={i} >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' key={i} >\r\n+<Card className='mcard card bg-dark p-2 m-5'  >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661247449055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Suserdata.map((Suserdata,i) => {\r\n+                      {Suserdata && Suserdata.map((Suserdata,i) => {\r\n     return(\r\n         <div className='justify-content-center' key={i} >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5'  >\r\n"
+                },
+                {
+                    "date": 1661247483939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n                       {Suserdata && Suserdata.map((Suserdata,i) => {\r\n     return(\r\n         <div className='justify-content-center' key={i} >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5'  >\r\n+<Card className='card bg-dark p-2 m-5'  >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661247558535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,15 +32,14 @@\n             </nav>\r\n         </header>\r\n         </div>\r\n         <div>\r\n-        <Container className=''>\r\n+        <Container className='container'>\r\n                   <Col className=''>\r\n                       {Suserdata && Suserdata.map((Suserdata,i) => {\r\n     return(\r\n-        <div className='justify-content-center' key={i} >\r\n-<div>\r\n-<Card className='card bg-dark p-2 m-5'  >\r\n+        \r\n+<Card className='card bg-dark p-2 m-5' key={i} >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n@@ -50,11 +49,9 @@\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n-</div>\r\n \r\n-</div>\r\n     )\r\n })}\r\n \r\n     </Col>\r\n"
+                },
+                {
+                    "date": 1661247760545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n         setSUserData(response.data);\r\n+        console.log(response.data)\r\n       };\r\n   return (\r\n     <div>\r\n        \r\n"
+                },
+                {
+                    "date": 1661247793626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import Card from 'react-bootstrap/Card';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n-    const Surl = \"http://localhost:9999/retrieveSellers/:email\";\r\n+    const Surl = \"http://localhost:9999/retrieveSellers\";\r\n \r\n     useEffect(() => {\r\n         getSeller();\r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1661247885933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         </div>\r\n         <div>\r\n         <Container className='container'>\r\n                   <Col className=''>\r\n-                      {Suserdata && Suserdata.map((Suserdata,i) => {\r\n+                      {Suserdata.map((Suserdata,i) => {\r\n     return(\r\n         \r\n <Card className='card bg-dark p-2 m-5' key={i} >\r\n <Card.Body>\r\n"
+                },
+                {
+                    "date": 1661247962611,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,18 +5,17 @@\n import Card from 'react-bootstrap/Card';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n-    const Surl = \"http://localhost:9999/retrieveSellers\";\r\n+    const Surl = \"http://localhost:9999/retrieveSellers/:email\";\r\n \r\n     useEffect(() => {\r\n         getSeller();\r\n       }, []);\r\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n         setSUserData(response.data);\r\n-        console.log(response.data)\r\n       };\r\n   return (\r\n     <div>\r\n        \r\n@@ -33,26 +32,29 @@\n             </nav>\r\n         </header>\r\n         </div>\r\n         <div>\r\n-        <Container className='container'>\r\n+        <Container className=''>\r\n                   <Col className=''>\r\n-                      {Suserdata.map((Suserdata,i) => {\r\n+                      {Object.keys(Suserdata).map((key,i) => {\r\n     return(\r\n-        \r\n-<Card className='card bg-dark p-2 m-5' key={i} >\r\n+        <div className='justify-content-center' >\r\n+<div>\r\n+<Card className='mcard card bg-dark p-2 m-5' key={i} >\r\n <Card.Body>\r\n    \r\n-    <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n+    <Card.Title> <h1 className=''>{key.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-    <h2 className='' >{Suserdata.service}</h2>\r\n-    <h3 className=''>{Suserdata.rating}</h3>\r\n-    <p className=''>{Suserdata.orders}</p>\r\n+    <h2 className='' >{key.service}</h2>\r\n+    <h3 className=''>{key.rating}</h3>\r\n+    <p className=''>{key.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n+</div>\r\n \r\n+</div>\r\n     )\r\n })}\r\n \r\n     </Col>\r\n"
+                },
+                {
+                    "date": 1661248000163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n         setSUserData(response.data);\r\n+        console.log(response.data);\r\n       };\r\n   return (\r\n     <div>\r\n        \r\n"
+                },
+                {
+                    "date": 1661248009916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import Card from 'react-bootstrap/Card';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n-    const Surl = \"http://localhost:9999/retrieveSellers/:email\";\r\n+    const Surl = \"http://localhost:9999/retrieveSellers\";\r\n \r\n     useEffect(() => {\r\n         getSeller();\r\n       }, []);\r\n"
+                },
+                {
+                    "date": 1661248049845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n                       {Object.keys(Suserdata).map((key,i) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' key={i} >\r\n+<Card className='mcard card bg-dark p-2 m-5'  >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{key.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661248134824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,20 +35,20 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Object.keys(Suserdata).map((key,i) => {\r\n+                      {Object.keys(Suserdata).map((Suserdata,i) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5'  >\r\n <Card.Body>\r\n    \r\n-    <Card.Title> <h1 className=''>{key.name}</h1></Card.Title>\r\n+    <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-    <h2 className='' >{key.service}</h2>\r\n-    <h3 className=''>{key.rating}</h3>\r\n-    <p className=''>{key.orders}</p>\r\n+    <h2 className='' >{Suserdata.service}</h2>\r\n+    <h3 className=''>{Suserdata.rating}</h3>\r\n+    <p className=''>{Suserdata.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661248180212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n                       {Object.keys(Suserdata).map((Suserdata,i) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5'  >\r\n+<Card className='mcard card bg-dark p-2 m-5' key={Suserdata}  >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661248217415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n                       {Object.keys(Suserdata).map((Suserdata,i) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' key={Suserdata}  >\r\n+<Card className='mcard card bg-dark p-2 m-5'  >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661248697639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n       }, []);\r\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n-        setSUserData(response.data);\r\n+        let parseData = JSON.parse(response.data)\r\n+        setSUserData(parseData);\r\n         console.log(response.data);\r\n       };\r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1661248717770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       }, []);\r\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n-        let parseData = JSON.parse(response.data)\r\n+        let parseData = JSON.parse(response.data);\r\n         setSUserData(parseData);\r\n         console.log(response.data);\r\n       };\r\n   return (\r\n"
+                },
+                {
+                    "date": 1661248726561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n         let parseData = JSON.parse(response.data);\r\n-        setSUserData(parseData);\r\n+       \r\n         console.log(response.data);\r\n       };\r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1661248734395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,9 @@\n       }, []);\r\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n-        let parseData = JSON.parse(response.data);\r\n-       \r\n+        setSUserData(response.data);\r\n         console.log(response.data);\r\n       };\r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1661248762765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n         setSUserData(response.data);\r\n-        console.log(response.data);\r\n+        console.log(typeof(response.data));\r\n       };\r\n   return (\r\n     <div>\r\n        \r\n"
+                },
+                {
+                    "date": 1661248783565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n         setSUserData(response.data);\r\n-        console.log(typeof(response.data));\r\n+        console.log(response.data);\r\n       };\r\n   return (\r\n     <div>\r\n        \r\n"
+                },
+                {
+                    "date": 1661248791713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Object.keys(Suserdata).map((Suserdata,i) => {\r\n+                      {Object.keys(Suserdata).map((key,i) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5'  >\r\n"
+                },
+                {
+                    "date": 1661248843551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,13 +35,13 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Object.keys(Suserdata).map((key,i) => {\r\n+                      {Object.keys(Suserdata).map((key,id) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5'  >\r\n+<Card className='mcard card bg-dark p-2 m-5' key={id}  >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661248973293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,13 +35,13 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Object.keys(Suserdata).map((key,id) => {\r\n+                      {Object.keys(Suserdata).map((Suserdata,id) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' key={id}  >\r\n+<Card className='mcard card bg-dark p-2 m-5' key={Suserdata}  >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661249056436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,13 +35,13 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Object.keys(Suserdata).map((Suserdata,id) => {\r\n+                      {Object.keys(Suserdata).map((Suserdata) => {\r\n     return(\r\n         <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' key={Suserdata}  >\r\n+<Card className='mcard card bg-dark p-2 m-5' key={Suserdata.id}  >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661249093599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,11 +37,11 @@\n         <Container className=''>\r\n                   <Col className=''>\r\n                       {Object.keys(Suserdata).map((Suserdata) => {\r\n     return(\r\n-        <div className='justify-content-center' >\r\n+        <div className='justify-content-center' key={Suserdata.id}>\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' key={Suserdata.id}  >\r\n+<Card className='mcard card bg-dark p-2 m-5' >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661249109436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n         <Container className=''>\r\n                   <Col className=''>\r\n                       {Object.keys(Suserdata).map((Suserdata) => {\r\n     return(\r\n-        <div className='justify-content-center' key={Suserdata.id}>\r\n+        <div className='justify-content-center' key={Suserdata._id}>\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n <Card.Body>\r\n    \r\n"
+                },
+                {
+                    "date": 1661249337129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,20 +35,20 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Object.keys(Suserdata).map((Suserdata) => {\r\n+                      {Suserdata && Suserdata.map((Suserdata,index) => {\r\n     return(\r\n         <div className='justify-content-center' key={Suserdata._id}>\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-    <h2 className='' >{Suserdata.service}</h2>\r\n-    <h3 className=''>{Suserdata.rating}</h3>\r\n-    <p className=''>{Suserdata.orders}</p>\r\n+    <h2 className='' >{Suserdata?.service}</h2>\r\n+    <h3 className=''>{Suserdata?.rating}</h3>\r\n+    <p className=''>{Suserdata?.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661249377001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,11 +44,11 @@\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-    <h2 className='' >{Suserdata?.service}</h2>\r\n-    <h3 className=''>{Suserdata?.rating}</h3>\r\n-    <p className=''>{Suserdata?.orders}</p>\r\n+    <h2 className='' >{Suserdata.service}</h2>\r\n+    <h3 className=''>{Suserdata.rating}</h3>\r\n+    <p className=''>{Suserdata.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661249386118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n     <h2 className='' >{Suserdata.service}</h2>\r\n     <h3 className=''>{Suserdata.rating}</h3>\r\n-    <p className=''>{Suserdata.orders}</p>\r\n+   \r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661249514955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n         <Container className=''>\r\n                   <Col className=''>\r\n                       {Suserdata && Suserdata.map((Suserdata,index) => {\r\n     return(\r\n-        <div className='justify-content-center' key={Suserdata._id}>\r\n+        <div className='justify-content-center'>\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n <Card.Body>\r\n    \r\n"
+                },
+                {
+                    "date": 1661249564132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,10 +44,12 @@\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-    <h2 className='' >{Suserdata.service}</h2>\r\n+   <div>\r\n+   <h2 className='' >{Suserdata.service}</h2>\r\n     <h3 className=''>{Suserdata.rating}</h3>\r\n+   </div>\r\n    \r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n"
+                },
+                {
+                    "date": 1661250136385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,19 +37,17 @@\n         <Container className=''>\r\n                   <Col className=''>\r\n                       {Suserdata && Suserdata.map((Suserdata,index) => {\r\n     return(\r\n-        <div className='justify-content-center'>\r\n+        <div className='justify-content-center' key={Suserdata}>\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n-   <div>\r\n-   <h2 className='' >{Suserdata.service}</h2>\r\n+    <h2 className='' >{Suserdata.service}</h2>\r\n     <h3 className=''>{Suserdata.rating}</h3>\r\n-   </div>\r\n    \r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n"
+                },
+                {
+                    "date": 1661250168319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,18 +37,18 @@\n         <Container className=''>\r\n                   <Col className=''>\r\n                       {Suserdata && Suserdata.map((Suserdata,index) => {\r\n     return(\r\n-        <div className='justify-content-center' key={Suserdata}>\r\n+        <div className='justify-content-center' key={Suserdata._id}>\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n     <h2 className='' >{Suserdata.service}</h2>\r\n     <h3 className=''>{Suserdata.rating}</h3>\r\n-   \r\n+    <p className=''>{Suserdata.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661250190211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n         <Container className=''>\r\n                   <Col className=''>\r\n                       {Suserdata && Suserdata.map((Suserdata,index) => {\r\n     return(\r\n-        <div className='justify-content-center' key={Suserdata._id}>\r\n+        <div className='justify-content-center' key={index}>\r\n <div>\r\n <Card className='mcard card bg-dark p-2 m-5' >\r\n <Card.Body>\r\n    \r\n"
+                },
+                {
+                    "date": 1661250213957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,8 @@\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n     <h2 className='' >{Suserdata.service}</h2>\r\n     <h3 className=''>{Suserdata.rating}</h3>\r\n-    <p className=''>{Suserdata.orders}</p>\r\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n"
+                },
+                {
+                    "date": 1661250272855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,11 +37,11 @@\n         <Container className=''>\r\n                   <Col className=''>\r\n                       {Suserdata && Suserdata.map((Suserdata,index) => {\r\n     return(\r\n-        <div className='justify-content-center' key={index}>\r\n+        <div className='justify-content-center' >\r\n <div>\r\n-<Card className='mcard card bg-dark p-2 m-5' >\r\n+<Card className='card bg-dark p-2 m-5' key={index} >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n     <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661250303027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n         <Container className=''>\r\n                   <Col className=''>\r\n                       {Suserdata && Suserdata.map((Suserdata,index) => {\r\n     return(\r\n-        <div className='justify-content-center' >\r\n-<div>\r\n+     \r\n+\r\n <Card className='card bg-dark p-2 m-5' key={index} >\r\n <Card.Body>\r\n    \r\n     <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n@@ -50,11 +50,11 @@\n     </Card.Text>\r\n </Card.Body>\r\n \r\n </Card>\r\n-</div>\r\n \r\n-</div>\r\n+\r\n+\r\n     )\r\n })}\r\n \r\n     </Col>\r\n"
+                },
+                {
+                    "date": 1661264316260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,29 +35,23 @@\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n-                      {Suserdata && Suserdata.map((Suserdata,index) => {\r\n-    return(\r\n-     \r\n+                     {Suserdata.map(data=>(\r\n+                        <Card style={{ width: '18rem' }}>\r\n+      <Card.Body>\r\n+        <Card.Title>Card Title</Card.Title>\r\n+        <Card.Text>\r\n+          Some quick example text to build on the card title and make up the\r\n+          bulk of the card's content.\r\n+        </Card.Text>\r\n+      \r\n+      </Card.Body>\r\n+    </Card>\r\n \r\n-<Card className='card bg-dark p-2 m-5' key={index} >\r\n-<Card.Body>\r\n+\r\n+                     ))}\r\n    \r\n-    <Card.Title> <h1 className=''>{Suserdata.name}</h1></Card.Title>\r\n-    <Card.Text>\r\n-    <h2 className='' >{Suserdata.service}</h2>\r\n-    <h3 className=''>{Suserdata.rating}</h3>\r\n-    </Card.Text>\r\n-</Card.Body>\r\n-\r\n-</Card>\r\n-\r\n-\r\n-\r\n-    )\r\n-})}\r\n-\r\n     </Col>\r\n \r\n     </Container>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1661264450564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,14 +36,16 @@\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card style={{ width: '18rem' }}>\r\n+                        <Card style={{ width: '18rem' }} key={data.id.value}>\r\n       <Card.Body>\r\n-        <Card.Title>Card Title</Card.Title>\r\n+        <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n-          Some quick example text to build on the card title and make up the\r\n-          bulk of the card's content.\r\n+          <div>\r\n+            <h2>{data.service}</h2>\r\n+            <h3>{data.rating}</h3>\r\n+          </div>\r\n         </Card.Text>\r\n       \r\n       </Card.Body>\r\n     </Card>\r\n"
+                },
+                {
+                    "date": 1661264554407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card style={{ width: '18rem' }} key={data.id.value}>\r\n+                        <Card style={{ width: '18rem' }} key={data.id}>\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661264765413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n         <div>\r\n         <Container className=''>\r\n                   <Col className=''>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card style={{ width: '18rem' }} key={data.id}>\r\n+                        <Card className='mcard' style={{ width: '18rem' }} key={data.id}>\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661264880534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n         </header>\r\n         </div>\r\n         <div>\r\n         <Container className=''>\r\n-                  <Col className=''>\r\n+                  <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n                         <Card className='mcard' style={{ width: '18rem' }} key={data.id}>\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n"
+                },
+                {
+                    "date": 1661265651792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import './BuyerHp.css';\r\n import { Link,useNavigate} from \"react-router-dom\";\r\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n+import StarRatings from './react-star-ratings';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers\";\r\n@@ -42,9 +43,16 @@\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n             <h2>{data.service}</h2>\r\n-            <h3>{data.rating}</h3>\r\n+            <StarRatings\r\n+          rating={data.rating}\r\n+          starRatedColor=\"yellow\"\r\n+      \r\n+          numberOfStars={5}\r\n+        \r\n+        />\r\n+            \r\n           </div>\r\n         </Card.Text>\r\n       \r\n       </Card.Body>\r\n"
+                },
+                {
+                    "date": 1661265701251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import './BuyerHp.css';\r\n import { Link,useNavigate} from \"react-router-dom\";\r\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n-import StarRatings from './react-star-ratings';\r\n+import StarRatings from 'react-star-ratings';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers\";\r\n"
+                },
+                {
+                    "date": 1661265819741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n             <h2>{data.service}</h2>\r\n             <StarRatings\r\n           rating={data.rating}\r\n           starRatedColor=\"yellow\"\r\n-      \r\n+          starDimension=\"40px\"\r\n           numberOfStars={5}\r\n         \r\n         />\r\n             \r\n"
+                },
+                {
+                    "date": 1661265835643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n         <div>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card className='mcard' style={{ width: '18rem' }} key={data.id}>\r\n+                        <Card className='mcard' style={{ width: '20rem' }} key={data.id}>\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661266421464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { Link,useNavigate} from \"react-router-dom\";\r\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import StarRatings from 'react-star-ratings';\r\n+import cardavatar from '../cardavatar.jpg';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers\";\r\n@@ -38,8 +39,9 @@\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n                         <Card className='mcard' style={{ width: '20rem' }} key={data.id}>\r\n+      <Card.Img variant=\"top\" src=\"holder.js/100px180\" />\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661266437940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n                         <Card className='mcard' style={{ width: '20rem' }} key={data.id}>\r\n-      <Card.Img variant=\"top\" src=\"holder.js/100px180\" />\r\n+      <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661266619527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Link,useNavigate} from \"react-router-dom\";\r\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import StarRatings from 'react-star-ratings';\r\n-import cardavatar from '../cardavatar.jpg';\r\n+import cardavatar from '../cardavatar.png';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers\";\r\n"
+                },
+                {
+                    "date": 1661266820406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n             </nav>\r\n         </header>\r\n         </div>\r\n         <div>\r\n+        <h1>Services you may like</h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n                         <Card className='mcard' style={{ width: '20rem' }} key={data.id}>\r\n"
+                },
+                {
+                    "date": 1661266840225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Link,useNavigate} from \"react-router-dom\";\r\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import StarRatings from 'react-star-ratings';\r\n-import cardavatar from '../cardavatar.png';\r\n+import cardavatar from '../cardavatar.PNG';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers\";\r\n"
+                },
+                {
+                    "date": 1661266876539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         setSUserData(response.data);\r\n         console.log(response.data);\r\n       };\r\n   return (\r\n-    <div>\r\n+    <div className='p-4'>\r\n        \r\n         <div>\r\n         <h1>Buyer HomePage</h1>\r\n         <header>\r\n"
+                },
+                {
+                    "date": 1661266890029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         <h1>Services you may like</h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card className='mcard' style={{ width: '20rem' }} key={data.id}>\r\n+                        <Card className='mcard' style={{ width: '25rem' }} key={data.id}>\r\n       <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661266900850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         <h1>Services you may like</h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card className='mcard' style={{ width: '25rem' }} key={data.id}>\r\n+                        <Card className='mcard' style={{ width: '20px' }} key={data.id}>\r\n       <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661266907800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         <h1>Services you may like</h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card className='mcard' style={{ width: '20px' }} key={data.id}>\r\n+                        <Card className='mcard' style={{ width: '100px' }} key={data.id}>\r\n       <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661266916041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         <h1>Services you may like</h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card className='mcard' style={{ width: '100px' }} key={data.id}>\r\n+                        <Card className='mcard' style={{ width: '20rem' }} key={data.id}>\r\n       <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661266944602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         <h1>Services you may like</h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card className='mcard' style={{ width: '20rem' }} key={data.id}>\r\n+                        <Card className='mcard' style={{ width: '20rem',height:\"18rem\" }} key={data.id}>\r\n       <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661266954543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         <h1>Services you may like</h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card className='mcard' style={{ width: '20rem',height:\"18rem\" }} key={data.id}>\r\n+                        <Card className='mcard' style={{ width: '20rem',height:\"20rem\" }} key={data.id}>\r\n       <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661266964304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         <h1>Services you may like</h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n-                        <Card className='mcard' style={{ width: '20rem',height:\"20rem\" }} key={data.id}>\r\n+                        <Card className='mcard' style={{ width: '20rem'}} key={data.id}>\r\n       <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661267513158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,13 +46,9 @@\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n             <h2>{data.service}</h2>\r\n-            <StarRatings\r\n-          rating={data.rating}\r\n-          starRatedColor=\"yellow\"\r\n-          starDimension=\"40px\"\r\n-          numberOfStars={5}\r\n+            <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5}\r\n         \r\n         />\r\n             \r\n           </div>\r\n"
+                },
+                {
+                    "date": 1661267550186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n                      {Suserdata.map(data=>(\r\n                         <Card className='mcard' style={{ width: '20rem'}} key={data.id}>\r\n       <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n+      <hr/>\r\n         <Card.Title><h1>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n             <h2>{data.service}</h2>\r\n@@ -57,9 +58,9 @@\n       </Card.Body>\r\n     </Card>\r\n \r\n \r\n-                     ))}\r\n+    ))}\r\n    \r\n     </Col>\r\n \r\n     </Container>\r\n"
+                },
+                {
+                    "date": 1661267592985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,12 +43,12 @@\n                         <Card className='mcard' style={{ width: '20rem'}} key={data.id}>\r\n       <Card.Img variant=\"top\" src={cardavatar} />\r\n       <Card.Body>\r\n       <hr/>\r\n-        <Card.Title><h1>{data.name}</h1></Card.Title>\r\n+        <Card.Title><h1 id='uname'>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n-            <h2>{data.service}</h2>\r\n+            <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5}\r\n         \r\n         />\r\n             \r\n"
+                },
+                {
+                    "date": 1661267763780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   return (\r\n     <div className='p-4'>\r\n        \r\n         <div>\r\n-        <h1>Buyer HomePage</h1>\r\n+        <h1 id='bhp'>Buyer HomePage</h1>\r\n         <header>\r\n             <nav className='navbar'>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n"
+                },
+                {
+                    "date": 1661267775453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   return (\r\n     <div className='p-4'>\r\n        \r\n         <div>\r\n-        <h1 id='bhp'>Buyer HomePage</h1>\r\n+        <h1 id='bhop'>Buyer HomePage</h1>\r\n         <header>\r\n             <nav className='navbar'>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n"
+                },
+                {
+                    "date": 1661267953608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n   return (\r\n     <div className='p-4'>\r\n        \r\n         <div>\r\n-        <h1 id='bhop'>Buyer HomePage</h1>\r\n+        <h1 className='bhpg'>Buyer HomePage</h1>\r\n         <header>\r\n             <nav className='navbar'>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n"
+                },
+                {
+                    "date": 1661268164258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             </nav>\r\n         </header>\r\n         </div>\r\n         <div>\r\n-        <h1>Services you may like</h1>\r\n+        <h1>Services you may like <i class=\"fa-solid fa-thumbs-up\"></i></h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n                         <Card className='mcard' style={{ width: '20rem'}} key={data.id}>\r\n"
+                },
+                {
+                    "date": 1661268212288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n             </nav>\r\n         </header>\r\n         </div>\r\n         <div>\r\n-        <h1>Services you may like <i class=\"fa-solid fa-thumbs-up\"></i></h1>\r\n+        <h1 id=\"lserv\">Services you may like <i class=\"fa-solid fa-thumbs-up\"></i></h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n                         <Card className='mcard' style={{ width: '20rem'}} key={data.id}>\r\n"
+                },
+                {
+                    "date": 1661268433073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n                 <li><button>Post a Request/Job</button></li>\r\n                 <li><button>Profile</button></li>\r\n+                <li><button>Settings</button></li>\r\n                 <li><button>Logout</button></li>\r\n             </ul>\r\n             </nav>\r\n         </header>\r\n"
+                },
+                {
+                    "date": 1661268497953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,11 +48,10 @@\n         <Card.Title><h1 id='uname'>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n-            <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5}\r\n-        \r\n-        />\r\n+            <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n+            <p>{data.orders.id}</p>\r\n             \r\n           </div>\r\n         </Card.Text>\r\n       \r\n"
+                },
+                {
+                    "date": 1661268549920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n             </nav>\r\n         </header>\r\n         </div>\r\n         <div>\r\n-        <h1 id=\"lserv\">Services you may like <i class=\"fa-solid fa-thumbs-up\"></i></h1>\r\n+        <h1 id=\"lserv\">Services you may like <i className=\"fa-solid fa-thumbs-up\"></i></h1>\r\n         <Container className=''>\r\n                   <Col className='cardcont'>\r\n                      {Suserdata.map(data=>(\r\n                         <Card className='mcard' style={{ width: '20rem'}} key={data.id}>\r\n"
+                },
+                {
+                    "date": 1661268568096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n         <Card.Text>\r\n           <div>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p>{data.orders.id}</p>\r\n+            <p>{data.orders}</p>\r\n             \r\n           </div>\r\n         </Card.Text>\r\n       \r\n"
+                },
+                {
+                    "date": 1661268591390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,10 @@\n         <Card.Text>\r\n           <div>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p>{data.orders}</p>\r\n             \r\n+            \r\n           </div>\r\n         </Card.Text>\r\n       \r\n       </Card.Body>\r\n"
+                },
+                {
+                    "date": 1661271494233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,10 @@\n         <Card.Text>\r\n           <div>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n+            <p>{data.id}</p>\r\n             \r\n-            \r\n           </div>\r\n         </Card.Text>\r\n       \r\n       </Card.Body>\r\n"
+                },
+                {
+                    "date": 1661271525213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n         <Card.Text>\r\n           <div>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p>{data.id}</p>\r\n+            <p>hello</p>\r\n             \r\n           </div>\r\n         </Card.Text>\r\n       \r\n"
+                },
+                {
+                    "date": 1661271545739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n         <Card.Text>\r\n           <div>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p>hello</p>\r\n+            <p>{data}</p>\r\n             \r\n           </div>\r\n         </Card.Text>\r\n       \r\n"
+                },
+                {
+                    "date": 1661271553621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n         <Card.Text>\r\n           <div>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p>{data}</p>\r\n+            <p>{data.key}</p>\r\n             \r\n           </div>\r\n         </Card.Text>\r\n       \r\n"
+                },
+                {
+                    "date": 1661271562391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,10 @@\n         <Card.Text>\r\n           <div>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p>{data.key}</p>\r\n             \r\n+            \r\n           </div>\r\n         </Card.Text>\r\n       \r\n       </Card.Body>\r\n"
+                },
+                {
+                    "date": 1661273002176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,10 @@\n         <Card.Text>\r\n           <div>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n+            <p>{data._id}</p>\r\n             \r\n-            \r\n           </div>\r\n         </Card.Text>\r\n       \r\n       </Card.Body>\r\n"
+                },
+                {
+                    "date": 1661273107922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,12 +47,14 @@\n       <hr/>\r\n         <Card.Title><h1 id='uname'>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n+            <p>{data.email}</p>\r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p>{data._id}</p>\r\n+            <p>{data.email}</p>\r\n             \r\n+            \r\n           </div>\r\n         </Card.Text>\r\n       \r\n       </Card.Body>\r\n"
+                },
+                {
+                    "date": 1661273244316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n       <hr/>\r\n         <Card.Title><h1 id='uname'>{data.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n-            <p>{data.email}</p>\r\n+          \r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n             <p>{data.email}</p>\r\n             \r\n"
+                },
+                {
+                    "date": 1661273270653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n           <div>\r\n           \r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p>{data.email}</p>\r\n+            <p >{data.email}</p>\r\n             \r\n             \r\n           </div>\r\n         </Card.Text>\r\n"
+                },
+                {
+                    "date": 1661273442902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n           <div>\r\n           \r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p >{data.email}</p>\r\n+            <p>{data.email}</p>\r\n             \r\n             \r\n           </div>\r\n         </Card.Text>\r\n"
+                },
+                {
+                    "date": 1661273493613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { Link,useNavigate} from \"react-router-dom\";\r\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import StarRatings from 'react-star-ratings';\r\n-import cardavatar from '../cardavatar.PNG';\r\n+import cardavatar from '../cardavatar.jpg';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers\";\r\n"
+                },
+                {
+                    "date": 1661273530284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n           <div>\r\n           \r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n-            <p>{data.email}</p>\r\n+            <p id=\"pmail\">{data.email}</p>\r\n             \r\n             \r\n           </div>\r\n         </Card.Text>\r\n"
+                },
+                {
+                    "date": 1661324632241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n                 <li><button>Dashboard</button></li>\r\n                 <li><button>Post a Request/Job</button></li>\r\n                 <li><button>Profile</button></li>\r\n                 <li><button>Settings</button></li>\r\n+                <li><button>Billing</button></li>\r\n                 <li><button>Logout</button></li>\r\n             </ul>\r\n             </nav>\r\n         </header>\r\n"
+                },
+                {
+                    "date": 1661324718289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers\";\r\n+    const navigate=useNavigate();\r\n \r\n     useEffect(() => {\r\n         getSeller();\r\n       }, []);\r\n@@ -25,14 +26,15 @@\n         <div>\r\n         <h1 className='bhpg'>Buyer HomePage</h1>\r\n         <header>\r\n             <nav className='navbar'>\r\n+            <Link to=\"/\"></Link>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n                 <li><button>Post a Request/Job</button></li>\r\n                 <li><button>Profile</button></li>\r\n-                <li><button>Settings</button></li>\r\n-                <li><button>Billing</button></li>\r\n+                <li><button    onClick={()=>navigate('/set')}>Settings</button></li>\r\n+<li><button    onClick={()=>navigate('/bill')}>Billing</button></li>\r\n                 <li><button>Logout</button></li>\r\n             </ul>\r\n             </nav>\r\n         </header>\r\n"
+                },
+                {
+                    "date": 1661324728831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n                 <li><button>Dashboard</button></li>\r\n                 <li><button>Post a Request/Job</button></li>\r\n                 <li><button>Profile</button></li>\r\n                 <li><button    onClick={()=>navigate('/set')}>Settings</button></li>\r\n-<li><button    onClick={()=>navigate('/bill')}>Billing</button></li>\r\n+                <li><button    onClick={()=>navigate('/bill')}>Billing</button></li>\r\n                 <li><button>Logout</button></li>\r\n             </ul>\r\n             </nav>\r\n         </header>\r\n"
+                },
+                {
+                    "date": 1661324750947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,10 +31,10 @@\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n                 <li><button>Post a Request/Job</button></li>\r\n                 <li><button>Profile</button></li>\r\n-                <li><button    onClick={()=>navigate('/set')}>Settings</button></li>\r\n-                <li><button    onClick={()=>navigate('/bill')}>Billing</button></li>\r\n+                <li><button onClick={()=>navigate('/set')}>Settings</button></li>\r\n+                <li><button onClick={()=>navigate('/bill')}>Billing</button></li>\r\n                 <li><button>Logout</button></li>\r\n             </ul>\r\n             </nav>\r\n         </header>\r\n"
+                },
+                {
+                    "date": 1661325066230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n             <nav className='navbar'>\r\n             <Link to=\"/\"></Link>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n-                <li><button>Post a Request/Job</button></li>\r\n+                <li><button onClick={()=>navigate('/postpr')}>Post a Request/Job</button></li>\r\n                 <li><button>Profile</button></li>\r\n                 <li><button onClick={()=>navigate('/set')}>Settings</button></li>\r\n                 <li><button onClick={()=>navigate('/bill')}>Billing</button></li>\r\n                 <li><button>Logout</button></li>\r\n"
+                },
+                {
+                    "date": 1661752691430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,15 @@\n import { Link,useNavigate} from \"react-router-dom\";\r\n import {Container,Col} from 'react-bootstrap';\r\n import Card from 'react-bootstrap/Card';\r\n import StarRatings from 'react-star-ratings';\r\n+import { useUserAuth } from \"../context/UserAuthContext\";\r\n import cardavatar from '../cardavatar.jpg';\r\n import axios from \"axios\";\r\n function BuyerHp() {\r\n     const [Suserdata, setSUserData] = useState([]);\r\n     const Surl = \"http://localhost:9999/retrieveSellers\";\r\n+    const { logOut, user } = useUserAuth();\r\n     const navigate=useNavigate();\r\n \r\n     useEffect(() => {\r\n         getSeller();\r\n@@ -17,10 +19,22 @@\n     \r\n       const getSeller = async () => {\r\n         const response = await axios.get(Surl);\r\n         setSUserData(response.data);\r\n-        console.log(response.data);\r\n+       \r\n       };\r\n+\r\n+      const handleLogout=async()=>{\r\n+        try {\r\n+\r\n+          await logOut();\r\n+          localStorage.removeItem(\"buyers\");\r\n+          navigate(\"/home\");\r\n+        } catch (error) {\r\n+          console.log(error.message);\r\n+        }\r\n+      }\r\n+     \r\n   return (\r\n     <div className='p-4'>\r\n        \r\n         <div>\r\n@@ -30,12 +44,13 @@\n             <Link to=\"/\"></Link>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n                 <li><button onClick={()=>navigate('/postpr')}>Post a Request/Job</button></li>\r\n-                <li><button>Profile</button></li>\r\n+                <li><button onClick={()=>navigate('/buprof')}>Profile</button></li>\r\n                 <li><button onClick={()=>navigate('/set')}>Settings</button></li>\r\n                 <li><button onClick={()=>navigate('/bill')}>Billing</button></li>\r\n-                <li><button>Logout</button></li>\r\n+                <li><button onClick={handleLogout}>Logout</button></li>\r\n+                <li><button onClick={()=>navigate('/selld')}>Seller dashboard</button></li>\r\n             </ul>\r\n             </nav>\r\n         </header>\r\n         </div>\r\n@@ -53,8 +68,9 @@\n           <div>\r\n           \r\n             <h2 id=\"service\">{data.service}</h2>\r\n             <StarRatings rating={data.rating} starRatedColor=\"yellow\" starDimension=\"30px\"  numberOfStars={5} />\r\n+           <h5>{data.orders}</h5>\r\n             <p id=\"pmail\">{data.email}</p>\r\n             \r\n             \r\n           </div>\r\n"
+                },
+                {
+                    "date": 1662308705656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         try {\r\n \r\n           await logOut();\r\n           localStorage.removeItem(\"buyers\");\r\n-          navigate(\"/home\");\r\n+          navigate(\"/\");\r\n         } catch (error) {\r\n           console.log(error.message);\r\n         }\r\n       }\r\n@@ -44,13 +44,15 @@\n             <Link to=\"/\"></Link>\r\n             <ul>\r\n                 <li><button>Dashboard</button></li>\r\n                 <li><button onClick={()=>navigate('/postpr')}>Post a Request/Job</button></li>\r\n+                <li><button onClick={()=>navigate('/bidman')}>Manage Requests</button></li>\r\n+                <li><button onClick={()=>navigate('/bmord')}>My Orders</button></li>\r\n                 <li><button onClick={()=>navigate('/buprof')}>Profile</button></li>\r\n                 <li><button onClick={()=>navigate('/set')}>Settings</button></li>\r\n                 <li><button onClick={()=>navigate('/bill')}>Billing</button></li>\r\n                 <li><button onClick={handleLogout}>Logout</button></li>\r\n-                <li><button onClick={()=>navigate('/selld')}>Seller dashboard</button></li>\r\n+               \r\n             </ul>\r\n             </nav>\r\n         </header>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1662668703505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       const handleLogout=async()=>{\r\n         try {\r\n \r\n           await logOut();\r\n-          localStorage.removeItem(\"buyers\");\r\n+         \r\n           navigate(\"/\");\r\n         } catch (error) {\r\n           console.log(error.message);\r\n         }\r\n"
+                },
+                {
+                    "date": 1662668833278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       const handleLogout=async()=>{\r\n         try {\r\n \r\n           await logOut();\r\n-         \r\n+          localStorage.removeItem(\"buyers\");\r\n           navigate(\"/\");\r\n         } catch (error) {\r\n           console.log(error.message);\r\n         }\r\n"
+                },
+                {
+                    "date": 1662669652036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 <li><button onClick={()=>navigate('/bidman')}>Manage Requests</button></li>\r\n                 <li><button onClick={()=>navigate('/bmord')}>My Orders</button></li>\r\n                 <li><button onClick={()=>navigate('/buprof')}>Profile</button></li>\r\n                 <li><button onClick={()=>navigate('/set')}>Settings</button></li>\r\n-                <li><button onClick={()=>navigate('/bill')}>Billing</button></li>\r\n+                <li><button onClick={()=>navigate('/billby')}>Billing</button></li>\r\n                 <li><button onClick={handleLogout}>Logout</button></li>\r\n                \r\n             </ul>\r\n             </nav>\r\n"
+                },
+                {
+                    "date": 1662669822579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n       const handleLogout=async()=>{\r\n         try {\r\n \r\n           await logOut();\r\n-          localStorage.removeItem(\"buyers\");\r\n+          localStorage.removeItem(\"buyer\");\r\n           navigate(\"/\");\r\n         } catch (error) {\r\n           console.log(error.message);\r\n         }\r\n"
+                }
+            ],
+            "date": 1661236187214,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction BuyerHp() {\r\n  return (\r\n    <div>BuyerHp</div>\r\n  )\r\n}\r\n\r\nexport default BuyerHp;"
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+{
+    "sourceFile": "src/components/Sellerdash.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 44,
+            "patches": [
+                {
+                    "date": 1661872863979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662043627235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,4 +46,7 @@\n }\r\n #bid:hover{\r\n     background-color: lightsalmon;\r\n }\r\n+.modform input{\r\n+    width:200px\r\n+}\r\n"
+                },
+                {
+                    "date": 1662043636747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,6 +47,6 @@\n #bid:hover{\r\n     background-color: lightsalmon;\r\n }\r\n .modform input{\r\n-    width:200px\r\n+    width:300px;\r\n }\r\n"
+                },
+                {
+                    "date": 1662043712294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,7 +46,7 @@\n }\r\n #bid:hover{\r\n     background-color: lightsalmon;\r\n }\r\n-.modform input{\r\n-    width:300px;\r\n-}\r\n+.modinp{\r\n+width:300px;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043739453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,5 +48,6 @@\n     background-color: lightsalmon;\r\n }\r\n .modinp{\r\n width:300px;\r\n+text-align: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043747718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,5 +49,6 @@\n }\r\n .modinp{\r\n width:300px;\r\n text-align: center;\r\n+padding: 3px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043838602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,5 +50,8 @@\n .modinp{\r\n width:300px;\r\n text-align: center;\r\n padding: 3px;\r\n+}\r\n+#modteta{\r\n+    width:100%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043846580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,6 +52,6 @@\n text-align: center;\r\n padding: 3px;\r\n }\r\n #modteta{\r\n-    width:100%;\r\n+    width:500px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043866769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,7 +51,7 @@\n width:300px;\r\n text-align: center;\r\n padding: 3px;\r\n }\r\n-#modteta{\r\n+#modtexta{\r\n     width:500px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043873352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,6 +52,6 @@\n text-align: center;\r\n padding: 3px;\r\n }\r\n #modtexta{\r\n-    width:500px;\r\n+    width:300px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043895252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,5 +53,6 @@\n padding: 3px;\r\n }\r\n #modtexta{\r\n     width:300px;\r\n+    height: 200px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043900944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,6 +53,6 @@\n padding: 3px;\r\n }\r\n #modtexta{\r\n     width:300px;\r\n-    height: 200px;\r\n+    height: 100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043965805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,5 +54,8 @@\n }\r\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n+}\r\n+#modsel{\r\n+    width:100px\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043972480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,6 +56,6 @@\n     width:300px;\r\n     height: 100px;\r\n }\r\n #modsel{\r\n-    width:100px\r\n+    width:200px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043982071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,5 +57,6 @@\n     height: 100px;\r\n }\r\n #modsel{\r\n     width:200px;\r\n+    padding: 2px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662043988782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,5 +58,6 @@\n }\r\n #modsel{\r\n     width:200px;\r\n     padding: 2px;\r\n+    text-align: center;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044024113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,12 @@\n }\r\n #bid:hover{\r\n     background-color: lightsalmon;\r\n }\r\n+.modform{\r\n+border:2px solid black\r\n+\r\n+}\r\n .modinp{\r\n width:300px;\r\n text-align: center;\r\n padding: 3px;\r\n"
+                },
+                {
+                    "date": 1662044104831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,11 @@\n #bid:hover{\r\n     background-color: lightsalmon;\r\n }\r\n .modform{\r\n-border:2px solid black\r\n+border:2px solid black;\r\n+position: relative;\r\n+left:5%;\r\n \r\n }\r\n .modinp{\r\n width:300px;\r\n"
+                },
+                {
+                    "date": 1662044211759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,12 +48,14 @@\n     background-color: lightsalmon;\r\n }\r\n .modform{\r\n border:2px solid black;\r\n-position: relative;\r\n-left:5%;\r\n \r\n }\r\n+.inform{\r\n+    position: relative;\r\n+    left:20%;\r\n+}\r\n .modinp{\r\n width:300px;\r\n text-align: center;\r\n padding: 3px;\r\n"
+                },
+                {
+                    "date": 1662044231766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,8 +58,10 @@\n .modinp{\r\n width:300px;\r\n text-align: center;\r\n padding: 3px;\r\n+position: relative;\r\n+    left:20%;\r\n }\r\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n"
+                },
+                {
+                    "date": 1662044238235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,18 +50,15 @@\n .modform{\r\n border:2px solid black;\r\n \r\n }\r\n-.inform{\r\n-    position: relative;\r\n-    left:20%;\r\n-}\r\n+\r\n .modinp{\r\n width:300px;\r\n text-align: center;\r\n padding: 3px;\r\n position: relative;\r\n-    left:20%;\r\n+left:20%;\r\n }\r\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n"
+                },
+                {
+                    "date": 1662044272984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,10 +61,14 @@\n }\r\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n+    position: relative;\r\n+    left:20%;\r\n }\r\n #modsel{\r\n     width:200px;\r\n     padding: 2px;\r\n     text-align: center;\r\n+    position: relative;\r\n+    left:20%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044285023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n     position: relative;\r\n-    left:20%;\r\n+    left:30%;\r\n }\r\n #modsel{\r\n     width:200px;\r\n     padding: 2px;\r\n"
+                },
+                {
+                    "date": 1662044292239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,9 +62,9 @@\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n     position: relative;\r\n-    left:30%;\r\n+    left:20%;\r\n }\r\n #modsel{\r\n     width:200px;\r\n     padding: 2px;\r\n"
+                },
+                {
+                    "date": 1662044309644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,8 +57,9 @@\n text-align: center;\r\n padding: 3px;\r\n position: relative;\r\n left:20%;\r\n+margin-top: 3px;\r\n }\r\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n@@ -69,6 +70,6 @@\n     width:200px;\r\n     padding: 2px;\r\n     text-align: center;\r\n     position: relative;\r\n-    left:20%;\r\n+    left:30%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044315957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n text-align: center;\r\n padding: 3px;\r\n position: relative;\r\n left:20%;\r\n-margin-top: 3px;\r\n+margin-top: 5px;\r\n }\r\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n"
+                },
+                {
+                    "date": 1662044324313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n text-align: center;\r\n padding: 3px;\r\n position: relative;\r\n left:20%;\r\n-margin-top: 5px;\r\n+margin-top: 10px;\r\n }\r\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n"
+                },
+                {
+                    "date": 1662044345335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n text-align: center;\r\n padding: 3px;\r\n position: relative;\r\n left:20%;\r\n-margin-top: 10px;\r\n+margin-top: 20px;\r\n }\r\n #modtexta{\r\n     width:300px;\r\n     height: 100px;\r\n"
+                },
+                {
+                    "date": 1662044383901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,5 +71,12 @@\n     padding: 2px;\r\n     text-align: center;\r\n     position: relative;\r\n     left:30%;\r\n+}\r\n+#modsub{\r\n+    width:200px;\r\n+    padding: 2px;\r\n+    text-align: center;\r\n+    position: relative;\r\n+    left:30%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044418860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,9 @@\n     background-color: lightsalmon;\r\n }\r\n .modform{\r\n border:2px solid black;\r\n+padding: 5px;\r\n \r\n }\r\n \r\n .modinp{\r\n"
+                },
+                {
+                    "date": 1662044427491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     background-color: lightsalmon;\r\n }\r\n .modform{\r\n border:2px solid black;\r\n-padding: 5px;\r\n+padding: 10px;\r\n \r\n }\r\n \r\n .modinp{\r\n"
+                },
+                {
+                    "date": 1662044447202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,5 +79,6 @@\n     padding: 2px;\r\n     text-align: center;\r\n     position: relative;\r\n     left:30%;\r\n+    background-color: darkgreen;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044485223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,6 +79,6 @@\n     padding: 2px;\r\n     text-align: center;\r\n     position: relative;\r\n     left:30%;\r\n-    background-color: darkgreen;\r\n+    background-color:#1dbf73;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044935771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,5 +80,8 @@\n     text-align: center;\r\n     position: relative;\r\n     left:30%;\r\n     background-color:#1dbf73;\r\n+}\r\n+#modcan{\r\n+    padding: 5px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044954623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,5 +83,7 @@\n     background-color:#1dbf73;\r\n }\r\n #modcan{\r\n     padding: 5px;\r\n+    position: relative;\r\n+    right: 20%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044962519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,6 +84,6 @@\n }\r\n #modcan{\r\n     padding: 5px;\r\n     position: relative;\r\n-    right: 20%;\r\n+    right: 30%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044969636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,6 +84,6 @@\n }\r\n #modcan{\r\n     padding: 5px;\r\n     position: relative;\r\n-    right: 30%;\r\n+    right: 40%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662044977504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,5 +85,6 @@\n #modcan{\r\n     padding: 5px;\r\n     position: relative;\r\n     right: 40%;\r\n+    width:200px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662045000265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,6 +85,6 @@\n #modcan{\r\n     padding: 5px;\r\n     position: relative;\r\n     right: 40%;\r\n-    width:200px;\r\n+    width:100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662045017392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,7 +84,7 @@\n }\r\n #modcan{\r\n     padding: 5px;\r\n     position: relative;\r\n-    right: 40%;\r\n+    right: 30%;\r\n     width:100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662045026411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,7 +84,7 @@\n }\r\n #modcan{\r\n     padding: 5px;\r\n     position: relative;\r\n-    right: 30%;\r\n+    right: 35%;\r\n     width:100px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662045042839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,5 +86,6 @@\n     padding: 5px;\r\n     position: relative;\r\n     right: 35%;\r\n     width:100px;\r\n+    background-color: lightblue;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662053573882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,8 +65,9 @@\n     width:300px;\r\n     height: 100px;\r\n     position: relative;\r\n     left:20%;\r\n+    text-align: center;\r\n }\r\n #modsel{\r\n     width:200px;\r\n     padding: 2px;\r\n"
+                },
+                {
+                    "date": 1662457498168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,5 +88,41 @@\n     position: relative;\r\n     right: 35%;\r\n     width:100px;\r\n     background-color: lightblue;\r\n-}\n\\ No newline at end of file\n+}\r\n+@media (min-width: 481px) and (max-width: 850px) {\r\n+\r\n+    .navbar{\r\n+        display: inline-block!important;\r\n+        left:25%;\r\n+    }\r\n+     .tabcont{\r\n+        width: 100%;\r\n+        margin-bottom: 15px;\r\n+        overflow-y: hidden;\r\n+        -ms-overflow-style: -ms-autohiding-scrollbar;\r\n+        padding: 5px;\r\n+     }\r\n+     .tabcont > .table {\r\n+        margin-bottom: 0;\r\n+    }\r\n+      \r\n+    }\r\n+    @media (min-width: 320px) and (max-width: 480px)\r\n+    {\r\n+        .navbar{\r\n+            display: inline-block!important;\r\n+            left:10%;\r\n+           \r\n+        }\r\n+         .tabcont{\r\n+            width: 100%;\r\n+            margin-bottom: 15px;\r\n+            overflow-y: hidden;\r\n+            -ms-overflow-style: -ms-autohiding-scrollbar;\r\n+            padding: 5px;\r\n+         }\r\n+         .tabcont > .table {\r\n+            margin-bottom: 0;\r\n+        }\r\n+    }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662457623956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,40 +89,4 @@\n     right: 35%;\r\n     width:100px;\r\n     background-color: lightblue;\r\n }\r\n-@media (min-width: 481px) and (max-width: 850px) {\r\n-\r\n-    .navbar{\r\n-        display: inline-block!important;\r\n-        left:25%;\r\n-    }\r\n-     .tabcont{\r\n-        width: 100%;\r\n-        margin-bottom: 15px;\r\n-        overflow-y: hidden;\r\n-        -ms-overflow-style: -ms-autohiding-scrollbar;\r\n-        padding: 5px;\r\n-     }\r\n-     .tabcont > .table {\r\n-        margin-bottom: 0;\r\n-    }\r\n-      \r\n-    }\r\n-    @media (min-width: 320px) and (max-width: 480px)\r\n-    {\r\n-        .navbar{\r\n-            display: inline-block!important;\r\n-            left:10%;\r\n-           \r\n-        }\r\n-         .tabcont{\r\n-            width: 100%;\r\n-            margin-bottom: 15px;\r\n-            overflow-y: hidden;\r\n-            -ms-overflow-style: -ms-autohiding-scrollbar;\r\n-            padding: 5px;\r\n-         }\r\n-         .tabcont > .table {\r\n-            margin-bottom: 0;\r\n-        }\r\n-    }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1661872863979,
+            "name": "Commit-0",
+            "content": "#sellh{\r\n    -webkit-text-stroke-color: darkslateblue;\r\n    -webkit-text-stroke-width:2px;\r\n    text-transform: uppercase;\r\n    letter-spacing: 3px;\r\n    text-align: center;\r\n}\r\n.tabpro{\r\n   border:3px solid black;\r\n   padding:10px;\r\n  width: 100%;\r\n  overflow: hidden;\r\n  margin-top: 20px;\r\n}\r\n.tabpro th{\r\n    text-transform: uppercase;\r\n    text-align: center;\r\n    margin-right: 10px;\r\n    border: 1px solid black;\r\n    width:30%;\r\n    padding: 5px;\r\n    background-color: lightgreen;\r\n    letter-spacing: 3px;\r\n   \r\n}\r\n.tabpro tr td{\r\n    margin-right: 20px;\r\n    border: 1px solid black;\r\n    padding: 3px;\r\n    text-align: center;\r\n    width:30%;\r\n    font-weight: bold;\r\n    letter-spacing: 2px;\r\n    background-color: lightskyblue;\r\n    \r\n}\r\n#bid{\r\n    padding: 5px;\r\n    background-color:green;\r\n    font-weight: bold;\r\n    width:60px;\r\n    border-radius: 20px;\r\n}\r\n.tabpro td:hover{\r\n    background-color: khaki;\r\n}\r\n#bid:hover{\r\n    background-color: lightsalmon;\r\n}\r\n"
+        }
+    ]
+}

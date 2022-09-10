@@ -1,0 +1,290 @@
+{
+    "sourceFile": "src/components/Home.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 68,
+            "patches": [
+                {
+                    "date": 1661104735578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1661104780477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,8 +95,10 @@\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n   .carousel{\r\n     padding: 5px !important;\r\n+    width: 300px !important;\r\n+    height: 400px!important;\r\n   }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661104827830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,13 +93,14 @@\n     right: 12%!important;\r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n-  .carousel{\r\n-    padding: 5px !important;\r\n-    width: 300px !important;\r\n-    height: 400px!important;\r\n-  }\r\n+    .car-cont{\r\n+        padding: 10px;\r\n+        background-image: linear-gradient(#0bab64,#3bb78f);\r\n+        border: 3px solid black;\r\n+    \r\n+    }\r\n    \r\n     \r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1661104845103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,9 @@\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .car-cont{\r\n-        padding: 10px;\r\n+        padding: 0px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n     \r\n     }\r\n"
+                },
+                {
+                    "date": 1661104857059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,11 +94,12 @@\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .car-cont{\r\n-        padding: 0px;\r\n+        padding: 10px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n+        display: inline-block;\r\n     \r\n     }\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1661104868206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n     .car-cont{\r\n         padding: 10px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n-        display: inline-block;\r\n+        display: inline;\r\n     \r\n     }\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1661104877339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n     .car-cont{\r\n         padding: 10px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n-        display: inline;\r\n+        display: flex;\r\n     \r\n     }\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1661104885618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n     .car-cont{\r\n         padding: 10px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n-        display: flex;\r\n+        display: inline-block;\r\n     \r\n     }\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1661104897056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,8 +98,9 @@\n         padding: 10px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n+        width: 600px;\r\n     \r\n     }\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1661104902688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n         padding: 10px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n-        width: 600px;\r\n+        width: 800px;\r\n     \r\n     }\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1661104941214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,8 +101,11 @@\n         display: inline-block;\r\n         width: 800px;\r\n     \r\n     }\r\n+    .carousel{\r\n+        width:fit-content!important\r\n+    }\r\n    \r\n     \r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1661104974889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n         width: 800px;\r\n     \r\n     }\r\n     .carousel{\r\n-        width:fit-content!important\r\n+        width:100%!important\r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661104989110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n         width: 800px;\r\n     \r\n     }\r\n     .carousel{\r\n-        width:100%!important\r\n+        \\\r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661105002348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n         width: 800px;\r\n     \r\n     }\r\n     .carousel{\r\n-        \\\r\n+        display: inline-block!important;\r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661105046464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,10 +101,12 @@\n         display: inline-block;\r\n         width: 800px;\r\n     \r\n     }\r\n-    .carousel{\r\n-        display: inline-block!important;\r\n+    .carousel-inner{\r\n+        position: relative;\r\n+        left: 20%;\r\n+        width: 640px!important;\r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661105058666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,9 @@\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n-        left: 20%;\r\n+        left: 20%!important;\r\n         width: 640px!important;\r\n     }\r\n    \r\n     \r\n"
+                },
+                {
+                    "date": 1661105083228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n         left: 20%!important;\r\n-        width: 640px!important;\r\n+        width: 600px!important;\r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661105099778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,10 +103,10 @@\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n-        left: 20%!important;\r\n-        width: 600px!important;\r\n+        left: 10%!important;\r\n+       \r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661105123813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,9 @@\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .car-cont{\r\n-        padding: 10px;\r\n+        padding: 20px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n"
+                },
+                {
+                    "date": 1661105142968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n         padding: 20px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n-        width: 800px;\r\n+        width: 700px;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105150140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n         padding: 20px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n-        width: 700px;\r\n+        width: 800px;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105182208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,8 +106,11 @@\n         position: relative;\r\n         left: 10%!important;\r\n        \r\n     }\r\n+    .carousel-control-next {\r\n+        right: 15%!important;\r\n+    }\r\n    \r\n     \r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1661105188712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n         left: 10%!important;\r\n        \r\n     }\r\n     .carousel-control-next {\r\n-        right: 15%!important;\r\n+        right: 20%!important;\r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661105211229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n         left: 10%!important;\r\n        \r\n     }\r\n     .carousel-control-next {\r\n-        right: 20%!important;\r\n+        right: 10%!important;\r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661105218362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n         left: 10%!important;\r\n        \r\n     }\r\n     .carousel-control-next {\r\n-        right: 10%!important;\r\n+        right: 5%!important;\r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661105223777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n         left: 10%!important;\r\n        \r\n     }\r\n     .carousel-control-next {\r\n-        right: 5%!important;\r\n+        right: 2%!important;\r\n     }\r\n    \r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1661105298538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,8 +93,16 @@\n     right: 12%!important;\r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n+    .hlogo{\r\n+        display: inline;\r\n+        justify-content: center;\r\n+        align-items: center;\r\n+        background-color: darkgray;\r\n+        width: 100%;\r\n+        padding: 10px;\r\n+    }\r\n     .car-cont{\r\n         padding: 20px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n"
+                },
+                {
+                    "date": 1661105309765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,9 @@\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .hlogo{\r\n-        display: inline;\r\n+        display: inline-flex;\r\n         justify-content: center;\r\n         align-items: center;\r\n         background-color: darkgray;\r\n         width: 100%;\r\n"
+                },
+                {
+                    "date": 1661105423731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,8 +93,11 @@\n     right: 12%!important;\r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n+    .navbar{\r\n+        display: inline-block!important;\r\n+    }\r\n     .hlogo{\r\n         display: inline-flex;\r\n         justify-content: center;\r\n         align-items: center;\r\n"
+                },
+                {
+                    "date": 1661105453146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,9 +102,9 @@\n         justify-content: center;\r\n         align-items: center;\r\n         background-color: darkgray;\r\n         width: 100%;\r\n-        padding: 10px;\r\n+        padding: 5px;\r\n     }\r\n     .car-cont{\r\n         padding: 20px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n"
+                },
+                {
+                    "date": 1661105460913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,16 +96,9 @@\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n-    .hlogo{\r\n-        display: inline-flex;\r\n-        justify-content: center;\r\n-        align-items: center;\r\n-        background-color: darkgray;\r\n-        width: 100%;\r\n-        padding: 5px;\r\n-    }\r\n+    \r\n     .car-cont{\r\n         padding: 20px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n"
+                },
+                {
+                    "date": 1661105498075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,8 +96,13 @@\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n+    header ul{\r\n+        display:inline;\r\n+        flex-direction: row;\r\n+        font-size: 14px;\r\n+    }\r\n     \r\n     .car-cont{\r\n         padding: 20px;\r\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n"
+                },
+                {
+                    "date": 1661105508318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n     header ul{\r\n-        display:inline;\r\n+        display:inline-block;\r\n         flex-direction: row;\r\n         font-size: 14px;\r\n     }\r\n     \r\n"
+                },
+                {
+                    "date": 1661105518984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n     header ul{\r\n-        display:inline-block;\r\n+        display:flex;\r\n         flex-direction: row;\r\n         font-size: 14px;\r\n     }\r\n     \r\n"
+                },
+                {
+                    "date": 1661105594485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,12 +96,10 @@\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n-    header ul{\r\n-        display:flex;\r\n-        flex-direction: row;\r\n-        font-size: 14px;\r\n+    li button{\r\n+        width: 100px;\r\n     }\r\n     \r\n     .car-cont{\r\n         padding: 20px;\r\n"
+                },
+                {
+                    "date": 1661105603813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n     li button{\r\n-        width: 100px;\r\n+        width: 200px;\r\n     }\r\n     \r\n     .car-cont{\r\n         padding: 20px;\r\n"
+                },
+                {
+                    "date": 1661105679814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,8 +106,9 @@\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n+        justify-content: center;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105689755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,8 +107,9 @@\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n         justify-content: center;\r\n+        align-items: center;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105712378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,10 +106,10 @@\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n-        justify-content: center;\r\n-        align-items: center;\r\n+      position: relative;\r\n+      left: 30%;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105726477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n       position: relative;\r\n-      left: 30%;\r\n+      left: 50%;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105735418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n       position: relative;\r\n-      left: 50%;\r\n+      left: 80%;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105748619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n       position: relative;\r\n-      left: 80%;\r\n+      left: 90%;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105756154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n       position: relative;\r\n-      left: 90%;\r\n+      left: 50%;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105763835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,8 +108,9 @@\n         display: inline-block;\r\n         width: 800px;\r\n       position: relative;\r\n       left: 50%;\r\n+      right: 50%;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105771468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,9 +108,9 @@\n         display: inline-block;\r\n         width: 800px;\r\n       position: relative;\r\n       left: 50%;\r\n-      right: 50%;\r\n+      right: 20%;\r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105782718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,9 +108,9 @@\n         display: inline-block;\r\n         width: 800px;\r\n       position: relative;\r\n       left: 50%;\r\n-      right: 20%;\r\n+      \r\n     \r\n     }\r\n     .carousel-inner{\r\n         position: relative;\r\n"
+                },
+                {
+                    "date": 1661105798441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,10 +106,9 @@\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n-      position: relative;\r\n-      left: 50%;\r\n+      margin-left: 30px;\r\n       \r\n     \r\n     }\r\n     .carousel-inner{\r\n"
+                },
+                {
+                    "date": 1661105805903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,9 +106,9 @@\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n-      margin-left: 30px;\r\n+      margin-right: 30px;\r\n       \r\n     \r\n     }\r\n     .carousel-inner{\r\n"
+                },
+                {
+                    "date": 1661105815370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,9 +106,9 @@\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n-      margin-right: 30px;\r\n+      margin-left: 100px;\r\n       \r\n     \r\n     }\r\n     .carousel-inner{\r\n"
+                },
+                {
+                    "date": 1661105822857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,9 +106,9 @@\n         background-image: linear-gradient(#0bab64,#3bb78f);\r\n         border: 3px solid black;\r\n         display: inline-block;\r\n         width: 800px;\r\n-      margin-left: 100px;\r\n+      margin-left: 500px;\r\n       \r\n     \r\n     }\r\n     .carousel-inner{\r\n"
+                },
+                {
+                    "date": 1661105922765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,8 +95,9 @@\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n+        padding: 10px;\r\n     }\r\n     li button{\r\n         width: 200px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1661105928682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,9 +95,8 @@\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n-        padding: 10px;\r\n     }\r\n     li button{\r\n         width: 200px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1661105946818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,8 +96,11 @@\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n+    li{\r\n+        padding: 5px;\r\n+    }\r\n     li button{\r\n         width: 200px;\r\n     }\r\n     \r\n"
+                },
+                {
+                    "date": 1661105953376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n     li{\r\n-        padding: 5px;\r\n+        padding: 20px;\r\n     }\r\n     li button{\r\n         width: 200px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1661105962599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,8 +98,9 @@\n         display: inline-block!important;\r\n     }\r\n     li{\r\n         padding: 20px;\r\n+        margin-top: 5px;\r\n     }\r\n     li button{\r\n         width: 200px;\r\n     }\r\n"
+                },
+                {
+                    "date": 1661106021162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,8 +91,13 @@\n \r\n .carousel-control-next {\r\n     right: 12%!important;\r\n }\r\n+.carousel-indicators [data-bs-target] {\r\n+    \r\n+    /* background-clip: padding-box; */\r\n+   \r\n+}\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1661106062828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n     right: 12%!important;\r\n }\r\n .carousel-indicators [data-bs-target] {\r\n     \r\n-    /* background-clip: padding-box; */\r\n+     background-clip: none;\r\n    \r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n"
+                },
+                {
+                    "date": 1661106084042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n     right: 12%!important;\r\n }\r\n .carousel-indicators [data-bs-target] {\r\n     \r\n-     background-clip: none;\r\n+     background-clip:none!important;\r\n    \r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n"
+                },
+                {
+                    "date": 1661106119728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n     right: 12%!important;\r\n }\r\n .carousel-indicators [data-bs-target] {\r\n     \r\n-     background-clip:none!important;\r\n+    /* background-clip: padding-box; */!important\r\n    \r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n"
+                },
+                {
+                    "date": 1661106155112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n     right: 12%!important;\r\n }\r\n .carousel-indicators [data-bs-target] {\r\n     \r\n-    /* background-clip: padding-box; */!important\r\n+   width: 50px !important;\r\n    \r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n"
+                },
+                {
+                    "date": 1661106174420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,8 +94,9 @@\n }\r\n .carousel-indicators [data-bs-target] {\r\n     \r\n    width: 50px !important;\r\n+   height: 10px!important;\r\n    \r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 767px) {\r\n"
+                },
+                {
+                    "date": 1661106373674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -134,8 +134,36 @@\n   }\r\n   \r\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n+    .navbar{\r\n+        display: inline-block!important;\r\n+    }\r\n+    li{\r\n+        padding: 20px;\r\n+        margin-top: 5px;\r\n+    }\r\n+    li button{\r\n+        width: 200px;\r\n+    }\r\n     \r\n+    .car-cont{\r\n+        padding: 20px;\r\n+        background-image: linear-gradient(#0bab64,#3bb78f);\r\n+        border: 3px solid black;\r\n+        display: inline-block;\r\n+        width: 800px;\r\n+      margin-left: 500px;\r\n+      \r\n+    \r\n+    }\r\n+    .carousel-inner{\r\n+        position: relative;\r\n+        left: 10%!important;\r\n+       \r\n+    }\r\n+    .carousel-control-next {\r\n+        right: 2%!important;\r\n+    }\r\n    \r\n     \r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661106387585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -135,9 +135,9 @@\n   \r\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n     .navbar{\r\n-        display: inline-block!important;\r\n+        display: inline!important;\r\n     }\r\n     li{\r\n         padding: 20px;\r\n         margin-top: 5px;\r\n"
+                },
+                {
+                    "date": 1661106417751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -135,9 +135,9 @@\n   \r\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n     .navbar{\r\n-        display: inline!important;\r\n+        display: inline-block!important;\r\n     }\r\n     li{\r\n         padding: 20px;\r\n         margin-top: 5px;\r\n"
+                },
+                {
+                    "date": 1661106974782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,8 +138,9 @@\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n     li{\r\n+        display: inline;\r\n         padding: 20px;\r\n         margin-top: 5px;\r\n     }\r\n     li button{\r\n"
+                },
+                {
+                    "date": 1661107006319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,8 +102,13 @@\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n+    header ul{\r\n+        display:inline-block;\r\n+        \r\n+        font-size: 14px;\r\n+    }\r\n     li{\r\n         padding: 20px;\r\n         margin-top: 5px;\r\n     }\r\n@@ -138,9 +143,9 @@\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n     li{\r\n-        display: inline;\r\n+        \r\n         padding: 20px;\r\n         margin-top: 5px;\r\n     }\r\n     li button{\r\n"
+                },
+                {
+                    "date": 1661107013542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,9 +103,9 @@\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n     header ul{\r\n-        display:inline-block;\r\n+        display:inline;\r\n         \r\n         font-size: 14px;\r\n     }\r\n     li{\r\n"
+                },
+                {
+                    "date": 1661107062526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,13 +102,9 @@\n @media (min-width: 481px) and (max-width: 767px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n-    header ul{\r\n-        display:inline;\r\n-        \r\n-        font-size: 14px;\r\n-    }\r\n+    \r\n     li{\r\n         padding: 20px;\r\n         margin-top: 5px;\r\n     }\r\n@@ -142,8 +138,13 @@\n   @media (min-width: 320px) and (max-width: 480px) {\r\n     .navbar{\r\n         display: inline-block!important;\r\n     }\r\n+    header ul{\r\n+        display:inline;\r\n+        \r\n+        font-size: 14px;\r\n+    }\r\n     li{\r\n         \r\n         padding: 20px;\r\n         margin-top: 5px;\r\n"
+                },
+                {
+                    "date": 1661107076759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,9 +136,9 @@\n   \r\n   \r\n   @media (min-width: 320px) and (max-width: 480px) {\r\n     .navbar{\r\n-        display: inline-block!important;\r\n+        display: inline!important;\r\n     }\r\n     header ul{\r\n         display:inline;\r\n         \r\n"
+                }
+            ],
+            "date": 1661104735578,
+            "name": "Commit-0",
+            "content": ".hlogo{\r\n    display: inline-flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: darkgray;\r\n    width: 100%;\r\n    padding: 10px;\r\n}\r\n.hlogo h1{\r\n    font-size: 50px;\r\n    letter-spacing: 3px;\r\n}\r\n.filogo{\r\n    width: 100px;\r\n    height: 100px;\r\n    \r\n}\r\n\r\nheader ul{\r\n    display:flex;\r\n    flex-direction: row;\r\n    font-size: 14px;\r\n}\r\n\r\nli{\r\n    list-style-type: none;\r\n    margin-right: 30px;\r\n    padding:10px;\r\n   \r\n}\r\nli button{\r\n    padding:5px;\r\n    border:5px solid lime;\r\n    background-color: lightblue;\r\n    font-weight: bold;\r\n    letter-spacing: 3px;\r\n}\r\nli button:hover{\r\n    opacity: 0.8;\r\n    background-color: lightgreen;\r\n}\r\n\r\n\r\n.car-cont{\r\n    padding: 30px;\r\n    background-image: linear-gradient(#0bab64,#3bb78f);\r\n    border: 3px solid black;\r\n\r\n}\r\n.carousel{\r\n    width:740px !important; \r\n    height:500px !important;\r\n    display: inline!important;\r\n}\r\n.carousel-inner {\r\n    position: relative;\r\n    left: 25%;\r\n    width: 640px!important;\r\n   \r\n}\r\n.carousel-item{\r\n  width: 740px !important;\r\n}\r\n.carousel-item img{\r\n    height: 400px!important;\r\n    width: 600px !important;\r\n    border: 3px solid black;\r\n    padding: 5px;\r\n}\r\n.carousel-caption {\r\n    position: absolute;\r\n    right: 30%!important;\r\n    bottom: 1.25rem;\r\n    left: 15%;\r\n    padding-top: 1.25rem;\r\n    padding-bottom: 1.25rem;\r\n    color: slateblue!important;\r\n    text-align: center;\r\n    font-size: 16px!important;\r\n    font-weight: bolder !important;\r\n    letter-spacing: 2px;\r\n    -webkit-text-stroke-color: black;\r\n    -webkit-text-stroke-width:1px;\r\n   \r\n}\r\n.carousel-indicators {\r\n    position: relative!important; \r\n   \r\n    \r\n}\r\n\r\n.carousel-control-next {\r\n    right: 12%!important;\r\n}\r\n\r\n@media (min-width: 481px) and (max-width: 767px) {\r\n  .carousel{\r\n    padding: 5px !important;\r\n  }\r\n   \r\n    \r\n  }\r\n  \r\n  \r\n  @media (min-width: 320px) and (max-width: 480px) {\r\n    \r\n   \r\n    \r\n  }"
+        }
+    ]
+}

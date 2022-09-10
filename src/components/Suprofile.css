@@ -1,0 +1,135 @@
+.bprof{
+    position: relative;
+    left:25%;
+    top:5%;
+}
+.scard{
+    border: 5px solid black;
+    padding: 10px;
+    margin: 18px;
+    text-align:center;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px 5px green;
+   
+    transition:transform ease 0.5s;
+    background-image: linear-gradient(109.6deg, rgba(98, 210, 141, 0.88) 11.2%, rgba(234, 245, 45, 0.79) 88%);
+
+}
+#suid{
+    text-align: center;
+    position: relative;
+    right: 25%;
+    -webkit-text-stroke-color: royalblue;
+    letter-spacing: 20px;
+    font-size: 50px;
+    -webkit-text-stroke-width:1px;
+    text-transform: uppercase;
+
+}
+#sname{
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width:1px;
+}
+.sptab{
+    border: 3px solid black;
+    margin-top: 5px;
+    padding: 5px;
+}
+.scard th{
+    width:30%;
+    border: 1px solid black;
+    color:midnightblues;
+    letter-spacing: 2px;
+    padding: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.scard tr{
+    width:30%;
+    border: 1px solid black;
+    padding: 5px;
+    
+}
+.scard td{
+    text-transform: lowercase;
+    font-family: cursive;
+    font-weight: 400;
+    width:30%;
+    letter-spacing: 3px;
+    padding: 5px;
+    color:black;
+    border: 1px solid black;
+    font-size: 16px;
+
+    
+   
+    
+}
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .p-2 {
+        padding: 50px!important; 
+   }
+   .navbar{
+       display: inline-block!important;
+       left:30%;
+   }
+   
+   .scard{
+  
+   position: relative;
+   width: 320px!important;
+   right:12%;
+}
+.cardtab{
+   width: 100%;
+   margin-bottom: 15px;
+   overflow-y: hidden;
+   -ms-overflow-style: -ms-autohiding-scrollbar;
+   padding: 10px;
+}
+
+   #suid{
+       right:10%;
+       margin-top: 5px;
+       font-size: 25px;
+   }
+
+  
+
+}
+@media (min-width: 320px) and (max-width: 480px)
+{
+    .p-2 {
+        padding: 60px!important; 
+   }
+   .navbar{
+       display: inline-block!important;
+       left: 60%;
+      
+   }
+   
+   .scard{
+  
+   position: relative;
+   right:50%;
+   width: 320px!important;
+}
+.cardtab{
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    padding: 10px;
+ }
+ 
+#suid{
+   right:2%;
+   margin-top: 3px;
+   font-size: 25px;
+}
+}

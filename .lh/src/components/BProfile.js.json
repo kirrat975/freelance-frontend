@@ -1,0 +1,278 @@
+{
+    "sourceFile": "src/components/BProfile.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 65,
+            "patches": [
+                {
+                    "date": 1661752592711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1661752975561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,15 @@\n import React from 'react'\r\n \r\n function BProfile() {\r\n+    const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n+    console.log(buyerInfo)\r\n   return (\r\n     <div>\r\n-        <h1>Buyer Profie</h1>\r\n+      <div>\r\n+\r\n+      </div>\r\n\\ No newline at end of file\n     </div>\r\n   )\r\n }\r\n \r\n-export default BProfile\n+export default BProfile;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661753036846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     console.log(buyerInfo)\r\n   return (\r\n     <div>\r\n       <div>\r\n-\r\n+        <h1>Buyer Profile</h1>\r\n       </div>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1661762978785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,41 @@\n-import React from 'react'\r\n+import React from 'react';\r\n+import Card from 'react-bootstrap/Card';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    console.log(buyerInfo)\r\n+    console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div>\r\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n+      <div>\r\n+      {buyerInfo.map(buyerInfo=>(\r\n+                        <Card className='mcard' style={{ width: '20rem'}} key={buyerInfo.id}>\r\n+      <Card.Img variant=\"top\" />\r\n+      <Card.Body>\r\n+      <hr/>\r\n+        <Card.Title><h1 id='uname'>{buyerInfo.name}</h1></Card.Title>\r\n+        <Card.Text>\r\n+          <div>\r\n+          \r\n+            <h2 id=\"service\">{buyerInfo.email}</h2>\r\n+           \r\n+           <h5>{buyerInfo.phone}</h5>\r\n+            <p id=\"pmail\">{buyerInfo.address}</p>\r\n+            \r\n+            \r\n+          </div>\r\n+        </Card.Text>\r\n+      \r\n+      </Card.Body>\r\n+    </Card>\r\n+\r\n+\r\n+    ))}\r\n+   \r\n+      </div>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1661763975191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react';\r\n import Card from 'react-bootstrap/Card';\r\n+import buyer from '../buyer.jpg';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n     console.log(buyerInfo);\r\n@@ -11,9 +12,9 @@\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='mcard' style={{ width: '20rem'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" />\r\n+      <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title><h1 id='uname'>{buyerInfo.name}</h1></Card.Title>\r\n         <Card.Text>\r\n"
+                },
+                {
+                    "date": 1661764018114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n                         <Card className='mcard' style={{ width: '20rem'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n-        <Card.Title><h1 id='uname'>{buyerInfo.name}</h1></Card.Title>\r\n+        <Card.Title><h1 id='uname'>UserName:{buyerInfo.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n           \r\n             <h2 id=\"service\">{buyerInfo.email}</h2>\r\n"
+                },
+                {
+                    "date": 1661764058069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n                         <Card className='mcard' style={{ width: '20rem'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n-        <Card.Title><h1 id='uname'>UserName:{buyerInfo.name}</h1></Card.Title>\r\n+        <Card.Title><h1 id='uname'><label>UserName</label>{buyerInfo.name}</h1></Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n           \r\n             <h2 id=\"service\">{buyerInfo.email}</h2>\r\n"
+                },
+                {
+                    "date": 1661764139695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,12 @@\n                         <Card className='mcard' style={{ width: '20rem'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n-        <Card.Title><h1 id='uname'><label>UserName</label>{buyerInfo.name}</h1></Card.Title>\r\n+        <Card.Title>\r\n+            <label>UserName: <span>{buyerInfo.name}</span></label>\r\n+            \r\n+        </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n           \r\n             <h2 id=\"service\">{buyerInfo.email}</h2>\r\n"
+                },
+                {
+                    "date": 1661764183006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,18 +16,15 @@\n       <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n-            <label>UserName: <span>{buyerInfo.name}</span></label>\r\n+           \r\n             \r\n         </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n           \r\n-            <h2 id=\"service\">{buyerInfo.email}</h2>\r\n-           \r\n-           <h5>{buyerInfo.phone}</h5>\r\n-            <p id=\"pmail\">{buyerInfo.address}</p>\r\n+          <label>Email Address: <span>{buyerInfo.email}</span></label>\r\n             \r\n             \r\n           </div>\r\n         </Card.Text>\r\n"
+                },
+                {
+                    "date": 1661764227432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n       <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n-           \r\n+            <label>UserName: <span>{buyerInfo.name}</span></label>\r\n             \r\n         </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661764249702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n-                        <Card className='mcard' style={{ width: '20rem'}} key={buyerInfo.id}>\r\n+                        <Card className='mcard' style={{ width: '22rem'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n"
+                },
+                {
+                    "date": 1661764266020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n-                        <Card className='mcard' style={{ width: '22rem'}} key={buyerInfo.id}>\r\n+                        <Card className='mcard' style={{ width: '50px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n"
+                },
+                {
+                    "date": 1661764272714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n-                        <Card className='mcard' style={{ width: '50px'}} key={buyerInfo.id}>\r\n+                        <Card className='mcard' style={{ width: '300px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n"
+                },
+                {
+                    "date": 1661764278638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n-                        <Card className='mcard' style={{ width: '300px'}} key={buyerInfo.id}>\r\n+                        <Card className='mcard' style={{ width: '500px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n"
+                },
+                {
+                    "date": 1661764354852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n-                        <Card className='mcard' style={{ width: '500px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} />\r\n+                        <Card className='mcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"200px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n             <label>UserName: <span>{buyerInfo.name}</span></label>\r\n"
+                },
+                {
+                    "date": 1661764367302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='mcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"200px\" />\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"100px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n             <label>UserName: <span>{buyerInfo.name}</span></label>\r\n"
+                },
+                {
+                    "date": 1661764393770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='mcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"100px\" />\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"200px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n             <label>UserName: <span>{buyerInfo.name}</span></label>\r\n"
+                },
+                {
+                    "date": 1661764401439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='mcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"200px\" />\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"300px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n             <label>UserName: <span>{buyerInfo.name}</span></label>\r\n"
+                },
+                {
+                    "date": 1661764412590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='mcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"300px\" />\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"220px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n             <label>UserName: <span>{buyerInfo.name}</span></label>\r\n"
+                },
+                {
+                    "date": 1661764497129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='mcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"220px\" />\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"250px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n             <label>UserName: <span>{buyerInfo.name}</span></label>\r\n@@ -23,8 +23,10 @@\n         <Card.Text>\r\n           <div>\r\n           \r\n           <label>Email Address: <span>{buyerInfo.email}</span></label>\r\n+          <label>Mobile Number: <span>{buyerInfo.phone}</span></label>\r\n+          <label>Residance Address: <span><p>{buyerInfo.address}</p></span></label>\r\n             \r\n             \r\n           </div>\r\n         </Card.Text>\r\n"
+                },
+                {
+                    "date": 1661764526223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           <div>\r\n           \r\n           <label>Email Address: <span>{buyerInfo.email}</span></label>\r\n           <label>Mobile Number: <span>{buyerInfo.phone}</span></label>\r\n-          <label>Residance Address: <span><p>{buyerInfo.address}</p></span></label>\r\n+          <label>Residance Address: <span>{buyerInfo.address}</span></label>\r\n             \r\n             \r\n           </div>\r\n         </Card.Text>\r\n"
+                },
+                {
+                    "date": 1661764868819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react';\r\n import Card from 'react-bootstrap/Card';\r\n import buyer from '../buyer.jpg';\r\n+import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n     console.log(buyerInfo);\r\n@@ -11,9 +12,9 @@\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n-                        <Card className='mcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n+                        <Card className='bcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"250px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n"
+                },
+                {
+                    "date": 1661765934460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"250px\" />\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"80px\" height=\"250px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n             <label>UserName: <span>{buyerInfo.name}</span></label>\r\n"
+                },
+                {
+                    "date": 1661767182876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,12 +22,17 @@\n             \r\n         </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n-          \r\n-          <label>Email Address: <span>{buyerInfo.email}</span></label>\r\n-          <label>Mobile Number: <span>{buyerInfo.phone}</span></label>\r\n-          <label>Residance Address: <span>{buyerInfo.address}</span></label>\r\n+          <table>\r\n+            <tbody>\r\n+                <tr><td><label>Email Address: <span>{buyerInfo.email}</span></label></td></tr>\r\n+                <tr><td> <label>Mobile Number: <span>{buyerInfo.phone}</span></label></td></tr>\r\n+                <tr><td><label>Residance Address: <span>{buyerInfo.address}</span></label></td></tr>\r\n+            </tbody>\r\n+          </table>\r\n+\r\n+        \r\n             \r\n             \r\n           </div>\r\n         </Card.Text>\r\n"
+                },
+                {
+                    "date": 1661767368690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,12 +23,17 @@\n         </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n           <table>\r\n+          <thead>\r\n+            <tr><th>Email Address</th></tr>\r\n+            <tr><th>Mobile Number</th></tr>\r\n+            <tr><th>Residential Address</th></tr>\r\n+          </thead>\r\n             <tbody>\r\n-                <tr><td><label>Email Address: <span>{buyerInfo.email}</span></label></td></tr>\r\n-                <tr><td> <label>Mobile Number: <span>{buyerInfo.phone}</span></label></td></tr>\r\n-                <tr><td><label>Residance Address: <span>{buyerInfo.address}</span></label></td></tr>\r\n+                <tr><td><span>{buyerInfo.email}</span></td></tr>\r\n+                <tr><td> <span>{buyerInfo.phone}</span></td></tr>\r\n+                <tr><td><span>{buyerInfo.address}</span></td></tr>\r\n             </tbody>\r\n           </table>\r\n \r\n         \r\n"
+                },
+                {
+                    "date": 1661767427843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,13 @@\n         <Card.Text>\r\n           <div>\r\n           <table>\r\n           <thead>\r\n+          <tr>\r\n             <tr><th>Email Address</th></tr>\r\n             <tr><th>Mobile Number</th></tr>\r\n             <tr><th>Residential Address</th></tr>\r\n+            </tr>\r\n           </thead>\r\n             <tbody>\r\n                 <tr><td><span>{buyerInfo.email}</span></td></tr>\r\n                 <tr><td> <span>{buyerInfo.phone}</span></td></tr>\r\n"
+                },
+                {
+                    "date": 1661767437038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,11 +31,13 @@\n             <tr><th>Residential Address</th></tr>\r\n             </tr>\r\n           </thead>\r\n             <tbody>\r\n+            <tr>\r\n                 <tr><td><span>{buyerInfo.email}</span></td></tr>\r\n                 <tr><td> <span>{buyerInfo.phone}</span></td></tr>\r\n                 <tr><td><span>{buyerInfo.address}</span></td></tr>\r\n+                </tr>\r\n             </tbody>\r\n           </table>\r\n \r\n         \r\n"
+                },
+                {
+                    "date": 1661767477424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,18 +25,18 @@\n           <div>\r\n           <table>\r\n           <thead>\r\n           <tr>\r\n-            <tr><th>Email Address</th></tr>\r\n-            <tr><th>Mobile Number</th></tr>\r\n-            <tr><th>Residential Address</th></tr>\r\n+            <th>Email Address</th>\r\n+            <th>Mobile Number</th>\r\n+            <th>Residential Address</th>\r\n             </tr>\r\n           </thead>\r\n             <tbody>\r\n             <tr>\r\n-                <tr><td><span>{buyerInfo.email}</span></td></tr>\r\n-                <tr><td> <span>{buyerInfo.phone}</span></td></tr>\r\n-                <tr><td><span>{buyerInfo.address}</span></td></tr>\r\n+               <td><span>{buyerInfo.email}</span></td>\r\n+                <td> <span>{buyerInfo.phone}</span></td>\r\n+                <td><span>{buyerInfo.address}</span></td>\r\n                 </tr>\r\n             </tbody>\r\n           </table>\r\n \r\n"
+                },
+                {
+                    "date": 1661767496028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n-                        <Card className='bcard' style={{ width: '400px'}} key={buyerInfo.id}>\r\n+                        <Card className='bcard' style={{ width: '450px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"80px\" height=\"250px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n"
+                },
+                {
+                    "date": 1661767504783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n-                        <Card className='bcard' style={{ width: '450px'}} key={buyerInfo.id}>\r\n+                        <Card className='bcard' style={{ width: '500px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"80px\" height=\"250px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n"
+                },
+                {
+                    "date": 1661767518672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n-                        <Card className='bcard' style={{ width: '500px'}} key={buyerInfo.id}>\r\n+                        <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"80px\" height=\"250px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n"
+                },
+                {
+                    "date": 1661767553738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"80px\" height=\"250px\" />\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"250px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n             <label>UserName: <span>{buyerInfo.name}</span></label>\r\n"
+                },
+                {
+                    "date": 1661767565840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"100px\" height=\"250px\" />\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n             <label>UserName: <span>{buyerInfo.name}</span></label>\r\n"
+                },
+                {
+                    "date": 1661768016970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n-            <label>UserName: <span>{buyerInfo.name}</span></label>\r\n+         <h1>  {buyerInfo.name}</h1>\r\n             \r\n         </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661768029014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n-         <h1>  {buyerInfo.name}</h1>\r\n+         <h1 id='bname'>{buyerInfo.name}</h1>\r\n             \r\n         </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661768047094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n-         <h1 id='bname'>{buyerInfo.name}</h1>\r\n+         <h1 id='bname'>User Name :{buyerInfo.name}</h1>\r\n             \r\n         </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661768351627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,16 +10,16 @@\n     <div>\r\n       <div>\r\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n-      <div>\r\n+      <div className='p-3'>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n-         <h1 id='bname'>User Name :{buyerInfo.name}</h1>\r\n+         <h1 id='bname'>User Name : {buyerInfo.name}</h1>\r\n             \r\n         </Card.Title>\r\n         <Card.Text>\r\n           <div>\r\n"
+                },
+                {
+                    "date": 1661768372153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,12 @@\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n-      <div>\r\n+      <div className='p-3'>\r\n         <h1>Buyer Profile</h1>\r\n       </div>\r\n-      <div className='p-3'>\r\n+      <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n"
+                },
+                {
+                    "date": 1661768416012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-3'>\r\n-        <h1>Buyer Profile</h1>\r\n       </div>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n"
+                },
+                {
+                    "date": 1661768435876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\r\n     <div>\r\n       <div className='p-3'>\r\n       </div>\r\n-      <div>\r\n+      \r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n@@ -39,10 +39,10 @@\n             </tbody>\r\n           </table>\r\n \r\n         \r\n+          </div>\r\n             \r\n-            \r\n           </div>\r\n         </Card.Text>\r\n       \r\n       </Card.Body>\r\n"
+                },
+                {
+                    "date": 1661768451047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,12 @@\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n-      <div className='p-3'>\r\n+     \r\n+\r\n       </div>\r\n-      \r\n+      <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n@@ -39,10 +40,10 @@\n             </tbody>\r\n           </table>\r\n \r\n         \r\n-          </div>\r\n             \r\n+            \r\n           </div>\r\n         </Card.Text>\r\n       \r\n       </Card.Body>\r\n"
+                },
+                {
+                    "date": 1661768493310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,9 @@\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n-     \r\n-\r\n-      </div>\r\n+      <div className='p-3'>\r\n       <div>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n@@ -52,8 +50,10 @@\n \r\n     ))}\r\n    \r\n       </div>\r\n+      </div>\r\n+     \r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1661768547730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-3'>\r\n-      <div>\r\n+      <div className='bprof'>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n"
+                },
+                {
+                    "date": 1661768684071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n   return (\r\n     <div>\r\n       <div className='p-3'>\r\n       <div className='bprof'>\r\n+      <h1>BUYER PROFILE</h1>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n       <Card.Body>\r\n"
+                },
+                {
+                    "date": 1661768734385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       <div className='bprof'>\r\n       <h1>BUYER PROFILE</h1>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n-      <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"300px\" />\r\n+      <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"260px\" />\r\n       <Card.Body>\r\n       <hr/>\r\n         <Card.Title>\r\n          <h1 id='bname'>User Name : {buyerInfo.name}</h1>\r\n"
+                },
+                {
+                    "date": 1661768807154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\r\n     <div>\r\n       <div className='p-3'>\r\n       <div className='bprof'>\r\n-      <h1>BUYER PROFILE</h1>\r\n+      <h1 id='buid'>BUYER PROFILE</h1>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n       <Card.Img variant=\"top\" src={buyer} width=\"150px\" height=\"260px\" />\r\n       <Card.Body>\r\n"
+                },
+                {
+                    "date": 1661768983434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n-      <div className='p-3'>\r\n+      <div className='p-4'>\r\n       <div className='bprof'>\r\n       <h1 id='buid'>BUYER PROFILE</h1>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n"
+                },
+                {
+                    "date": 1661769012586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n-      <div className='p-4'>\r\n+      <div className='p-2'>\r\n       <div className='bprof'>\r\n       <h1 id='buid'>BUYER PROFILE</h1>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n"
+                },
+                {
+                    "date": 1662451901805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n import React from 'react';\r\n import Card from 'react-bootstrap/Card';\r\n-import buyer from '../buyer.jpg';\r\n+import buyer from '../buyer.png';\r\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n-      <div className='p-2'>\r\n+      <div className='p-2 '>\r\n       <div className='bprof'>\r\n       <h1 id='buid'>BUYER PROFILE</h1>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n"
+                },
+                {
+                    "date": 1662453455688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react';\r\n import Card from 'react-bootstrap/Card';\r\n+import Bheader from './Bheader';\r\n import buyer from '../buyer.png';\r\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n@@ -8,8 +9,9 @@\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n+      <Bheader/>\r\n       <div className='bprof'>\r\n       <h1 id='buid'>BUYER PROFILE</h1>\r\n       {buyerInfo.map(buyerInfo=>(\r\n                         <Card className='bcard' style={{ width: '600px'}} key={buyerInfo.id}>\r\n"
+                },
+                {
+                    "date": 1662458911588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n          <h1 id='bname'>User Name : {buyerInfo.name}</h1>\r\n             \r\n         </Card.Title>\r\n         <Card.Text>\r\n-          <div>\r\n+          <div className='cardtab'>\r\n           <table>\r\n           <thead>\r\n           <tr>\r\n             <th>Email Address</th>\r\n"
+                },
+                {
+                    "date": 1662670140126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n+    \r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670147332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    \r\n+    localStorage\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670153938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    localStorage\r\n+    localStorage.setItem\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670160806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    localStorage.setItem\r\n+    localStorage.setItem(buyerInfo)\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670168132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    localStorage.setItem(buyerInfo)\r\n+    localStorage.setItem(buyerInfo,JSON.stringf)\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670177919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    localStorage.setItem(buyerInfo,JSON.stringf)\r\n+    localStorage.setItem(buyerInfo,JSON.stringfy)\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670192552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    localStorage.setItem(buyerInfo,JSON.stringfy)\r\n+    localStorage.setItem(buyerInfo,JSON.stringfy(buyerInfo))\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670261323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    localStorage.setItem(buyerInfo,JSON.stringfy(buyerInfo))\r\n+  \r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670442087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-  \r\n+    \r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670504976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    \r\n+    console.log()\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670521833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    console.log()\r\n+    console.log(localS)\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670529746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    console.log(localS)\r\n+    console.log(localStorage.setItem())\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670544681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    console.log(localStorage.setItem())\r\n+    console.log(localStorage.setItem(buerInfo))\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670550280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import './Buprofile.css';\r\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n-    console.log(localStorage.setItem(\"\"))\r\n+    console.log(localStorage.setItem(\"b\"))\r\n     console.log(buyerInfo);\r\n   return (\r\n     <div>\r\n       <div className='p-2 '>\r\n"
+                },
+                {
+                    "date": 1662670827640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,9 @@\n \r\n function BProfile() {\r\n     const buyerInfo=JSON.parse(localStorage.getItem('buyer'));\r\n   \r\n-   const bemail=async()=>{\r\n-  \r\n-   }\r\n+   \r\n    useEffect(() => {\r\n    bemail();\r\n   \r\n   }, []);\r\n"
+                }
+            ],
+            "date": 1661752592711,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction BProfile() {\r\n  return (\r\n    <div>\r\n        <h1>Buyer Profie</h1>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default BProfile"
+        }
+    ]
+}

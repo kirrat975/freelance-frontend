@@ -1,0 +1,274 @@
+{
+    "sourceFile": "src/components/SBorder.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 64,
+            "patches": [
+                {
+                    "date": 1662447649559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662447811142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n-.tabreq{\r\n+.tabordr{\r\n     border:3px solid black;\r\n     padding:10px;\r\n    width: 100%;\r\n    overflow: hidden;\r\n    margin-top: 20px;\r\n  }\r\n- .tabreq th{\r\n+ .tabordr th{\r\n      text-transform: uppercase;\r\n      text-align: center;\r\n      margin-right: 10px;\r\n      border: 1px solid black;\r\n@@ -15,9 +15,9 @@\n      background-color: lightseagreen;\r\n      letter-spacing: 2px;\r\n     \r\n  }\r\n- .tabreq tr td{\r\n+ .tabordr tr td{\r\n      margin-right: 20px;\r\n      border: 1px solid black;\r\n      padding: 3px;\r\n      text-align: center;\r\n@@ -26,23 +26,16 @@\n      letter-spacing: 1px;\r\n      background-color: lightgreen;\r\n      \r\n  }\r\n- .tabreq td:hover{\r\n+ .tabordr td:hover{\r\n     background-color: khaki;\r\n }\r\n-#accb{\r\n-    background-color: crimson;\r\n-    padding: 5px;\r\n-    font-weight: bold;\r\n-}\r\n-#accb:hover{\r\n-    background-color: salmon;\r\n-}\r\n-#ordb{\r\n+\r\n+#bsupd{\r\n     background-color: royalblue;\r\n     padding: 5px;\r\n     font-weight: bold;  \r\n }\r\n-#ordb:hover{\r\n+#bsupd:hover{\r\n     background-color: lightblue;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662447839762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n      margin-right: 10px;\r\n      border: 1px solid black;\r\n      width:25%;\r\n      padding: 5px;\r\n-     background-color: lightseagreen;\r\n+     background-color: darkseagreen;\r\n      letter-spacing: 2px;\r\n     \r\n  }\r\n  .tabordr tr td{\r\n"
+                },
+                {
+                    "date": 1662447876981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n      text-align: center;\r\n      width:25%;\r\n      font-weight: bold;\r\n      letter-spacing: 1px;\r\n-     background-color: lightgreen;\r\n+     background-color: mediumseagreen;\r\n      \r\n  }\r\n  .tabordr td:hover{\r\n     background-color: khaki;\r\n"
+                },
+                {
+                    "date": 1662447912218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     background-color: khaki;\r\n }\r\n \r\n #bsupd{\r\n-    background-color: royalblue;\r\n+    background-color: steelblue;\r\n     padding: 5px;\r\n     font-weight: bold;  \r\n }\r\n #bsupd:hover{\r\n"
+                },
+                {
+                    "date": 1662447929310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,6 +36,6 @@\n     padding: 5px;\r\n     font-weight: bold;  \r\n }\r\n #bsupd:hover{\r\n-    background-color: lightblue;\r\n+    background-color: paleturquoise;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662447986776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n }\r\n \r\n #bsupd{\r\n     background-color: steelblue;\r\n-    padding: 5px;\r\n+    padding: 10px;\r\n     font-weight: bold;  \r\n }\r\n #bsupd:hover{\r\n     background-color: paleturquoise;\r\n"
+                },
+                {
+                    "date": 1662447995015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n }\r\n \r\n #bsupd{\r\n     background-color: steelblue;\r\n-    padding: 10px;\r\n+    padding: 5px;\r\n     font-weight: bold;  \r\n }\r\n #bsupd:hover{\r\n     background-color: paleturquoise;\r\n"
+                },
+                {
+                    "date": 1662448000552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n  }\r\n  .tabordr tr td{\r\n      margin-right: 20px;\r\n      border: 1px solid black;\r\n-     padding: 3px;\r\n+     padding: 5px;\r\n      text-align: center;\r\n      width:25%;\r\n      font-weight: bold;\r\n      letter-spacing: 1px;\r\n"
+                },
+                {
+                    "date": 1662448010263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n  }\r\n  .tabordr tr td{\r\n      margin-right: 20px;\r\n      border: 1px solid black;\r\n-     padding: 5px;\r\n+     padding: 10px;\r\n      text-align: center;\r\n      width:25%;\r\n      font-weight: bold;\r\n      letter-spacing: 1px;\r\n"
+                },
+                {
+                    "date": 1662448017225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n  }\r\n  .tabordr tr td{\r\n      margin-right: 20px;\r\n      border: 1px solid black;\r\n-     padding: 10px;\r\n+     padding: 6px;\r\n      text-align: center;\r\n      width:25%;\r\n      font-weight: bold;\r\n      letter-spacing: 1px;\r\n"
+                },
+                {
+                    "date": 1662449063583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,5 +37,8 @@\n     font-weight: bold;  \r\n }\r\n #bsupd:hover{\r\n     background-color: paleturquoise;\r\n+}\r\n+#swbtn{\r\n+    background-color: royalblue;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449073329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,5 +40,6 @@\n     background-color: paleturquoise;\r\n }\r\n #swbtn{\r\n     background-color: royalblue;\r\n+    padding: 5px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449086838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,6 @@\n }\r\n #swbtn{\r\n     background-color: royalblue;\r\n     padding: 5px;\r\n+    font-weight: bold;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449124640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,5 +42,7 @@\n #swbtn{\r\n     background-color: royalblue;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n+    position: relative;\r\n+    left:20%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449130988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,6 +43,6 @@\n     background-color: royalblue;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n     position: relative;\r\n-    left:20%;\r\n+    left:50%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449141709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,6 @@\n     padding: 5px;\r\n     font-weight: bold;\r\n     position: relative;\r\n     left:50%;\r\n+    margin-top: 5px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449150718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,7 @@\n #swbtn{\r\n     background-color: royalblue;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n-    position: relative;\r\n-    left:50%;\r\n+\r\n     margin-top: 5px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449157536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,6 +43,6 @@\n     background-color: royalblue;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n \r\n-    margin-top: 5px;\r\n+    margin-top: 10px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449165903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,6 +43,6 @@\n     background-color: royalblue;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n \r\n-    margin-top: 10px;\r\n+    margin-top: 20px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449174121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,6 +43,6 @@\n     background-color: royalblue;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n \r\n-    margin-top: 20px;\r\n+    margin-top: 40px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449207962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,10 +39,10 @@\n #bsupd:hover{\r\n     background-color: paleturquoise;\r\n }\r\n #swbtn{\r\n-    background-color: royalblue;\r\n+    background-color: slateblue;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n \r\n-    margin-top: 40px;\r\n+    margin-top: 30px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449215613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n #bsupd:hover{\r\n     background-color: paleturquoise;\r\n }\r\n #swbtn{\r\n-    background-color: slateblue;\r\n+    background-color: darkgreen;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n \r\n     margin-top: 30px;\r\n"
+                },
+                {
+                    "date": 1662449229068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,7 +42,7 @@\n #swbtn{\r\n     background-color: darkgreen;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n-\r\n+    color:white\r\n     margin-top: 30px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662449299715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,11 +38,14 @@\n }\r\n #bsupd:hover{\r\n     background-color: paleturquoise;\r\n }\r\n+.swform{\r\n+    background-color: lightgreen;\r\n+}\r\n #swbtn{\r\n     background-color: darkgreen;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n\\ No newline at end of file\n-    color:white\r\n+    color:white;\r\n     margin-top: 30px;\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1662449320521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,13 +39,13 @@\n #bsupd:hover{\r\n     background-color: paleturquoise;\r\n }\r\n .swform{\r\n-    background-color: lightgreen;\r\n+    background-color: lightskyblue;\r\n }\r\n #swbtn{\r\n     background-color: darkgreen;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1662449327097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,13 +39,13 @@\n #bsupd:hover{\r\n     background-color: paleturquoise;\r\n }\r\n .swform{\r\n-    background-color: lightskyblue;\r\n+    background-color: lightblue;\r\n }\r\n #swbtn{\r\n     background-color: darkgreen;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1662449336542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,12 +40,13 @@\n     background-color: paleturquoise;\r\n }\r\n .swform{\r\n     background-color: lightblue;\r\n+    padding: 5px;\r\n }\r\n #swbtn{\r\n     background-color: darkgreen;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1662449342428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,13 +40,13 @@\n     background-color: paleturquoise;\r\n }\r\n .swform{\r\n     background-color: lightblue;\r\n-    padding: 5px;\r\n+    padding: 10px;\r\n }\r\n #swbtn{\r\n     background-color: darkgreen;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1662449350519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,13 +40,13 @@\n     background-color: paleturquoise;\r\n }\r\n .swform{\r\n     background-color: lightblue;\r\n-    padding: 10px;\r\n+    padding: 20px;\r\n }\r\n #swbtn{\r\n     background-color: darkgreen;\r\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1662449687452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,5 +48,5 @@\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1662457620093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,4 +49,40 @@\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n }\r\n+@media (min-width: 481px) and (max-width: 850px) {\r\n+\r\n+    .navbar{\r\n+        display: inline-block!important;\r\n+        left:25%;\r\n+    }\r\n+     .tabcont{\r\n+        width: 100%;\r\n+        margin-bottom: 15px;\r\n+        overflow-y: hidden;\r\n+        -ms-overflow-style: -ms-autohiding-scrollbar;\r\n+        padding: 5px;\r\n+     }\r\n+     .tabcont > .table {\r\n+        margin-bottom: 0;\r\n+    }\r\n+      \r\n+    }\r\n+    @media (min-width: 320px) and (max-width: 480px)\r\n+    {\r\n+        .navbar{\r\n+            display: inline-block!important;\r\n+            left:10%;\r\n+           \r\n+        }\r\n+         .tabcont{\r\n+            width: 100%;\r\n+            margin-bottom: 15px;\r\n+            overflow-y: hidden;\r\n+            -ms-overflow-style: -ms-autohiding-scrollbar;\r\n+            padding: 5px;\r\n+         }\r\n+         .tabcont > .table {\r\n+            margin-bottom: 0;\r\n+        }\r\n+    }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662457651625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,16 +55,16 @@\n     .navbar{\r\n         display: inline-block!important;\r\n         left:25%;\r\n     }\r\n-     .tabcont{\r\n+     .botabcont{\r\n         width: 100%;\r\n         margin-bottom: 15px;\r\n         overflow-y: hidden;\r\n         -ms-overflow-style: -ms-autohiding-scrollbar;\r\n         padding: 5px;\r\n      }\r\n-     .tabcont > .table {\r\n+     .botabcont > .table {\r\n         margin-bottom: 0;\r\n     }\r\n       \r\n     }\r\n@@ -74,15 +74,15 @@\n             display: inline-block!important;\r\n             left:10%;\r\n            \r\n         }\r\n-         .tabcont{\r\n+         .botabcont{\r\n             width: 100%;\r\n             margin-bottom: 15px;\r\n             overflow-y: hidden;\r\n             -ms-overflow-style: -ms-autohiding-scrollbar;\r\n             padding: 5px;\r\n          }\r\n-         .tabcont > .table {\r\n+         .botabcont > .table {\r\n             margin-bottom: 0;\r\n         }\r\n     }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662532147291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,9 @@\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n+    ma\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n"
+                },
+                {
+                    "date": 1662532152958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n-    ma\r\n+    margin-left: 100px;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n"
+                },
+                {
+                    "date": 1662532163333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n-    margin-left: 100px;\r\n+    margin-left: 150px;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n"
+                },
+                {
+                    "date": 1662532170779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     padding: 5px;\r\n     font-weight: bold;\r\n     color:white;\r\n     margin-top: 30px;\r\n-    margin-left: 150px;\r\n+    margin-left: 180px;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n"
+                },
+                {
+                    "date": 1662532241871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n+\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1662532247447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n-\r\n+input[]\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1662532254840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n-input[]\r\n+input[t]\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1662532262246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n-input[t]\r\n+\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1662532360936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n-\r\n+input[type=text]\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1662532368938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n-input[type=text]\r\n+input[type=checkbox]\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1662532392856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,11 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n-input[type=checkbox]\r\n+input[type=checkbox]{\r\n+    width:\r\n+}\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1662532412403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n input[type=checkbox]{\r\n-    width:\r\n+    width:50px;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n"
+                },
+                {
+                    "date": 1662532417668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n input[type=checkbox]{\r\n-    width:50px;\r\n+    width:100px;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n"
+                },
+                {
+                    "date": 1662532467475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,10 @@\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n input[type=checkbox]{\r\n-    width:100px;\r\n+    height: 25px;\r\n+    width: 25px;\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n"
+                },
+                {
+                    "date": 1662532502487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,9 @@\n }\r\n input[type=checkbox]{\r\n     height: 25px;\r\n     width: 25px;\r\n+    ma\r\n }\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n"
+                },
+                {
+                    "date": 1662532560856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,10 +53,11 @@\n }\r\n input[type=checkbox]{\r\n     height: 25px;\r\n     width: 25px;\r\n-    ma\r\n+    margin-left: 20px;\r\n }\r\n+\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1662532566799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n+.inmod li\r\n input[type=checkbox]{\r\n     height: 25px;\r\n     width: 25px;\r\n     margin-left: 20px;\r\n"
+                },
+                {
+                    "date": 1662532574821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,11 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n-.inmod li\r\n+.inmod li{\r\n+    margin-left: 20px;\r\n+}\r\n input[type=checkbox]{\r\n     height: 25px;\r\n     width: 25px;\r\n     margin-left: 20px;\r\n"
+                },
+                {
+                    "date": 1662532652373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,8 +52,9 @@\n     margin-left: 180px;\r\n }\r\n .inmod li{\r\n     margin-left: 20px;\r\n+    l\r\n }\r\n input[type=checkbox]{\r\n     height: 25px;\r\n     width: 25px;\r\n"
+                },
+                {
+                    "date": 1662532672759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,11 +50,12 @@\n     color:white;\r\n     margin-top: 30px;\r\n     margin-left: 180px;\r\n }\r\n+\r\n .inmod li{\r\n     margin-left: 20px;\r\n-    l\r\n+    list-style-type: disc;\r\n }\r\n input[type=checkbox]{\r\n     height: 25px;\r\n     width: 25px;\r\n"
+                },
+                {
+                    "date": 1662532680148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,8 +55,9 @@\n .inmod li{\r\n     margin-left: 20px;\r\n     list-style-type: disc;\r\n }\r\n+.inmod p\r\n input[type=checkbox]{\r\n     height: 25px;\r\n     width: 25px;\r\n     margin-left: 20px;\r\n"
+                },
+                {
+                    "date": 1662532687182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,11 @@\n .inmod li{\r\n     margin-left: 20px;\r\n     list-style-type: disc;\r\n }\r\n-.inmod p\r\n+.inmod p{\r\n+    font-size: 20px;\r\n+}\r\n input[type=checkbox]{\r\n     height: 25px;\r\n     width: 25px;\r\n     margin-left: 20px;\r\n"
+                },
+                {
+                    "date": 1662532700020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n .inmod p{\r\n     font-size: 20px;\r\n }\r\n input[type=checkbox]{\r\n-    height: 25px;\r\n+    height: 20px;\r\n     width: 25px;\r\n     margin-left: 20px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1662532715985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,9 +60,9 @@\n     font-size: 20px;\r\n }\r\n input[type=checkbox]{\r\n     height: 20px;\r\n-    width: 25px;\r\n+    width: 20px;\r\n     margin-left: 20px;\r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 850px) {\r\n"
+                },
+                {
+                    "date": 1662532732194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     margin-left: 20px;\r\n     list-style-type: disc;\r\n }\r\n .inmod p{\r\n-    font-size: 20px;\r\n+    font-size: 26px;\r\n }\r\n input[type=checkbox]{\r\n     height: 20px;\r\n     width: 20px;\r\n"
+                },
+                {
+                    "date": 1662532738778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     margin-left: 20px;\r\n     list-style-type: disc;\r\n }\r\n .inmod p{\r\n-    font-size: 26px;\r\n+    font-size: 2px;\r\n }\r\n input[type=checkbox]{\r\n     height: 20px;\r\n     width: 20px;\r\n"
+                },
+                {
+                    "date": 1662532751602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     margin-left: 20px;\r\n     list-style-type: disc;\r\n }\r\n .inmod p{\r\n-    font-size: 2px;\r\n+    font-size: px;\r\n }\r\n input[type=checkbox]{\r\n     height: 20px;\r\n     width: 20px;\r\n"
+                },
+                {
+                    "date": 1662532761910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n .inmod li{\r\n     margin-left: 20px;\r\n     list-style-type: disc;\r\n }\r\n-.inmod p{\r\n+.inmod label{\r\n     font-size: px;\r\n }\r\n input[type=checkbox]{\r\n     height: 20px;\r\n"
+                },
+                {
+                    "date": 1662532779349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n     margin-left: 20px;\r\n     list-style-type: disc;\r\n }\r\n .inmod label{\r\n-    font-size: px;\r\n+    font-size: 22px;\r\n }\r\n input[type=checkbox]{\r\n     height: 20px;\r\n     width: 20px;\r\n"
+                },
+                {
+                    "date": 1662532907464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,8 +62,9 @@\n input[type=checkbox]{\r\n     height: 20px;\r\n     width: 20px;\r\n     margin-left: 20px;\r\n+    justify-content: center;\r\n }\r\n \r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n"
+                },
+                {
+                    "date": 1662532914648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,10 +63,12 @@\n     height: 20px;\r\n     width: 20px;\r\n     margin-left: 20px;\r\n     justify-content: center;\r\n+    ali\r\n }\r\n \r\n+\r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n         display: inline-block!important;\r\n"
+                },
+                {
+                    "date": 1662615830383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,11 +63,16 @@\n     height: 20px;\r\n     width: 20px;\r\n     margin-left: 20px;\r\n     justify-content: center;\r\n-    ali\r\n+    align-items: center;\r\n }\r\n \r\n+#inprate{\r\n+    width:300px;\r\n+    text-align:center;\r\n+    font-weight:bold;\r\n+}\r\n \r\n @media (min-width: 481px) and (max-width: 850px) {\r\n \r\n     .navbar{\r\n"
+                }
+            ],
+            "date": 1662447649559,
+            "name": "Commit-0",
+            "content": ".tabreq{\r\n    border:3px solid black;\r\n    padding:10px;\r\n   width: 100%;\r\n   overflow: hidden;\r\n   margin-top: 20px;\r\n }\r\n .tabreq th{\r\n     text-transform: uppercase;\r\n     text-align: center;\r\n     margin-right: 10px;\r\n     border: 1px solid black;\r\n     width:25%;\r\n     padding: 5px;\r\n     background-color: lightseagreen;\r\n     letter-spacing: 2px;\r\n    \r\n }\r\n .tabreq tr td{\r\n     margin-right: 20px;\r\n     border: 1px solid black;\r\n     padding: 3px;\r\n     text-align: center;\r\n     width:25%;\r\n     font-weight: bold;\r\n     letter-spacing: 1px;\r\n     background-color: lightgreen;\r\n     \r\n }\r\n .tabreq td:hover{\r\n    background-color: khaki;\r\n}\r\n#accb{\r\n    background-color: crimson;\r\n    padding: 5px;\r\n    font-weight: bold;\r\n}\r\n#accb:hover{\r\n    background-color: salmon;\r\n}\r\n#ordb{\r\n    background-color: royalblue;\r\n    padding: 5px;\r\n    font-weight: bold;  \r\n}\r\n#ordb:hover{\r\n    background-color: lightblue;\r\n}"
+        }
+    ]
+}
