@@ -46,8 +46,8 @@ function PostPR() {
            console.log(registercat);
     
            axios.all([
-            axios.post(`http://localhost:9999/registerProject`,registerp), 
-            axios.post(`http://localhost:9999/registerCategory`,registercat)
+            axios.post('https://peaceful-springs-81849.herokuapp.com/registerProject',registerp), 
+            axios.post('https://peaceful-springs-81849.herokuapp.com/registerCategory',registercat)
           ])
           .then(axios.spread((data1, data2) => {
            

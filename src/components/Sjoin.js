@@ -47,7 +47,7 @@ function Sjoin() {
       service:service,
       
       }
-      axios.post('http://localhost:9999/registerSeller', register)
+      axios.post('https://peaceful-springs-81849.herokuapp.com/registerSeller', register)
             .then(res => console.log(res.data)).then(data => { alert('SignUp SuccessFully') })
       await signUp(email, password);
 

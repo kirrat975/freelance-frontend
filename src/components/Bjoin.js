@@ -35,7 +35,7 @@ function Bjoin() {
       name:name,
       phone:phone,
       }
-      axios.post('http://localhost:9999/registerBuyer', register).then((res)=>{
+      axios.post('https://peaceful-springs-81849.herokuapp.com/registerBuyer', register).then((res)=>{
         console.log(res.data);
        alert("signup sucessfully")
       })

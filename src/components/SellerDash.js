@@ -36,7 +36,7 @@ function SellerDash() {
       const getProject = async () => {
        
      
-        await axios.get("http://localhost:9999/retrieveProjects/").then((response)=>{
+        await axios.get("https://peaceful-springs-81849.herokuapp.com/retrieveProjects/").then((response)=>{
           localStorage.setItem("projects",JSON.stringify(response.data))
            
             setSUserData(response.data);
@@ -59,7 +59,7 @@ function SellerDash() {
       
       const options = {
         method: 'POST',
-        url: 'http://localhost:9999/registerOrderRequest',
+        url: 'https://peaceful-springs-81849.herokuapp.com/registerOrderRequest',
         data: {
             title,
             description,

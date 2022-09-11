@@ -30,7 +30,7 @@ console.log(selleremail[0])
       const getSemail = async () => {
        
      
-        await axios.get("http://localhost:9999/retrieveOrders/"+selleremail[0]).then((response)=>{
+        await axios.get("https://peaceful-springs-81849.herokuapp.com/retrieveOrders/"+selleremail[0]).then((response)=>{
          
        // localStorage.setItem("sellerorder",JSON.stringify(response.data))
           

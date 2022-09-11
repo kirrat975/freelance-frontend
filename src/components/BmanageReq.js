@@ -26,7 +26,7 @@ function BmanageReq() {
       const getProject = async () => {
        
      
-        await axios.get("http://localhost:9999/retrieveProject/"+buyerId[0]).then((response)=>{
+        await axios.get("https://peaceful-springs-81849.herokuapp.com/retrieveProject/"+buyerId[0]).then((response)=>{
          
            
             setSUserData(response.data);
@@ -38,7 +38,7 @@ function BmanageReq() {
        const getBidRequest = async () => {
        
      
-        await axios.get("http://localhost:9999/retrieveOrderRequest/" +bidreq._id).then((response)=>{
+        await axios.get("https://peaceful-springs-81849.herokuapp.com/retrieveOrderRequest/" +bidreq._id).then((response)=>{
          
            
            
@@ -55,7 +55,7 @@ function BmanageReq() {
       const handleOrder=async (buyerId,title,description,category,duration,price)=>{
         const orderdata = {
             method: 'POST',
-            url: 'http://localhost:9999/registerOrder',
+            url: 'https://peaceful-springs-81849.herokuapp.com/registerOrder',
             data: 
             
             {

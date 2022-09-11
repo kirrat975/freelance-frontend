@@ -23,7 +23,7 @@ function Sebillpage() {
       const getSellerO = async () => {
        
      
-        await axios.get("http://localhost:9999/retrieveOrders/"+order.email).then((response)=>{
+        await axios.get("https://peaceful-springs-81849.herokuapp.com/retrieveOrders/"+order.email).then((response)=>{
          console.log(response.data);
         setSUserData(response.data);
          

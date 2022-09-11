@@ -9,7 +9,7 @@ import cardavatar from '../cardavatar.jpg';
 import axios from "axios";
 function BuyerHp() {
     const [Suserdata, setSUserData] = useState([]);
-    const Surl = "http://localhost:9999/retrieveSellers";
+    const Surl = "https://peaceful-springs-81849.herokuapp.com/retrieveSellers";
     const { logOut, user } = useUserAuth();
     const navigate=useNavigate();
 

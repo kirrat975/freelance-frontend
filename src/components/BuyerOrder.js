@@ -43,7 +43,7 @@ function BuyerOrders() {
       const getOrder = async () => {
        
      
-        await axios.get("http://localhost:9999/retrieveOrders/"+order.email).then((response)=>{
+        await axios.get("https://peaceful-springs-81849.herokuapp.com/retrieveOrders/"+order.email).then((response)=>{
          
 
           
@@ -71,7 +71,7 @@ function BuyerOrders() {
           rating:0,
         };
         console.log(cancelled)
-        await axios.put("http://localhost:9999/updateOrderStatus/"+data._id,updata1).then((res)=>{
+        await axios.put("https://peaceful-springs-81849.herokuapp.com/updateOrderStatus/"+data._id,updata1).then((res)=>{
           console.log(res.data)
           localStorage.setItem("updata",JSON.stringify(res.data))
           alert("status updated ")
@@ -84,7 +84,7 @@ function BuyerOrders() {
         status:completed,
         rating:rating,
       };
-      await axios.put("http://localhost:9999/updateOrderStatus/"+data._id,updata2).then((res)=>{
+      await axios.put("https://peaceful-springs-81849.herokuapp.com/updateOrderStatus/"+data._id,updata2).then((res)=>{
         console.log(res.data);
         localStorage.setItem("updata",JSON.stringify(res.data))
         alert("status and rating are updated")

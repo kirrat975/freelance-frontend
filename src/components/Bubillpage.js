@@ -25,7 +25,7 @@ function Bubillpage() {
       const getSeller = async () => {
        
      
-        await axios.get("http://localhost:9999/retrieveSellers/"+order.email).then((response)=>{
+        await axios.get("https://peaceful-springs-81849.herokuapp.com/retrieveSellers/"+order.email).then((response)=>{
          console.log(response.data);
          setSUserData(response.data);
          
@@ -38,7 +38,7 @@ function Bubillpage() {
       const getOrder = async () => {
        
      
-        await axios.get("http://localhost:9999/retrieveOrders/"+order.email).then((response)=>{
+        await axios.get("https://peaceful-springs-81849.herokuapp.com/retrieveOrders/"+order.email).then((response)=>{
          console.log(response.data);
       
          setSordata(response.data)

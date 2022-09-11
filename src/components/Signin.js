@@ -24,7 +24,7 @@ function Signin() {
     setError("");
     try {
     
-      await axios.get('http://localhost:9999/retrieveBuyer/'+email).then((res)=>{
+      await axios.get('https://peaceful-springs-81849.herokuapp.com/retrieveBuyer/'+email).then((res)=>{
        
        
         
@@ -62,7 +62,7 @@ function Signin() {
     setError("");
     try {
     
-      await axios.get('http://localhost:9999/retrieveSellers/'+email).then((res)=>{
+      await axios.get('https://peaceful-springs-81849.herokuapp.com/retrieveSellers/'+email).then((res)=>{
        
         
         console.log(res.data);
